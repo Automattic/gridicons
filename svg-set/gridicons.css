@@ -1,0 +1,25 @@
+/**
+
+	Gridicons
+
+*/
+
+
+/**
+ * All gridicons
+ */
+
+.gridicon {
+	-moz-transition: color .1s ease-in 0;
+	-webkit-transition: color .1s ease-in 0;
+	speak: none;
+	width: 24px;
+	height: 24px;
+}
+
+
+/**
+ * Individual icons
+ */
+
+
