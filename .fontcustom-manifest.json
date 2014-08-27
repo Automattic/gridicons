@@ -1,0 +1,190 @@
+{
+  "checksum": {
+    "previous": "8ca6683e8361acdf72ffcf4788ecd42c65fbd7c6244f417fdeac618e305eed43",
+    "current": "8ca6683e8361acdf72ffcf4788ecd42c65fbd7c6244f417fdeac618e305eed43"
+  },
+  "fonts": [
+    "fontcustom-webfont/Gridicons.ttf",
+    "fontcustom-webfont/Gridicons.svg",
+    "fontcustom-webfont/Gridicons.woff",
+    "fontcustom-webfont/Gridicons.eot"
+  ],
+  "glyphs": {
+    "arrow": {
+      "codepoint": 61696,
+      "source": "svg/arrow.svg"
+    },
+    "attachment": {
+      "codepoint": 61705,
+      "source": "svg/attachment.svg"
+    },
+    "backspace": {
+      "codepoint": 61706,
+      "source": "svg/backspace.svg"
+    },
+    "block": {
+      "codepoint": 61707,
+      "source": "svg/block.svg"
+    },
+    "bold": {
+      "codepoint": 61708,
+      "source": "svg/bold.svg"
+    },
+    "bookmark": {
+      "codepoint": 61709,
+      "source": "svg/bookmark.svg"
+    },
+    "bookmarked": {
+      "codepoint": 61710,
+      "source": "svg/bookmarked.svg"
+    },
+    "calendar": {
+      "codepoint": 61711,
+      "source": "svg/calendar.svg"
+    },
+    "camera": {
+      "codepoint": 61712,
+      "source": "svg/camera.svg"
+    },
+    "cell": {
+      "codepoint": 61713,
+      "source": "svg/cell.svg"
+    },
+    "checkmark": {
+      "codepoint": 61697,
+      "source": "svg/checkmark.svg"
+    },
+    "cloud": {
+      "codepoint": 61725,
+      "source": "svg/cloud.svg"
+    },
+    "cloud-download": {
+      "codepoint": 61726,
+      "source": "svg/cloud-download.svg"
+    },
+    "cloud-empty": {
+      "codepoint": 61727,
+      "source": "svg/cloud-empty.svg"
+    },
+    "cloud-upload": {
+      "codepoint": 61732,
+      "source": "svg/cloud-upload.svg"
+    },
+    "cross": {
+      "codepoint": 61698,
+      "source": "svg/cross.svg"
+    },
+    "edit": {
+      "codepoint": 61714,
+      "source": "svg/edit.svg"
+    },
+    "ellipsis": {
+      "codepoint": 61699,
+      "source": "svg/ellipsis.svg"
+    },
+    "flag": {
+      "codepoint": 61715,
+      "source": "svg/flag.svg"
+    },
+    "help": {
+      "codepoint": 61716,
+      "source": "svg/help.svg"
+    },
+    "italic": {
+      "codepoint": 61717,
+      "source": "svg/italic.svg"
+    },
+    "link": {
+      "codepoint": 61718,
+      "source": "svg/link.svg"
+    },
+    "mail": {
+      "codepoint": 61728,
+      "source": "svg/mail.svg"
+    },
+    "menu": {
+      "codepoint": 61700,
+      "source": "svg/menu.svg"
+    },
+    "microphone": {
+      "codepoint": 61719,
+      "source": "svg/microphone.svg"
+    },
+    "minus": {
+      "codepoint": 61701,
+      "source": "svg/minus.svg"
+    },
+    "minus-small": {
+      "codepoint": 61702,
+      "source": "svg/minus-small.svg"
+    },
+    "note": {
+      "codepoint": 61720,
+      "source": "svg/note.svg"
+    },
+    "plus": {
+      "codepoint": 61703,
+      "source": "svg/plus.svg"
+    },
+    "plus-small": {
+      "codepoint": 61704,
+      "source": "svg/plus–small.svg"
+    },
+    "redo": {
+      "codepoint": 61729,
+      "source": "svg/redo.svg"
+    },
+    "spam": {
+      "codepoint": 61721,
+      "source": "svg/spam.svg"
+    },
+    "tablet": {
+      "codepoint": 61722,
+      "source": "svg/tablet.svg"
+    },
+    "tag": {
+      "codepoint": 61723,
+      "source": "svg/tag.svg"
+    },
+    "textcolor": {
+      "codepoint": 61724,
+      "source": "svg/textcolor.svg"
+    },
+    "undo": {
+      "codepoint": 61731,
+      "source": "svg/undo.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": "fontcustom.yml",
+    "css_selector": ".gridicon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "Gridicons",
+    "force": true,
+    "input": {
+      "templates": "fontcustom-templates",
+      "vectors": "svg"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "fontcustom-webfont",
+      "fonts": "fontcustom-webfont",
+      "preview": "fontcustom-webfont"
+    },
+    "preprocessor_path": "",
+    "quiet": false,
+    "templates": [
+      "index.html",
+      "gridicons.css"
+    ]
+  },
+  "templates": [
+    "fontcustom-webfont/index.html",
+    "fontcustom-webfont/gridicons.css"
+  ]
+}

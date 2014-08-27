@@ -1,0 +1,365 @@
+<% scale = %w|12 14 16 18 21 24 36 48 60 72| %><!DOCTYPE html>
+<html>
+<head>
+<title><%= font_name %></title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="gridicons.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<style type="text/css">
+body {
+	font-family: sans-serif;
+	line-height: 1.5;
+	margin: 0;
+	color: #2f2d2c;
+	background: #fff;
+	font-size: 11pt;
+}
+a {
+	color: #2f2d2c;
+}
+h4 {
+	margin-top: 40px;
+}
+
+#iconlist {
+	clear: both;
+	margin-bottom: 20px;
+}
+#iconlist div {
+	padding: 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 48px;
+	line-height: 1;
+	position: relative;
+	width: 48px;
+	height: 48px;
+}
+#iconlist div:before {
+	margin-right: 20px;
+}
+#iconlist div:hover {
+	cursor: pointer;
+	color: #77cad3;
+}
+#primary {
+	background: #77cad3;
+	overflow: hidden;
+}
+#content {
+	position: relative;
+	color: #fff;
+	max-width: 980px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+#icons {
+	background: #fbfbfb;
+}
+#icons #iconlist {
+	max-width: 980px;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	padding: 20px 0;
+	margin: 0 auto;
+}
+#glyph {
+	float: left;
+	width: 50%;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	padding: 20px 0;
+}
+#glyph .info {
+	float: right;
+	width: 180px;
+	padding: 36px 0 0 0;
+}
+#glyph .info a {
+	color: #2f2d2c;
+	display: block;
+	padding: 8px 0 8px 15px;
+}
+#glyph .info strong {
+	font-weight: normal;
+	display: block;
+	padding: 8px 0;
+}
+#glyph .gridicon {
+	font-size: 256px;
+	width: 256px;
+	height: 256px;
+	overflow: visible;
+	float: left;
+}
+.description {
+	margin-top: 50px;
+	width: 48%;
+	float: right;
+	padding-left: 40px;
+	margin-left: 2%;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	background-size: 4px 4px;
+}
+#primary h2 {
+	color: white;
+	margin: 0 auto;
+	padding: 22px 0 0 20px;
+	max-width: 980px;
+}
+#footer {
+	clear: both;
+	max-width: 980px;
+	margin: 50px auto;
+	font-size: 9pt;
+}
+pre, code {
+	font: 14px/1.5 monospace;
+}
+.code {
+	display: block;
+	font: 14px/1.5 monospace;
+	width: 600px;
+	white-space: pre;
+	border: 1px solid #ccc;
+	padding: 10px;
+	overflow: auto;
+	min-height: 110px;
+}
+#iconlist .new, #iconlist .update {
+	position: relative;
+}
+#iconlist .new:after, #iconlist .update:after {
+	color: #ea834d;
+	display: block;
+	content: "NEW";
+	font: bold 8px/1 sans-serif;
+	position: absolute;
+	top: 0px;
+	text-align: center;
+	z-index: 10;
+	width: 100%;
+}
+#iconlist .update:after {
+	content: "UPDATE";
+	left: -1px;
+}
+body.searching #iconlist span.update:after, body.searching #iconlist span.new:after {
+	display: none;
+}
+
+#search {
+	border: 0;
+	border-radius: 2px;
+	position: absolute;
+	right: 20px;
+	font: 11pt sans-serif;
+	padding: 10px;
+	top: 20px;
+	background: rgba(255,255,255,.8);
+}
+#search:focus {
+	background: #fff;
+	outline: none;
+}
+
+.gridicon:after {
+	content: attr(alt);
+	display: block;
+	font-size: 9px;
+	color: #999;
+	text-align: center;
+}
+
+.hideUACs.gridicon:after {
+	content: none;
+}
+
+
+/**
+ * Responsive
+ */
+
+@media only screen and ( max-width: 900px ) {
+
+	#glyph {
+		float: none;
+		width: 100%;
+	}
+	
+	#glyph .info {
+		width: 30%;
+	}
+	#glyph .gridicon {
+		width: 70%;
+	}
+
+	.description {
+		clear: both;
+		width: 100%;
+		background: none;
+		padding-left: 0;
+		float: none;
+	}
+
+}
+</style>
+<script type="text/javascript">
+function copyToClipboard ( text, copyMode ) {
+	if ( copyMode == "css" ) {
+		window.prompt( "Copy this, then paste in your CSS :before selector.", text );
+	} else if ( copyMode == "html" ) {
+		window.prompt( "Copy this, then paste in your HTML.", text );
+	} else {
+		window.prompt( "Copy this, then paste in your Photoshop textfield.", text );
+	}
+}
+
+function pickRandomIcon() {
+	var divs = jQuery("#iconlist div").get().sort(function(){
+			return Math.round(Math.random())-0.5;
+		}).slice(0,1);
+
+	attr = jQuery(divs).attr('alt');
+	cssclass = jQuery(divs).attr('class');
+	displayGlyph( attr, cssclass );
+
+}
+
+function displayGlyph( attr, cssclass ) {
+
+	// set permalink
+	var permalink = cssclass.split(' gridicon-')[1];
+	window.location.hash = permalink;
+
+	// css copy string
+	csstext = "content: \'\\" + attr + "';";
+
+	// html copy string
+	htmltext = '<span class="' + cssclass + '"></span>';
+
+	// glyph copy string
+	glyphtemp = "&#x" + attr + ";";
+	jQuery('#temp').html( glyphtemp );
+	glyphtext = jQuery('#temp').text();
+
+	// final output
+	output = '<div class="' + cssclass + '"></div>'
+	+ '<div class="info">'
+		+ '<strong>&larr; ' + cssclass.split( ' ' )[1] + '</strong>'
+		+ '<a href="javascript:copyToClipboard(csstext, \'css\')">Copy CSS</a>'
+		+ '<a href="javascript:copyToClipboard(htmltext, \'html\')">Copy HTML</a>'
+		+ '<a href="javascript:copyToClipboard(glyphtext)">Copy Glyph</a>'
+	+ '</div>';
+
+	jQuery( '#glyph' ).html( output );
+
+}
+
+function sortUnicode ( a, b ) {
+	var numberA = $(a).attr('alt').replace('f', '');
+	var numberB = $(b).attr('alt').replace('f', '');
+	var contentA =parseInt( numberA, 16 );
+	var contentB =parseInt( numberB, 16 );
+	return (contentA < contentB) ? -1 : (contentA > contentB) ? 1 : 0;
+}
+
+jQuery(document).ready(function() {
+
+	// pick random icon if no permalink, otherwise go to permalink
+	if ( window.location.hash ) {
+		permalink = "gridicon-" + window.location.hash.split('#')[1];
+		attr = jQuery( '.' + permalink ).attr( 'alt' );
+		cssclass = jQuery( '.' + permalink ).attr('class');
+		displayGlyph( attr, cssclass );
+	} else {
+		pickRandomIcon();
+	}
+
+	jQuery( '#iconlist div' ).click(function() {
+
+		attr = jQuery( this ).attr( 'alt' );
+		cssclass = jQuery( this ).attr( 'class' );
+
+		displayGlyph( attr, cssclass );
+
+	});
+
+	var $rows = jQuery('#iconlist div');
+	jQuery('#search').keyup(function() {
+	
+		// remove update text when using search
+		jQuery('body').addClass('searching');
+	
+	    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+	
+	    $rows.show().filter(function() {
+	        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+	        return !~text.indexOf(val);
+	    }).hide();
+	});
+	
+	jQuery('input#search').focus();
+
+	// sort based on number
+	jQuery('#iconlist div').sort( sortUnicode ).appendTo('#iconlist');
+
+});
+
+function toggleUACs() {
+	jQuery('.gridicon').toggleClass('hideUACs');
+}
+</script>
+</head>
+
+<body>
+
+<div id="main">
+
+	<div id="primary">
+		<div id="content">
+
+			<h2><%= font_name %></h2>
+
+			<input placeholder="Filter..." name="search" id="search" type="text" value="" maxlength="150" />
+
+			<div id="glyph">
+			</div>
+			
+			<div class="description">
+				<p><strong><em>Please do not use <%= font_name %> outside of their intended 24px font-size or 2x multiples thereof (48px, 96px). Even fonts look fuzzy outside of their pixel grid.</em></strong></p>
+			</div>
+			
+		</div>
+	</div>
+
+	<div id="icons">
+		<div id="iconlist">
+		
+			<!-- note, the text inside the HTML elements is purely for the seach -->
+			<% @glyphs.each do |name, value|
+			selector = @options[:css_selector].sub('{{glyph}}', name.to_s) %>
+			<div alt="<%= value[:codepoint].to_s(16) %>" class="gridicon <%= selector[1..-1] %>"><%= selector[9..100] %></div>
+			<% end %>
+
+		</div>
+		
+		<div id="temp" style="display: none;"></div>
+		
+	</div>
+
+	<div id="footer">
+
+		<p id="footer">Copyright &copy; WordPress.com</p>
+	</div>
+
+</div>
+
+</body>
+</html>

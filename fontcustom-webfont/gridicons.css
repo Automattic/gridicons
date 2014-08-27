@@ -1,0 +1,96 @@
+/**
+
+	Gridicons
+
+*/
+
+
+/* IE8 and below use EOT and allow cross-site embedding. 
+   IE9 uses WOFF which is base64 encoded to allow cross-site embedding.
+   So unfortunately, IE9 will throw a console error, but it'll still work.
+   When the font is base64 encoded, cross-site embedding works in Firefox */
+@font-face {
+  font-family: "Gridicons";
+  src: url("./Gridicons.eot");
+  src: url("./Gridicons.eot?#iefix") format("embedded-opentype"),
+	   url(data:application/font-woff;charset=utf-8;base64,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),
+       url("./Gridicons.woff") format("woff"),
+       url("./Gridicons.ttf") format("truetype"),
+       url("./Gridicons.svg#Gridicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Gridicons";
+    src: url("./Gridicons.svg#Gridicons") format("svg");
+  }
+}
+
+
+/**
+ * All gridicons
+ */
+
+.gridicon {
+	font-size: 16px;
+	vertical-align: top;
+	text-align: center;
+	-moz-transition: color .1s ease-in 0;
+	-webkit-transition: color .1s ease-in 0;
+	display: inline-block;
+	font-family: "Gridicons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1;
+	text-decoration: inherit;
+	text-transform: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	speak: none;
+}
+
+
+/**
+ * Individual icons
+ */
+
+.gridicon-arrow:before { content: "\f100"; }
+.gridicon-attachment:before { content: "\f109"; }
+.gridicon-backspace:before { content: "\f10a"; }
+.gridicon-block:before { content: "\f10b"; }
+.gridicon-bold:before { content: "\f10c"; }
+.gridicon-bookmark:before { content: "\f10d"; }
+.gridicon-bookmarked:before { content: "\f10e"; }
+.gridicon-calendar:before { content: "\f10f"; }
+.gridicon-camera:before { content: "\f110"; }
+.gridicon-cell:before { content: "\f111"; }
+.gridicon-checkmark:before { content: "\f101"; }
+.gridicon-cloud:before { content: "\f11d"; }
+.gridicon-cloud-download:before { content: "\f11e"; }
+.gridicon-cloud-empty:before { content: "\f11f"; }
+.gridicon-cloud-upload:before { content: "\f124"; }
+.gridicon-cross:before { content: "\f102"; }
+.gridicon-edit:before { content: "\f112"; }
+.gridicon-ellipsis:before { content: "\f103"; }
+.gridicon-flag:before { content: "\f113"; }
+.gridicon-help:before { content: "\f114"; }
+.gridicon-italic:before { content: "\f115"; }
+.gridicon-link:before { content: "\f116"; }
+.gridicon-mail:before { content: "\f120"; }
+.gridicon-menu:before { content: "\f104"; }
+.gridicon-microphone:before { content: "\f117"; }
+.gridicon-minus:before { content: "\f105"; }
+.gridicon-minus-small:before { content: "\f106"; }
+.gridicon-note:before { content: "\f118"; }
+.gridicon-plus:before { content: "\f107"; }
+.gridicon-plus-small:before { content: "\f108"; }
+.gridicon-redo:before { content: "\f121"; }
+.gridicon-spam:before { content: "\f119"; }
+.gridicon-tablet:before { content: "\f11a"; }
+.gridicon-tag:before { content: "\f11b"; }
+.gridicon-textcolor:before { content: "\f11c"; }
+.gridicon-undo:before { content: "\f123"; }
+

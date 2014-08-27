@@ -1,0 +1,44 @@
+# --------------------------------------------------------------------------- #
+# Project Info
+#   Defaults shown. Learn more about these options by running
+#   `fontcustom help` or visiting <http://fontcustom.com>.
+# --------------------------------------------------------------------------- #
+
+font_name: Gridicons
+
+css_selector: .gridicon-{{glyph}}
+preprocessor_path: ""
+autowidth: false
+no_hash: true
+force: true
+debug: false
+quiet: false
+
+
+# --------------------------------------------------------------------------- #
+# Input Paths
+# --------------------------------------------------------------------------- #
+
+input:
+  vectors: svg
+  templates: fontcustom-templates
+
+
+# --------------------------------------------------------------------------- #
+# Output Paths
+# --------------------------------------------------------------------------- #
+
+output:
+  fonts: fontcustom-webfont
+
+
+# --------------------------------------------------------------------------- #
+# Templates
+#   Included in Font Custom: preview, css, scss, scss-rails
+#   Custom templates should be saved in the INPUT[:templates] directory and
+#   referenced by their baserame.
+# --------------------------------------------------------------------------- #
+
+templates:
+ - index.html
+ - gridicons.css
