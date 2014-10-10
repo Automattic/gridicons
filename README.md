@@ -3,7 +3,7 @@
 An experiment to collaboratively create a new consistent icon set. 
 
 
-### Icon Guidelines
+## Icon Guidelines
 
 - 24dp base grid
 - straight 45 degree angles
@@ -16,7 +16,7 @@ An experiment to collaboratively create a new consistent icon set.
 These are not rules, they are guidelines that can be broken in style. The purpose of them is to try an ensure a uniform look as we all work on it together. They are also open to growing organically.
 
 
-### Making a new icon
+## Making a new icon
 
 1. Make sure your repo is fresh, then open gridicons.ai. 
 2. Press Shift + O to open the Artboard manager. 
@@ -24,12 +24,20 @@ These are not rules, they are guidelines that can be broken in style. The purpos
 4. Draw your icon. 
 
 
+### Setting up Grunt
+
+1. Go to http://nodejs.org/ and press "Install". Follow instructions.
+2. Open a terminal. Change to your Gridicons directory. Type `npm install`
+3. Now type `npm install -g grunt-cli`
+
+
 ### Exporting
 
 To export SVGs, do this:
 
 1. In Illustrator pick "Save as Copy...", pick the SVG format and the filename "gridicons.svg" (it defaults to "gridicons copy.svg"). Now check "Use Artboards". 
-2. Save to the "svg" folder and overwrite files. Files will be named "gridicons-[artboard].svg", for example "gridicons-calendar.svg".
+2. In the SVG save dialog, pick "More Options", now pick "Presentation Attributes" instead of "Style Properties".
+3. Save to the "svg" folder and overwrite files. Files will be named "gridicons-[artboard].svg", for example "gridicons-calendar.svg".
 
 ### Clean up with Grunt
 
@@ -37,9 +45,13 @@ Make sure you have `grunt` and `grunt-svgstore` installed.
 
 In the commandline, type `grunt`. This will clean up and combine all the SVG icons into a single sprite in the `svg-set` directory, called `gridicons.svg`. 
 
-@todo: Grunt should update the index.html example page with copy/paste instructions as well.
 
-
-### Icon Font
+## Icon Font
 
 In the deprecated folder there's a basic FontCustom template system bundled with this package. This will eventually be removed. 
+
+
+## Todo
+
+- implement search and permalinks in demo page
+- find alternative to picking Style Properties in exporting -- a grunt cleaner that doesn't just remove the entire style block in other words

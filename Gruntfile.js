@@ -37,29 +37,34 @@ module.exports = function(grunt) {
 						xmlns: 'http://www.w3.org/2000/svg'
 					},
 
+					cleanup : ['style', 'fill'],
+
 					includedemo : multiline.stripIndent(function(){/*
-					<!doctype html>
+					<!DOCTYPE html>
 					<html>
 					<head>
-					<style>
-					svg{
-					width:50px;
-					height:50px;
-					fill:black !important;
-					}
-					</style>
+					<link rel="stylesheet" type="text/css" href="gridicons-demo.css" />
+					<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+					<script src="gridicons-demo.js"></script>
+					<script src="svg4everybody.ie8.min.js"></script>
 					<head>
 					<body>
-					{{{svg}}}
 					
+					<h1>Gridicons</h1>
+					<p><em>Tap icon to get insertion code. <a href="gridicons.svg" title="Right-click -> Save as...">Download the SVG sprite</a>.</em></p>
+
+					{{{svg}}}
+
+					<div id="icons">
 					{{#each icons}}
-					<div>
-					<svg>
-					<use xlink:href="#{{name}}" />
-					</svg>
-					<div>{{title}}</div>
-					</div>
+						<div>
+							<svg>
+							<use xlink:href="#{{name}}" />
+							</svg>
+							<p>{{title}}</p>
+						</div>
 					{{/each}}
+					</div>
 					
 					</body>
 					</html>
@@ -71,15 +76,27 @@ module.exports = function(grunt) {
 				}
 			},
 		},
+
+	    rename: {
+	        moveThis: {
+	            src: 'svg-set/gridicons-demo.html',
+	            dest: 'svg-set/index.html'
+	        },
+	    },
+
+		
 	});
 
-	// Load the renamer
+	// Load the copier
 	grunt.loadNpmTasks('grunt-contrib-copy');
 
 	// Load the SVGstore
 	grunt.loadNpmTasks('grunt-svgstore');
 	
+	// Load the renamer
+	grunt.loadNpmTasks('grunt-rename');
+	
 	// Default task(s).
-	grunt.registerTask('default', ['copy', 'svgstore']);
+	grunt.registerTask('default', ['copy', 'svgstore', 'rename']);
 
 };

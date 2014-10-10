@@ -2,7 +2,7 @@
 <!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
-	 height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g id="Structural_Icons">
 	<g id="minus">
 	</g>
@@ -27,7 +27,7 @@
 	<g id="attachment">
 	</g>
 	<g>
-		<path style="fill:#58595B;" d="M8,6h3.423c1.561,0,2.692,0.222,3.398,0.666c0.704,0.443,1.056,1.149,1.056,2.117
+		<path fill="#58595B" d="M8,6h3.423c1.561,0,2.692,0.222,3.398,0.666c0.704,0.443,1.056,1.149,1.056,2.117
 			c0,0.657-0.153,1.196-0.462,1.617c-0.309,0.422-0.719,0.675-1.23,0.761v0.075c0.697,0.155,1.2,0.446,1.509,0.873
 			c0.309,0.426,0.463,0.993,0.463,1.7c0,1.003-0.362,1.785-1.088,2.348C14.345,16.719,13.359,17,12.115,17H8V6z M10.333,10.356
 			h1.354c0.633,0,1.09-0.099,1.374-0.294c0.282-0.195,0.425-0.519,0.425-0.97c0-0.422-0.154-0.725-0.463-0.907

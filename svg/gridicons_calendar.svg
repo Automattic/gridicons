@@ -2,7 +2,7 @@
 <!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
-	 height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g id="Structural_Icons">
 	<g id="minus">
 	</g>
@@ -26,7 +26,7 @@
 <g id="Form_Icons">
 	<g id="attachment">
 	</g>
-	<path style="fill:#58595B;" d="M19,4h-1V2h-2v2H8V2H6v2H5C3.896,4,3,4.896,3,6v13c0,1.104,0.896,2,2,2h14c1.104,0,2-0.896,2-2V6
+	<path fill="#58595B" d="M19,4h-1V2h-2v2H8V2H6v2H5C3.896,4,3,4.896,3,6v13c0,1.104,0.896,2,2,2h14c1.104,0,2-0.896,2-2V6
 		C21,4.896,20.104,4,19,4z M19,19H5V8h14V19z"/>
 </g>
 <g id="Status_Icons">
