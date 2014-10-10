@@ -43,6 +43,8 @@ module.exports = function(grunt) {
 					<!DOCTYPE html>
 					<html>
 					<head>
+					<title>Gridicons</title>
+					<meta name="robots" content="noindex">
 					<link rel="stylesheet" type="text/css" href="gridicons-demo.css" />
 					<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 					<script src="gridicons-demo.js"></script>
