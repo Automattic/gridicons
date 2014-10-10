@@ -37,28 +37,31 @@ module.exports = function(grunt) {
 						xmlns: 'http://www.w3.org/2000/svg'
 					},
 
+					cleanup : ['style', 'fill'],
+
 					includedemo : multiline.stripIndent(function(){/*
-					<!doctype html>
+					<!DOCTYPE html>
 					<html>
 					<head>
 					<style>
 					svg{
-					width:50px;
-					height:50px;
-					fill:black !important;
+					width:72px;
+					height:72px;
+					fill: #555 !important;
 					}
 					</style>
 					<head>
 					<body>
+
 					{{{svg}}}
-					
+
 					{{#each icons}}
-					<div>
-					<svg>
-					<use xlink:href="#{{name}}" />
-					</svg>
-					<div>{{title}}</div>
-					</div>
+						<div>
+						<svg>
+						<use xlink:href="#{{name}}" />
+						</svg>
+						<div>{{title}}</div>
+						</div>
 					{{/each}}
 					
 					</body>
