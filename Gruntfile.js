@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 					<body>
 					
 					<h1>Gridicons</h1>
-					<p><em>Tap icon to get insertion code.</em></p>
+					<p><em>Tap icon to get insertion code. <a href="gridicons.svg" title="Right-click -> Save as...">Download the SVG sprite</a>.</em></p>
 
 					{{{svg}}}
 
