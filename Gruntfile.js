@@ -43,26 +43,25 @@ module.exports = function(grunt) {
 					<!DOCTYPE html>
 					<html>
 					<head>
-					<style>
-					svg{
-					width:72px;
-					height:72px;
-					fill: #555 !important;
-					}
-					</style>
+					<link rel="stylesheet" type="text/css" href="gridicons-demo.css" />
+					<script type="text/javascript" src="gridicons-demo.js"></script>
 					<head>
 					<body>
+					
+					<h1>Gridicons</h1>
 
 					{{{svg}}}
 
+					<div id="icons">
 					{{#each icons}}
 						<div>
-						<svg>
-						<use xlink:href="#{{name}}" />
-						</svg>
-						<div>{{title}}</div>
+							<svg>
+							<use xlink:href="#{{name}}" />
+							</svg>
+							<p>{{title}}</p>
 						</div>
 					{{/each}}
+					</div>
 					
 					</body>
 					</html>
