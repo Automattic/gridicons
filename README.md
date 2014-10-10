@@ -53,6 +53,5 @@ In the deprecated folder there's a basic FontCustom template system bundled with
 
 ## Todo
 
-- index.html should reference separate CSS/JS to make things copy/paste-able.
-- copy paste tool should suggest the separate svg file
+- implement search and permalinks in demo page
 - find alternative to picking Style Properties in exporting -- a grunt cleaner that doesn't just remove the entire style block in other words

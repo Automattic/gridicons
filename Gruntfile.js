@@ -44,11 +44,14 @@ module.exports = function(grunt) {
 					<html>
 					<head>
 					<link rel="stylesheet" type="text/css" href="gridicons-demo.css" />
-					<script type="text/javascript" src="gridicons-demo.js"></script>
+					<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+					<script src="gridicons-demo.js"></script>
+					<script src="svg4everybody.ie8.min.js"></script>
 					<head>
 					<body>
 					
 					<h1>Gridicons</h1>
+					<p><em>Tap icon to get insertion code.</em></p>
 
 					{{{svg}}}
 
@@ -73,15 +76,27 @@ module.exports = function(grunt) {
 				}
 			},
 		},
+
+	    rename: {
+	        moveThis: {
+	            src: 'svg-set/gridicons-demo.html',
+	            dest: 'svg-set/index.html'
+	        },
+	    },
+
+		
 	});
 
-	// Load the renamer
+	// Load the copier
 	grunt.loadNpmTasks('grunt-contrib-copy');
 
 	// Load the SVGstore
 	grunt.loadNpmTasks('grunt-svgstore');
 	
+	// Load the renamer
+	grunt.loadNpmTasks('grunt-rename');
+	
 	// Default task(s).
-	grunt.registerTask('default', ['copy', 'svgstore']);
+	grunt.registerTask('default', ['copy', 'svgstore', 'rename']);
 
 };
