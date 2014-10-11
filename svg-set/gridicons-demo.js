@@ -5,7 +5,7 @@
 function suggestCode ( attr, cssclass ) {
 
 	var cdn = 'gridicons.svg';	// Todo: should have permanent home somewhere
-	var suggestion = '<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + cdn + attr + '"></use></svg>';
+	var suggestion = '<svg class="gi"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + cdn + attr + '"></use></svg>';
 
 	window.prompt( "Copy this, paste in your HTML.\n\nNote: for now, remember to upload the gridicons.svg file as well!", suggestion );
 }
