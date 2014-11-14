@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 						xmlns: 'http://www.w3.org/2000/svg'
 					},
 
-					cleanup : ['style', 'fill'],
+					cleanup : ['style', 'fill', 'id'],
 
 					includedemo : multiline.stripIndent(function(){/*
 					<!DOCTYPE html>
