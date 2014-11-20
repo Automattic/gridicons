@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
-	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g id="Structural_Icons">
 	<g id="minus">
 	</g>
@@ -30,7 +29,7 @@
 <g id="Status_Icons">
 	<g id="bell">
 	</g>
-	<path fill="#58595B" d="M16,2H8C6.896,2,6,2.896,6,4v16c0,1.104,0.896,2,2,2h8c1.104,0,2-0.896,2-2V4C18,2.896,17.104,2,16,2z
+	<path fill="#58595B" d="M16,2H8C6.895,2,6,2.895,6,4v16c0,1.104,0.895,2,2,2h8c1.104,0,2-0.896,2-2V4C18,2.895,17.104,2,16,2z
 		 M16,18H8V6h8V18z"/>
 </g>
 <g id="Action_Icons">
