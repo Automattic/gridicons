@@ -45,11 +45,16 @@ Make sure you have `grunt` and `grunt-svgstore` installed.
 
 In the commandline, type `grunt`. This will clean up and combine all the SVG icons into a single sprite in the `svg-set` directory, called `gridicons.svg`. 
 
+## Committers
 
-## Icon Font
+If you'd like to contribute an icon, but are unable to bake the sprite with grunt, or upload it, you can ping someone on this list and they'll help you compile and deploy:
 
-In the deprecated folder there's a basic FontCustom template system bundled with this package. This will eventually be removed. 
-
+- Joen
+- Kevin
+- Michael
+- Filipe
+- Davide
+- Dave M.
 
 ## Todo
 
