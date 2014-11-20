@@ -15,10 +15,10 @@ module.exports = function(grunt) {
 		copy: {
 			main: {
 				files: [{
-					expand: true, 
-					cwd: 'svg/', 
-					src: ['**/*.svg'], 
-					dest: 'svg/output/', 
+					expand: true,
+					cwd: 'svg-min/',
+					src: ['**/*.svg'],
+					dest: 'svg/output/',
 					rename: function(dest, src) {
 						return dest + src.split('_')[1];
 					}
@@ -26,9 +26,30 @@ module.exports = function(grunt) {
 			},
 		},
 
+		// minifies SVGs
+		svgmin: {
+				options: {
+						plugins: [
+								{
+										removeViewBox: false
+								}, {
+										removeUselessStrokeAndFill: false
+								}
+						]
+				},
+				dist: {
+						files: [{
+							expand: true,
+							cwd: 'svg',
+							src: ['*.svg'],
+							dest: 'svg-min/',
+							ext: '.svg'
+						}]
+				}
+		},
+
 		// Configuration to be run (and then tested).
 		svgstore: {
-
 			withCustomTemplate:{
 				options: {
 					prefix : 'gridicon-', // This will prefix each ID
@@ -50,7 +71,7 @@ module.exports = function(grunt) {
 					<script src="gridicons-demo.js"></script>
 					<head>
 					<body>
-					
+
 					<h1>Gridicons</h1>
 					<p><em>Tap icon to get insertion code. <a href="gridicons.svg" title="Right-click -> Save as...">Download the SVG sprite</a>.</em></p>
 
@@ -66,7 +87,7 @@ module.exports = function(grunt) {
 						</div>
 					{{/each}}
 					</div>
-					
+
 					</body>
 					</html>
 					*/})
@@ -78,14 +99,14 @@ module.exports = function(grunt) {
 			},
 		},
 
-	    rename: {
-	        moveThis: {
-	            src: 'svg-set/gridicons-demo.html',
-	            dest: 'svg-set/index.html'
-	        },
-	    },
+			rename: {
+					moveThis: {
+							src: 'svg-set/gridicons-demo.html',
+							dest: 'svg-set/index.html'
+					},
+			},
 
-		
+
 	});
 
 	// Load the copier
@@ -93,11 +114,14 @@ module.exports = function(grunt) {
 
 	// Load the SVGstore
 	grunt.loadNpmTasks('grunt-svgstore');
-	
+
 	// Load the renamer
 	grunt.loadNpmTasks('grunt-rename');
-	
+
+	// Load svgmin
+	grunt.loadNpmTasks('grunt-svgmin');
+
 	// Default task(s).
-	grunt.registerTask('default', ['copy', 'svgstore', 'rename']);
+	grunt.registerTask('default', ['svgmin', 'copy', 'svgstore', 'rename']);
 
 };
