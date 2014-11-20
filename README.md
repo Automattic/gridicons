@@ -18,6 +18,8 @@ These are not rules, they are guidelines that can be broken in style. The purpos
 
 ## Making a new icon
 
+_This is a technical walkthrough of the process. See also "Contributing an icon" later on this page._
+
 1. Make sure your repo is fresh, then open gridicons.ai. 
 2. Press Shift + O to open the Artboard manager. 
 3. Now create a new artboard and position it where it makes sense. Name the artboard using lowercase letters and dashes.
@@ -44,6 +46,17 @@ To export SVGs, do this:
 Make sure you have `grunt` and `grunt-svgstore` installed. 
 
 In the commandline, type `grunt`. This will clean up and combine all the SVG icons into a single sprite in the `svg-set` directory, called `gridicons.svg`. 
+
+## Contributing an icon
+
+Currently, icons are added to a big `gridicons.ai` sprite before baked and deployed. In order to avoid merge conflicts, here's a suggested process for contributing icons:
+
+1. Draw the icon in Illlustrator on a 24px grid. However you like.
+2. Submit the icon as an SVG file to the `svg` folder as a pull request. 
+3. One of us reviews the pull request, adds it to the `gridicons.ai` sprite, bakes and deploys.
+
+This process is open to suggestions.
+
 
 ## Committers
 
