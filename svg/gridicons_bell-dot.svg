@@ -28,12 +28,12 @@
 </g>
 <g id="Status_Icons">
 	<g id="bell">
-		<circle fill-rule="evenodd" clip-rule="evenodd" fill="#58595B" cx="10.844" cy="5.531" r="2.844"/>
 	</g>
 </g>
 <g id="Action_Icons">
 </g>
 <g id="Navigation_Icons">
+	<circle fill-rule="evenodd" clip-rule="evenodd" fill="#333333" cx="8" cy="5" r="2.5"/>
 </g>
 <g id="PLAYGROUND">
 </g>

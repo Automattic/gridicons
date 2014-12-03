@@ -17,9 +17,9 @@
 	</g>
 	<g id="menu">
 		<g>
-			<rect x="3" y="6" fill="#58595B" width="18" height="2"/>
-			<rect x="3" y="16" fill="#58595B" width="18" height="2"/>
-			<rect x="3" y="11" fill="#58595B" width="18" height="2"/>
+			<rect x="3" y="6" fill="#333333" width="18" height="2"/>
+			<rect x="3" y="16" fill="#333333" width="18" height="2"/>
+			<rect x="3" y="11" fill="#333333" width="18" height="2"/>
 		</g>
 	</g>
 	<g id="cross">

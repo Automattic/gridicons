@@ -26,10 +26,10 @@
 	<g id="attachment">
 	</g>
 	<g>
-		<rect x="5" y="17" fill="#58595B" width="14" height="2"/>
-		<rect x="8" y="13" fill="#58595B" width="8" height="2"/>
-		<rect x="5" y="9" fill="#58595B" width="14" height="2"/>
-		<rect x="8" y="5" fill="#58595B" width="8" height="2"/>
+		<rect x="5" y="17" fill="#333333" width="14" height="2"/>
+		<rect x="8" y="13" fill="#333333" width="8" height="2"/>
+		<rect x="5" y="9" fill="#333333" width="14" height="2"/>
+		<rect x="8" y="5" fill="#333333" width="8" height="2"/>
 	</g>
 </g>
 <g id="Status_Icons">
