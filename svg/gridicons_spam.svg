@@ -29,7 +29,7 @@
 <g id="Status_Icons">
 	<g id="bell">
 	</g>
-	<path fill="#58595B" d="M17,2H7L2,7v10l5,5h10l5-5V7L17,2z M13,18h-2v-2h2V18z M13,14h-2l-0.5-8h3L13,14z"/>
+	<path fill="#333333" d="M17,2H7L2,7v10l5,5h10l5-5V7L17,2z M13,18h-2v-2h2V18z M13,14h-2l-0.5-8h3L13,14z"/>
 </g>
 <g id="Action_Icons">
 </g>
