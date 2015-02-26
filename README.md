@@ -61,9 +61,9 @@ Make sure you have `grunt` and `grunt-svgstore` installed.
 
 In the commandline, type `grunt`. This will clean up and combine all the SVG icons into a single sprite in the `svg-set` directory, called `gridicons.svg`. 
 
-## Contributing an icon
+## Committing an icon
 
-Currently, icons are added to a big `gridicons.ai` sprite before baked and deployed. In order to avoid merge conflicts, here's a suggested process for contributing icons:
+Currently, icons are added to a big `gridicons.ai` sprite before baked and deployed. In order to avoid merge conflicts, here's a suggested process for committing icons:
 
 1. Draw the icon in Illlustrator on a 24px grid. However you like.
 2. Submit the icon as an SVG file to the `svg` folder as a pull request. 
