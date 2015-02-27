@@ -37,7 +37,7 @@ body {
 
 #icons div {
 	width: 48px;
-	height: 72px;
+	height: 64px;
 	float: left;
 	padding: 6px 2px;
 	position: relative;
@@ -57,7 +57,7 @@ body {
 #icons div svg {
 	width: 48px;
 	height: 48px;
-	fill: #333;
+	fill: #000;
 }
 
 #icons div:hover svg {
