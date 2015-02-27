@@ -51,6 +51,7 @@ body {
 	text-align: center;
 	overflow: hidden;
 	max-height: 1.9em;
+	word-break: break-word;
 }
 
 #icons div svg {
