@@ -31,24 +31,33 @@ body {
 	margin: 100px auto;
 }
 
+#icons {
+	padding: 0 20px;
+}
+
 #icons div {
-	width: 72px;
-	height: 72px;
+	width: 48px;
+	height: 64px;
 	float: left;
-	padding: 12px;
+	padding: 6px 2px;
 	position: relative;
-	font-size: 8pt;
+	font-size: 7pt;
 	cursor: pointer;
 }
 
 #icons div p {
-	display: none;
+	margin: 0;
+	color: #bbb;
+	text-align: center;
+	overflow: hidden;
+	max-height: 1.9em;
+	word-break: break-word;
 }
 
 #icons div svg {
-	width:72px;
-	height:72px;
-	fill: #555;
+	width: 48px;
+	height: 48px;
+	fill: #000;
 }
 
 #icons div:hover svg {
