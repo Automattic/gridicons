@@ -99,12 +99,12 @@ module.exports = function(grunt) {
 			},
 		},
 
-			rename: {
-					moveThis: {
-							src: 'svg-set/gridicons-demo.html',
-							dest: 'svg-set/index.html'
-					},
+		rename: {
+			moveThis: {
+					src: 'svg-set/gridicons-demo.html',
+					dest: 'svg-set/index.html'
 			},
+		},
 
 
 	});
