@@ -105,8 +105,6 @@ module.exports = function(grunt) {
 					dest: 'svg-set/index.html'
 			},
 		},
-
-
 	});
 
 	// Load the copier
@@ -121,7 +119,63 @@ module.exports = function(grunt) {
 	// Load svgmin
 	grunt.loadNpmTasks('grunt-svgmin');
 
+	// Output React Component
+	grunt.registerTask( 'svgreact', 'Output a react component for SVGs', function() {
+		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] ),
+			content;
+
+		// Start the React component
+		content =	"var React = require( 'react/addons' );\n\n" +
+					"var Gridicon = React.createClass({\n" +
+					"	render: function() {\n" +
+					"		var size = '24',\n" +
+					"		icon = this.props.icon,\n" +
+					"		svg;\n\n" +
+					"		if ( this.props.size ) {\n" +
+					"			size = this.props.size;\n" +
+					"		}\n\n" +
+					"		switch ( icon ) {\n";
+
+		// Create a switch() case for each svg file
+		svgFiles.forEach( function( svgFile ) {
+			// Clean up the filename to use for the react components
+			var name = svgFile.split( '_' );
+			name = name[1];
+			name = name.split( '.' );
+			name = name[0];
+
+			// Grab the relevant bits from the file contents
+			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
+
+			// Add className, height, and width to the svg element
+			fileContent = fileContent.slice( 0, 4 ) +
+						' className="gridicon gridicon__' + name + '" height={ size } width={ size }' +
+						fileContent.slice( 4 );
+
+			// Output the case for each icon
+			var iconComponent = "			case '" + name + "':\n" +
+								"				svg = " + fileContent + ";\n" +
+								"				break;\n";
+
+			content += iconComponent;
+		} );
+
+		// Finish up the React component
+		content +=	'		}\n\n' +
+					'		return (\n' +
+					'			<span className="gridicon-wrapper">\n' +
+					'				{ svg }\n' +
+					'			</span>\n' +
+					'		);\n' +
+					'	}\n' +
+					'} );\n\n' +
+					'module.exports = Gridicon;\n';
+
+		// Write the React component to gridicon.jsx
+		grunt.file.write( 'react/gridicon.jsx', content );
+	});
+
 	// Default task(s).
-	grunt.registerTask('default', ['svgmin', 'copy', 'svgstore', 'rename']);
+	grunt.registerTask('default', ['svgmin', 'copy', 'svgstore', 'rename', 'svgreact']);
 
 };
