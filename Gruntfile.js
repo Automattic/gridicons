@@ -127,18 +127,26 @@ module.exports = function(grunt) {
 		// Start the React component
 		content =	"var React = require( 'react/addons' );\n\n" +
 					"var Gridicon = React.createClass({\n" +
+					"	propTypes: {\n" +
+					"		size: React.PropTypes.number,\n" +
+					"		icon: React.PropTypes.string.isRequired,\n" +
+					"		className: React.PropTypes.string,\n" +
+					"	},\n\n" +
 					"	render: function() {\n" +
 					"		var size = '24',\n" +
-					"		icon = this.props.icon,\n" +
-					'		classNames = [ "gridicon" ],\n' +
-					"		svg;\n\n" +
+					"			icon = this.props.icon,\n" +
+					'			classNames = [ "gridicon" ],\n' +
+					"			svg;\n\n" +
 					"		if ( this.props.size ) {\n" +
 					"			size = this.props.size;\n" +
 					"		}\n\n" +
 					"		if ( this.props.className ) {\n" +
 					"			classNames.push( this.props.className );\n" +
 					"		}\n" +
-					"		switch ( icon ) {\n";
+					"		switch ( icon ) {\n" +
+					"			default:\n" +
+					"				svg = <svg height={ size } width={ size } />;\n" +
+					"				break;\n";
 
 		// Create a switch() case for each svg file
 		svgFiles.forEach( function( svgFile ) {

@@ -1,11 +1,17 @@
 var React = require( 'react/addons' );
 
 var Gridicon = React.createClass({
+	propTypes: {
+		size: React.PropTypes.number,
+		icon: React.PropTypes.string.isRequired,
+		className: React.PropTypes.string,
+	},
+
 	render: function() {
 		var size = '24',
-		icon = this.props.icon,
-		classNames = [ "gridicon" ],
-		svg;
+			icon = this.props.icon,
+			classNames = [ "gridicon" ],
+			svg;
 
 		if ( this.props.size ) {
 			size = this.props.size;
@@ -15,6 +21,9 @@ var Gridicon = React.createClass({
 			classNames.push( this.props.className );
 		}
 		switch ( icon ) {
+			default:
+				svg = <svg height={ size } width={ size } />;
+				break;
 			case 'aligncenter':
 				classNames.push( "aligncenter" );
 				svg = <svg className={ classNames.join( " " ) } height={ size } width={ size } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><g fill="#333"><path d="M5 17h14v2H5zM8 13h8v2H8zM5 9h14v2H5zM8 5h8v2H8z"/></g></g>{ this.props.children }</svg>;
