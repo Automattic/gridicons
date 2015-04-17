@@ -130,10 +130,14 @@ module.exports = function(grunt) {
 					"	render: function() {\n" +
 					"		var size = '24',\n" +
 					"		icon = this.props.icon,\n" +
+					'		classNames = [ "gridicon" ],\n' +
 					"		svg;\n\n" +
 					"		if ( this.props.size ) {\n" +
 					"			size = this.props.size;\n" +
 					"		}\n\n" +
+					"		if ( this.props.className ) {\n" +
+					"			classNames.push( this.props.className );\n" +
+					"		}\n" +
 					"		switch ( icon ) {\n";
 
 		// Create a switch() case for each svg file
@@ -149,11 +153,14 @@ module.exports = function(grunt) {
 
 			// Add className, height, and width to the svg element
 			fileContent = fileContent.slice( 0, 4 ) +
-						' className="gridicon gridicon__' + name + '" height={ size } width={ size }' +
-						fileContent.slice( 4 );
+						' className={ classNames.join( " " ) } height={ size } width={ size }' +
+						fileContent.slice( 4, -6 ) +
+						'{ this.props.children }' +
+						fileContent.slice( -6 );
 
 			// Output the case for each icon
 			var iconComponent = "			case '" + name + "':\n" +
+								'				classNames.push( "' + name + '" );\n' +
 								"				svg = " + fileContent + ";\n" +
 								"				break;\n";
 
@@ -162,11 +169,7 @@ module.exports = function(grunt) {
 
 		// Finish up the React component
 		content +=	'		}\n\n' +
-					'		return (\n' +
-					'			<span className="gridicon-wrapper">\n' +
-					'				{ svg }\n' +
-					'			</span>\n' +
-					'		);\n' +
+					'		return ( svg );\n' +
 					'	}\n' +
 					'} );\n\n' +
 					'module.exports = Gridicon;\n';
