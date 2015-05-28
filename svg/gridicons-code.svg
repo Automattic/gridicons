@@ -3,8 +3,7 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g id="code">
-	<path d="M9.41,7.41L8,6l-6,6l6,6l1.41-1.41L4.83,12L9.41,7.41z"/>
-	<path d="M14.59,16.59L16,18l6-6l-6-6l-1.41,1.41L19.17,12L14.59,16.59z"/>
+	<path d="M4.83,12l4.58,4.59L8,18l-6-6l6-6l1.41,1.41L4.83,12z M14.59,16.59L16,18l6-6l-6-6l-1.41,1.41L19.17,12L14.59,16.59z"/>
 </g>
 <g id="Layer_1">
 </g>

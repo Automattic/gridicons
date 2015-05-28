@@ -3,18 +3,7 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g id="posts">
-	<g>
-		<rect x="3" y="17" width="13" height="2"/>
-		<rect x="3" y="9" width="18" height="2"/>
-		<g>
-			<rect x="3" y="5" width="11" height="2"/>
-			<rect x="17" y="5" width="4" height="2"/>
-		</g>
-		<g>
-			<rect x="11" y="13" width="10" height="2"/>
-			<rect x="3" y="13" width="5" height="2"/>
-		</g>
-	</g>
+	<path d="M16,19H3v-2h13V19z M21,9H3v2h18V9z M3,5v2h11V5H3z M17,5v2h4V5H17z M11,13v2h10v-2H11z M3,13v2h5v-2H3z"/>
 </g>
 <g id="Layer_1">
 </g>

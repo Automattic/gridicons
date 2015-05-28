@@ -3,11 +3,7 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g id="align-center">
-	<g id="Form_Icons_10_">
-		<g id="attachment_10_">
-		</g>
-		<path d="M4,19h16v-2H4V19z M17,13H7v2h10V13z M4,9v2h16V9H4z M17,5H7v2h10V5z"/>
-	</g>
+	<path d="M4,19h16v-2H4V19z M17,13H7v2h10V13z M4,9v2h16V9H4z M17,5H7v2h10V5z"/>
 </g>
 <g id="Layer_1">
 </g>

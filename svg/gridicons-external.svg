@@ -3,10 +3,8 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g id="external">
-	<g>
-		<path d="M17,13v6H5V7h6V5H5C3.895,5,3,5.895,3,7v12c0,1.105,0.895,2,2,2h12c1.105,0,2-0.895,2-2v-6H17z"/>
-		<polygon points="13,3 13,5 17.586,5 9.793,12.793 11.207,14.207 19,6.414 19,11 21,11 21,3 		"/>
-	</g>
+	<path d="M19,13v6c0,1.105-0.895,2-2,2H5c-1.105,0-2-0.895-2-2V7c0-1.105,0.895-2,2-2h6v2H5v12h12v-6H19z M13,3v2h4.586
+		l-7.793,7.793l1.414,1.414L19,6.414V11h2V3H13z"/>
 </g>
 <g id="Layer_1">
 </g>

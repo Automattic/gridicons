@@ -3,20 +3,9 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g id="list-checkmark">
-	<g id="Form_Icons_12_">
-		<g id="attachment_12_">
-		</g>
-		<path d="M10,19h11v-2H10V19z M10,13h11v-2H10V13z M10,5v2h11V5H10z"/>
-	</g>
-	<g>
-		<polygon points="5,20.061 2.47,17.53 3.53,16.47 5,17.939 8.47,14.47 9.53,15.53 		"/>
-	</g>
-	<g>
-		<polygon points="5,14.061 2.47,11.53 3.53,10.47 5,11.939 8.47,8.47 9.53,9.53 		"/>
-	</g>
-	<g>
-		<polygon points="5,8.061 2.47,5.53 3.53,4.47 5,5.939 8.47,2.47 9.53,3.53 		"/>
-	</g>
+	<path d="M10,19h11v-2H10V19z M10,13h11v-2H10V13z M10,5v2h11V5H10z M5,20.061l-2.53-2.53L3.53,16.47L5,17.939l3.47-3.47L9.53,15.53
+		L5,20.061z M5,14.061l-2.53-2.53L3.53,10.47L5,11.939l3.47-3.47L9.53,9.53L5,14.061z M5,8.061L2.47,5.53L3.53,4.47L5,5.939
+		l3.47-3.47L9.53,3.53L5,8.061z"/>
 </g>
 <g id="Layer_1">
 </g>
