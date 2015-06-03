@@ -3,7 +3,7 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g id="flag">
-	<path d="M15,6c0-1.105-0.895-2-2-2H7H6H5v17h2v-7h5c0,1.105,0.895,2,2,2h6V6H15z"/>
+	<path d="M15,6c0-1.105-0.895-2-2-2H5v17h2v-7h5c0,1.105,0.895,2,2,2h6V6H15z"/>
 </g>
 <g id="Layer_1">
 </g>
