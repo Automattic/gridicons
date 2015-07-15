@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<% scale = %w|12 14 16 18 21 24 36 48 60 72| %><!DOCTYPE html>
 <html>
 <head>
-<title>Gridicons</title>
+<title><%= font_name %></title>
 <meta name="robots" content="noindex">
 <link rel="stylesheet" href="gridicons.css">
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -88,7 +88,7 @@ h4 {
 	display: block;
 	padding: 8px 0;
 }
-#glyph .gridicon {
+#glyph .gridicons {
 	font-size: 256px;
 	width: 256px;
 	height: 256px;
@@ -169,7 +169,7 @@ body.searching #iconlist span.update:after, body.searching #iconlist span.new:af
 	outline: none;
 }
 
-.gridicon:after {
+.gridicons:after {
 	content: attr(alt);
 	display: block;
 	font-size: 9px;
@@ -177,7 +177,7 @@ body.searching #iconlist span.update:after, body.searching #iconlist span.new:af
 	text-align: center;
 }
 
-.hideUACs.gridicon:after {
+.hideUACs.gridicons:after {
 	content: none;
 }
 
@@ -196,7 +196,7 @@ body.searching #iconlist span.update:after, body.searching #iconlist span.new:af
 	#glyph .info {
 		width: 30%;
 	}
-	#glyph .gridicon {
+	#glyph .gridicons {
 		width: 70%;
 	}
 
@@ -234,10 +234,6 @@ function pickRandomIcon() {
 
 function displayGlyph( attr, cssclass ) {
 
-	// set permalink
-	var permalink = cssclass.split(' gridicon-')[1];
-	window.location.hash = permalink;
-
 	// css copy string
 	csstext = "content: \'\\" + attr + "';";
 
@@ -272,15 +268,8 @@ function sortUnicode ( a, b ) {
 
 jQuery(document).ready(function() {
 
-	// pick random icon if no permalink, otherwise go to permalink
-	if ( window.location.hash ) {
-		permalink = "gridicon-" + window.location.hash.split('#')[1];
-		attr = jQuery( '.' + permalink ).attr( 'alt' );
-		cssclass = jQuery( '.' + permalink ).attr('class');
-		displayGlyph( attr, cssclass );
-	} else {
-		pickRandomIcon();
-	}
+	// pick random icon
+	pickRandomIcon();
 
 	jQuery( '#iconlist div' ).click(function() {
 
@@ -313,7 +302,7 @@ jQuery(document).ready(function() {
 });
 
 function toggleUACs() {
-	jQuery('.gridicon').toggleClass('hideUACs');
+	jQuery('.gridicons').toggleClass('hideUACs');
 }
 </script>
 </head>
@@ -325,7 +314,7 @@ function toggleUACs() {
 	<div id="primary">
 		<div id="content">
 
-			<h2>Gridicons</h2>
+			<h2><%= font_name %></h2>
 
 			<input placeholder="Filter..." name="search" id="search" type="text" value="" maxlength="150" />
 
@@ -333,7 +322,7 @@ function toggleUACs() {
 			</div>
 			
 			<div class="description">
-				<p><strong><em>Please do not use Gridicons outside of their intended 24px font-size or 2x multiples thereof (48px, 96px). Even fonts look fuzzy outside of their pixel grid.</em></strong></p>
+				<p><strong><em>Please do not use <%= font_name %> outside of their intended 24px font-size or 2x multiples thereof (48px, 96px). Even fonts look fuzzy outside of their pixel grid.</em></strong></p>
 			</div>
 			
 		</div>
@@ -343,79 +332,10 @@ function toggleUACs() {
 		<div id="iconlist">
 		
 			<!-- note, the text inside the HTML elements is purely for the seach -->
-			
-			<div alt="f100" class="gridicon gridicon-arrow">-arrow</div>
-			
-			<div alt="f109" class="gridicon gridicon-attachment">-attachment</div>
-			
-			<div alt="f10a" class="gridicon gridicon-backspace">-backspace</div>
-			
-			<div alt="f10b" class="gridicon gridicon-block">-block</div>
-			
-			<div alt="f10c" class="gridicon gridicon-bold">-bold</div>
-			
-			<div alt="f10d" class="gridicon gridicon-bookmark">-bookmark</div>
-			
-			<div alt="f10e" class="gridicon gridicon-bookmarked">-bookmarked</div>
-			
-			<div alt="f10f" class="gridicon gridicon-calendar">-calendar</div>
-			
-			<div alt="f110" class="gridicon gridicon-camera">-camera</div>
-			
-			<div alt="f111" class="gridicon gridicon-cell">-cell</div>
-			
-			<div alt="f101" class="gridicon gridicon-checkmark">-checkmark</div>
-			
-			<div alt="f11d" class="gridicon gridicon-cloud">-cloud</div>
-			
-			<div alt="f11e" class="gridicon gridicon-cloud-download">-cloud-download</div>
-			
-			<div alt="f11f" class="gridicon gridicon-cloud-empty">-cloud-empty</div>
-			
-			<div alt="f124" class="gridicon gridicon-cloud-upload">-cloud-upload</div>
-			
-			<div alt="f102" class="gridicon gridicon-cross">-cross</div>
-			
-			<div alt="f112" class="gridicon gridicon-edit">-edit</div>
-			
-			<div alt="f103" class="gridicon gridicon-ellipsis">-ellipsis</div>
-			
-			<div alt="f113" class="gridicon gridicon-flag">-flag</div>
-			
-			<div alt="f114" class="gridicon gridicon-help">-help</div>
-			
-			<div alt="f115" class="gridicon gridicon-italic">-italic</div>
-			
-			<div alt="f116" class="gridicon gridicon-link">-link</div>
-			
-			<div alt="f120" class="gridicon gridicon-mail">-mail</div>
-			
-			<div alt="f104" class="gridicon gridicon-menu">-menu</div>
-			
-			<div alt="f117" class="gridicon gridicon-microphone">-microphone</div>
-			
-			<div alt="f105" class="gridicon gridicon-minus">-minus</div>
-			
-			<div alt="f106" class="gridicon gridicon-minus-small">-minus-small</div>
-			
-			<div alt="f118" class="gridicon gridicon-note">-note</div>
-			
-			<div alt="f107" class="gridicon gridicon-plus">-plus</div>
-			
-			<div alt="f108" class="gridicon gridicon-plus-small">-plus-small</div>
-			
-			<div alt="f121" class="gridicon gridicon-redo">-redo</div>
-			
-			<div alt="f119" class="gridicon gridicon-spam">-spam</div>
-			
-			<div alt="f11a" class="gridicon gridicon-tablet">-tablet</div>
-			
-			<div alt="f11b" class="gridicon gridicon-tag">-tag</div>
-			
-			<div alt="f11c" class="gridicon gridicon-textcolor">-textcolor</div>
-			
-			<div alt="f123" class="gridicon gridicon-undo">-undo</div>
-			
+			<% @glyphs.each do |name, value|
+			selector = @options[:css_selector].sub('{{glyph}}', name.to_s) %>
+			<div alt="<%= value[:codepoint].to_s(16) %>" class="gridicons <%= selector[1..-1] %>"><%= selector[9..100] %></div>
+			<% end %>
 
 		</div>
 		

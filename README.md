@@ -58,6 +58,12 @@ Currently, icons are added to a big `gridicons.ai` sprite before baked and deplo
 
 This process is open to suggestions.
 
+## Icon Font
+
+The icon font is back on, per decision to get the ball rolling, July 15th. Please use the SVG React component whenever possible. Only use the icon font if there are no other options. 
+
+The icon font is built using stock fontcustom (install from fontcustom.com). To bake, navigate to the `icon-font` directory in the terminal and type `fontcustom compile`.
+
 
 ## Committers
 

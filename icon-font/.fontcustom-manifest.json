@@ -1,0 +1,471 @@
+{
+  "checksum": {
+    "previous": "76685f3926f750354a4545e6ad985a6bc3399359a87a4148e01a890663dddf91",
+    "current": "76685f3926f750354a4545e6ad985a6bc3399359a87a4148e01a890663dddf91"
+  },
+  "fonts": [
+    "fontcustom-webfont/Gridicons.ttf",
+    "fontcustom-webfont/Gridicons.svg",
+    "fontcustom-webfont/Gridicons.woff",
+    "fontcustom-webfont/Gridicons.eot"
+  ],
+  "glyphs": {
+    "gridicons-add": {
+      "codepoint": 61696,
+      "source": "../svg/gridicons-add.svg"
+    },
+    "gridicons-add-outline": {
+      "codepoint": 61697,
+      "source": "../svg/gridicons-add-outline.svg"
+    },
+    "gridicons-align-center": {
+      "codepoint": 61698,
+      "source": "../svg/gridicons-align-center.svg"
+    },
+    "gridicons-align-image-center": {
+      "codepoint": 61699,
+      "source": "../svg/gridicons-align-image-center.svg"
+    },
+    "gridicons-align-image-left": {
+      "codepoint": 61700,
+      "source": "../svg/gridicons-align-image-left.svg"
+    },
+    "gridicons-align-image-right": {
+      "codepoint": 61701,
+      "source": "../svg/gridicons-align-image-right.svg"
+    },
+    "gridicons-align-left": {
+      "codepoint": 61702,
+      "source": "../svg/gridicons-align-left.svg"
+    },
+    "gridicons-align-right": {
+      "codepoint": 61703,
+      "source": "../svg/gridicons-align-right.svg"
+    },
+    "gridicons-arrow-down": {
+      "codepoint": 61704,
+      "source": "../svg/gridicons-arrow-down.svg"
+    },
+    "gridicons-arrow-left": {
+      "codepoint": 61705,
+      "source": "../svg/gridicons-arrow-left.svg"
+    },
+    "gridicons-arrow-right": {
+      "codepoint": 61706,
+      "source": "../svg/gridicons-arrow-right.svg"
+    },
+    "gridicons-arrow-up": {
+      "codepoint": 61707,
+      "source": "../svg/gridicons-arrow-up.svg"
+    },
+    "gridicons-attachment": {
+      "codepoint": 61708,
+      "source": "../svg/gridicons-attachment.svg"
+    },
+    "gridicons-backspace": {
+      "codepoint": 61709,
+      "source": "../svg/gridicons-backspace.svg"
+    },
+    "gridicons-bell": {
+      "codepoint": 61710,
+      "source": "../svg/gridicons-bell.svg"
+    },
+    "gridicons-block": {
+      "codepoint": 61711,
+      "source": "../svg/gridicons-block.svg"
+    },
+    "gridicons-bold": {
+      "codepoint": 61712,
+      "source": "../svg/gridicons-bold.svg"
+    },
+    "gridicons-bookmark": {
+      "codepoint": 61713,
+      "source": "../svg/gridicons-bookmark.svg"
+    },
+    "gridicons-bookmark-outline": {
+      "codepoint": 61714,
+      "source": "../svg/gridicons-bookmark-outline.svg"
+    },
+    "gridicons-calendar": {
+      "codepoint": 61715,
+      "source": "../svg/gridicons-calendar.svg"
+    },
+    "gridicons-camera": {
+      "codepoint": 61716,
+      "source": "../svg/gridicons-camera.svg"
+    },
+    "gridicons-cart": {
+      "codepoint": 61717,
+      "source": "../svg/gridicons-cart.svg"
+    },
+    "gridicons-checkmark": {
+      "codepoint": 61718,
+      "source": "../svg/gridicons-checkmark.svg"
+    },
+    "gridicons-chevron-down": {
+      "codepoint": 61719,
+      "source": "../svg/gridicons-chevron-down.svg"
+    },
+    "gridicons-chevron-left": {
+      "codepoint": 61720,
+      "source": "../svg/gridicons-chevron-left.svg"
+    },
+    "gridicons-chevron-right": {
+      "codepoint": 61721,
+      "source": "../svg/gridicons-chevron-right.svg"
+    },
+    "gridicons-chevron-up": {
+      "codepoint": 61722,
+      "source": "../svg/gridicons-chevron-up.svg"
+    },
+    "gridicons-clipboard": {
+      "codepoint": 61723,
+      "source": "../svg/gridicons-clipboard.svg"
+    },
+    "gridicons-cloud": {
+      "codepoint": 61724,
+      "source": "../svg/gridicons-cloud.svg"
+    },
+    "gridicons-cloud-download": {
+      "codepoint": 61725,
+      "source": "../svg/gridicons-cloud-download.svg"
+    },
+    "gridicons-cloud-outline": {
+      "codepoint": 61726,
+      "source": "../svg/gridicons-cloud-outline.svg"
+    },
+    "gridicons-cloud-upload": {
+      "codepoint": 61727,
+      "source": "../svg/gridicons-cloud-upload.svg"
+    },
+    "gridicons-code": {
+      "codepoint": 61728,
+      "source": "../svg/gridicons-code.svg"
+    },
+    "gridicons-cog": {
+      "codepoint": 61729,
+      "source": "../svg/gridicons-cog.svg"
+    },
+    "gridicons-comment": {
+      "codepoint": 61730,
+      "source": "../svg/gridicons-comment.svg"
+    },
+    "gridicons-create": {
+      "codepoint": 61731,
+      "source": "../svg/gridicons-create.svg"
+    },
+    "gridicons-cross": {
+      "codepoint": 61732,
+      "source": "../svg/gridicons-cross.svg"
+    },
+    "gridicons-cross-small": {
+      "codepoint": 61733,
+      "source": "../svg/gridicons-cross-small.svg"
+    },
+    "gridicons-dropdown": {
+      "codepoint": 61734,
+      "source": "../svg/gridicons-dropdown.svg"
+    },
+    "gridicons-ellipsis": {
+      "codepoint": 61735,
+      "source": "../svg/gridicons-ellipsis.svg"
+    },
+    "gridicons-external": {
+      "codepoint": 61736,
+      "source": "../svg/gridicons-external.svg"
+    },
+    "gridicons-flag": {
+      "codepoint": 61737,
+      "source": "../svg/gridicons-flag.svg"
+    },
+    "gridicons-folder": {
+      "codepoint": 61738,
+      "source": "../svg/gridicons-folder.svg"
+    },
+    "gridicons-globe": {
+      "codepoint": 61739,
+      "source": "../svg/gridicons-globe.svg"
+    },
+    "gridicons-heading": {
+      "codepoint": 61740,
+      "source": "../svg/gridicons-heading.svg"
+    },
+    "gridicons-heart": {
+      "codepoint": 61741,
+      "source": "../svg/gridicons-heart.svg"
+    },
+    "gridicons-heart-outline": {
+      "codepoint": 61742,
+      "source": "../svg/gridicons-heart-outline.svg"
+    },
+    "gridicons-help": {
+      "codepoint": 61743,
+      "source": "../svg/gridicons-help.svg"
+    },
+    "gridicons-help-outline": {
+      "codepoint": 61744,
+      "source": "../svg/gridicons-help-outline.svg"
+    },
+    "gridicons-house": {
+      "codepoint": 61745,
+      "source": "../svg/gridicons-house.svg"
+    },
+    "gridicons-image": {
+      "codepoint": 61746,
+      "source": "../svg/gridicons-image.svg"
+    },
+    "gridicons-image-multiple": {
+      "codepoint": 61747,
+      "source": "../svg/gridicons-image-multiple.svg"
+    },
+    "gridicons-info": {
+      "codepoint": 61748,
+      "source": "../svg/gridicons-info.svg"
+    },
+    "gridicons-info-outline": {
+      "codepoint": 61749,
+      "source": "../svg/gridicons-info-outline.svg"
+    },
+    "gridicons-ink": {
+      "codepoint": 61750,
+      "source": "../svg/gridicons-ink.svg"
+    },
+    "gridicons-italic": {
+      "codepoint": 61751,
+      "source": "../svg/gridicons-italic.svg"
+    },
+    "gridicons-layout": {
+      "codepoint": 61752,
+      "source": "../svg/gridicons-layout.svg"
+    },
+    "gridicons-link": {
+      "codepoint": 61753,
+      "source": "../svg/gridicons-link.svg"
+    },
+    "gridicons-link-break": {
+      "codepoint": 61754,
+      "source": "../svg/gridicons-link-break.svg"
+    },
+    "gridicons-list-checkmark": {
+      "codepoint": 61755,
+      "source": "../svg/gridicons-list-checkmark.svg"
+    },
+    "gridicons-list-ordered": {
+      "codepoint": 61756,
+      "source": "../svg/gridicons-list-ordered.svg"
+    },
+    "gridicons-list-unordered": {
+      "codepoint": 61757,
+      "source": "../svg/gridicons-list-unordered.svg"
+    },
+    "gridicons-location": {
+      "codepoint": 61758,
+      "source": "../svg/gridicons-location.svg"
+    },
+    "gridicons-lock": {
+      "codepoint": 61759,
+      "source": "../svg/gridicons-lock.svg"
+    },
+    "gridicons-mail": {
+      "codepoint": 61760,
+      "source": "../svg/gridicons-mail.svg"
+    },
+    "gridicons-menu": {
+      "codepoint": 61761,
+      "source": "../svg/gridicons-menu.svg"
+    },
+    "gridicons-microphone": {
+      "codepoint": 61762,
+      "source": "../svg/gridicons-microphone.svg"
+    },
+    "gridicons-minus": {
+      "codepoint": 61763,
+      "source": "../svg/gridicons-minus.svg"
+    },
+    "gridicons-minus-small": {
+      "codepoint": 61764,
+      "source": "../svg/gridicons-minus-small.svg"
+    },
+    "gridicons-my-sites": {
+      "codepoint": 61765,
+      "source": "../svg/gridicons-my-sites.svg"
+    },
+    "gridicons-not-visible": {
+      "codepoint": 61766,
+      "source": "../svg/gridicons-not-visible.svg"
+    },
+    "gridicons-notice": {
+      "codepoint": 61767,
+      "source": "../svg/gridicons-notice.svg"
+    },
+    "gridicons-notice-outline": {
+      "codepoint": 61768,
+      "source": "../svg/gridicons-notice-outline.svg"
+    },
+    "gridicons-pages": {
+      "codepoint": 61769,
+      "source": "../svg/gridicons-pages.svg"
+    },
+    "gridicons-pencil": {
+      "codepoint": 61770,
+      "source": "../svg/gridicons-pencil.svg"
+    },
+    "gridicons-phone": {
+      "codepoint": 61771,
+      "source": "../svg/gridicons-phone.svg"
+    },
+    "gridicons-plus": {
+      "codepoint": 61772,
+      "source": "../svg/gridicons-plus.svg"
+    },
+    "gridicons-plus-small": {
+      "codepoint": 61773,
+      "source": "../svg/gridicons-plus-small.svg"
+    },
+    "gridicons-posts": {
+      "codepoint": 61774,
+      "source": "../svg/gridicons-posts.svg"
+    },
+    "gridicons-quote": {
+      "codepoint": 61775,
+      "source": "../svg/gridicons-quote.svg"
+    },
+    "gridicons-reader": {
+      "codepoint": 61776,
+      "source": "../svg/gridicons-reader.svg"
+    },
+    "gridicons-reblog": {
+      "codepoint": 61777,
+      "source": "../svg/gridicons-reblog.svg"
+    },
+    "gridicons-redo": {
+      "codepoint": 61778,
+      "source": "../svg/gridicons-redo.svg"
+    },
+    "gridicons-refresh": {
+      "codepoint": 61779,
+      "source": "../svg/gridicons-refresh.svg"
+    },
+    "gridicons-reply": {
+      "codepoint": 61780,
+      "source": "../svg/gridicons-reply.svg"
+    },
+    "gridicons-search": {
+      "codepoint": 61781,
+      "source": "../svg/gridicons-search.svg"
+    },
+    "gridicons-share-ios": {
+      "codepoint": 61782,
+      "source": "../svg/gridicons-share-ios.svg"
+    },
+    "gridicons-sign-out": {
+      "codepoint": 61783,
+      "source": "../svg/gridicons-sign-out.svg"
+    },
+    "gridicons-spam": {
+      "codepoint": 61784,
+      "source": "../svg/gridicons-spam.svg"
+    },
+    "gridicons-star": {
+      "codepoint": 61785,
+      "source": "../svg/gridicons-star.svg"
+    },
+    "gridicons-star-outline": {
+      "codepoint": 61786,
+      "source": "../svg/gridicons-star-outline.svg"
+    },
+    "gridicons-stats": {
+      "codepoint": 61787,
+      "source": "../svg/gridicons-stats.svg"
+    },
+    "gridicons-stats-alt": {
+      "codepoint": 61788,
+      "source": "../svg/gridicons-stats-alt.svg"
+    },
+    "gridicons-strikethrough": {
+      "codepoint": 61789,
+      "source": "../svg/gridicons-strikethrough.svg"
+    },
+    "gridicons-sync": {
+      "codepoint": 61790,
+      "source": "../svg/gridicons-sync.svg"
+    },
+    "gridicons-tablet": {
+      "codepoint": 61791,
+      "source": "../svg/gridicons-tablet.svg"
+    },
+    "gridicons-tag": {
+      "codepoint": 61792,
+      "source": "../svg/gridicons-tag.svg"
+    },
+    "gridicons-time": {
+      "codepoint": 61793,
+      "source": "../svg/gridicons-time.svg"
+    },
+    "gridicons-trash": {
+      "codepoint": 61794,
+      "source": "../svg/gridicons-trash.svg"
+    },
+    "gridicons-types": {
+      "codepoint": 61795,
+      "source": "../svg/gridicons-types.svg"
+    },
+    "gridicons-undo": {
+      "codepoint": 61796,
+      "source": "../svg/gridicons-undo.svg"
+    },
+    "gridicons-user": {
+      "codepoint": 61797,
+      "source": "../svg/gridicons-user.svg"
+    },
+    "gridicons-user-circle": {
+      "codepoint": 61798,
+      "source": "../svg/gridicons-user-circle.svg"
+    },
+    "gridicons-video": {
+      "codepoint": 61799,
+      "source": "../svg/gridicons-video.svg"
+    },
+    "gridicons-video-camera": {
+      "codepoint": 61800,
+      "source": "../svg/gridicons-video-camera.svg"
+    },
+    "gridicons-visible": {
+      "codepoint": 61801,
+      "source": "../svg/gridicons-visible.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "base64": true,
+    "config": "fontcustom.yml",
+    "css_selector": ".{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "Gridicons",
+    "force": false,
+    "input": {
+      "templates": "fontcustom-templates",
+      "vectors": "../svg"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "fontcustom-webfont",
+      "fonts": "fontcustom-webfont",
+      "preview": "fontcustom-webfont"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "index.html",
+      "gridicons.css"
+    ]
+  },
+  "templates": [
+    "fontcustom-webfont/index.html",
+    "fontcustom-webfont/gridicons.css"
+  ]
+}

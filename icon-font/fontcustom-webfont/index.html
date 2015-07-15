@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gridicons</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="gridicons.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<style type="text/css">
+body {
+	font-family: sans-serif;
+	line-height: 1.5;
+	margin: 0;
+	color: #2f2d2c;
+	background: #fff;
+	font-size: 11pt;
+}
+a {
+	color: #2f2d2c;
+}
+h4 {
+	margin-top: 40px;
+}
+
+#iconlist {
+	clear: both;
+	margin-bottom: 20px;
+}
+#iconlist div {
+	padding: 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 48px;
+	line-height: 1;
+	position: relative;
+	width: 48px;
+	height: 48px;
+}
+#iconlist div:before {
+	margin-right: 20px;
+}
+#iconlist div:hover {
+	cursor: pointer;
+	color: #77cad3;
+}
+#primary {
+	background: #77cad3;
+	overflow: hidden;
+}
+#content {
+	position: relative;
+	color: #fff;
+	max-width: 980px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+#icons {
+	background: #fbfbfb;
+}
+#icons #iconlist {
+	max-width: 980px;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	padding: 20px 0;
+	margin: 0 auto;
+}
+#glyph {
+	float: left;
+	width: 50%;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	padding: 20px 0;
+}
+#glyph .info {
+	float: right;
+	width: 180px;
+	padding: 36px 0 0 0;
+}
+#glyph .info a {
+	color: #2f2d2c;
+	display: block;
+	padding: 8px 0 8px 15px;
+}
+#glyph .info strong {
+	font-weight: normal;
+	display: block;
+	padding: 8px 0;
+}
+#glyph .gridicons {
+	font-size: 256px;
+	width: 256px;
+	height: 256px;
+	overflow: visible;
+	float: left;
+}
+.description {
+	margin-top: 50px;
+	width: 48%;
+	float: right;
+	padding-left: 40px;
+	margin-left: 2%;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	background-size: 4px 4px;
+}
+#primary h2 {
+	color: white;
+	margin: 0 auto;
+	padding: 22px 0 0 20px;
+	max-width: 980px;
+}
+#footer {
+	clear: both;
+	max-width: 980px;
+	margin: 50px auto;
+	font-size: 9pt;
+}
+pre, code {
+	font: 14px/1.5 monospace;
+}
+.code {
+	display: block;
+	font: 14px/1.5 monospace;
+	width: 600px;
+	white-space: pre;
+	border: 1px solid #ccc;
+	padding: 10px;
+	overflow: auto;
+	min-height: 110px;
+}
+#iconlist .new, #iconlist .update {
+	position: relative;
+}
+#iconlist .new:after, #iconlist .update:after {
+	color: #ea834d;
+	display: block;
+	content: "NEW";
+	font: bold 8px/1 sans-serif;
+	position: absolute;
+	top: 0px;
+	text-align: center;
+	z-index: 10;
+	width: 100%;
+}
+#iconlist .update:after {
+	content: "UPDATE";
+	left: -1px;
+}
+body.searching #iconlist span.update:after, body.searching #iconlist span.new:after {
+	display: none;
+}
+
+#search {
+	border: 0;
+	border-radius: 2px;
+	position: absolute;
+	right: 20px;
+	font: 11pt sans-serif;
+	padding: 10px;
+	top: 20px;
+	background: rgba(255,255,255,.8);
+}
+#search:focus {
+	background: #fff;
+	outline: none;
+}
+
+.gridicons:after {
+	content: attr(alt);
+	display: block;
+	font-size: 9px;
+	color: #999;
+	text-align: center;
+}
+
+.hideUACs.gridicons:after {
+	content: none;
+}
+
+
+/**
+ * Responsive
+ */
+
+@media only screen and ( max-width: 900px ) {
+
+	#glyph {
+		float: none;
+		width: 100%;
+	}
+	
+	#glyph .info {
+		width: 30%;
+	}
+	#glyph .gridicons {
+		width: 70%;
+	}
+
+	.description {
+		clear: both;
+		width: 100%;
+		background: none;
+		padding-left: 0;
+		float: none;
+	}
+
+}
+</style>
+<script type="text/javascript">
+function copyToClipboard ( text, copyMode ) {
+	if ( copyMode == "css" ) {
+		window.prompt( "Copy this, then paste in your CSS :before selector.", text );
+	} else if ( copyMode == "html" ) {
+		window.prompt( "Copy this, then paste in your HTML.", text );
+	} else {
+		window.prompt( "Copy this, then paste in your Photoshop textfield.", text );
+	}
+}
+
+function pickRandomIcon() {
+	var divs = jQuery("#iconlist div").get().sort(function(){
+			return Math.round(Math.random())-0.5;
+		}).slice(0,1);
+
+	attr = jQuery(divs).attr('alt');
+	cssclass = jQuery(divs).attr('class');
+	displayGlyph( attr, cssclass );
+
+}
+
+function displayGlyph( attr, cssclass ) {
+
+	// css copy string
+	csstext = "content: \'\\" + attr + "';";
+
+	// html copy string
+	htmltext = '<span class="' + cssclass + '"></span>';
+
+	// glyph copy string
+	glyphtemp = "&#x" + attr + ";";
+	jQuery('#temp').html( glyphtemp );
+	glyphtext = jQuery('#temp').text();
+
+	// final output
+	output = '<div class="' + cssclass + '"></div>'
+	+ '<div class="info">'
+		+ '<strong>&larr; ' + cssclass.split( ' ' )[1] + '</strong>'
+		+ '<a href="javascript:copyToClipboard(csstext, \'css\')">Copy CSS</a>'
+		+ '<a href="javascript:copyToClipboard(htmltext, \'html\')">Copy HTML</a>'
+		+ '<a href="javascript:copyToClipboard(glyphtext)">Copy Glyph</a>'
+	+ '</div>';
+
+	jQuery( '#glyph' ).html( output );
+
+}
+
+function sortUnicode ( a, b ) {
+	var numberA = $(a).attr('alt').replace('f', '');
+	var numberB = $(b).attr('alt').replace('f', '');
+	var contentA =parseInt( numberA, 16 );
+	var contentB =parseInt( numberB, 16 );
+	return (contentA < contentB) ? -1 : (contentA > contentB) ? 1 : 0;
+}
+
+jQuery(document).ready(function() {
+
+	// pick random icon
+	pickRandomIcon();
+
+	jQuery( '#iconlist div' ).click(function() {
+
+		attr = jQuery( this ).attr( 'alt' );
+		cssclass = jQuery( this ).attr( 'class' );
+
+		displayGlyph( attr, cssclass );
+
+	});
+
+	var $rows = jQuery('#iconlist div');
+	jQuery('#search').keyup(function() {
+	
+		// remove update text when using search
+		jQuery('body').addClass('searching');
+	
+	    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+	
+	    $rows.show().filter(function() {
+	        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+	        return !~text.indexOf(val);
+	    }).hide();
+	});
+	
+	jQuery('input#search').focus();
+
+	// sort based on number
+	jQuery('#iconlist div').sort( sortUnicode ).appendTo('#iconlist');
+
+});
+
+function toggleUACs() {
+	jQuery('.gridicons').toggleClass('hideUACs');
+}
+</script>
+</head>
+
+<body>
+
+<div id="main">
+
+	<div id="primary">
+		<div id="content">
+
+			<h2>Gridicons</h2>
+
+			<input placeholder="Filter..." name="search" id="search" type="text" value="" maxlength="150" />
+
+			<div id="glyph">
+			</div>
+			
+			<div class="description">
+				<p><strong><em>Please do not use Gridicons outside of their intended 24px font-size or 2x multiples thereof (48px, 96px). Even fonts look fuzzy outside of their pixel grid.</em></strong></p>
+			</div>
+			
+		</div>
+	</div>
+
+	<div id="icons">
+		<div id="iconlist">
+		
+			<!-- note, the text inside the HTML elements is purely for the seach -->
+			
+			<div alt="f100" class="gridicons gridicons-add">s-add</div>
+			
+			<div alt="f101" class="gridicons gridicons-add-outline">s-add-outline</div>
+			
+			<div alt="f102" class="gridicons gridicons-align-center">s-align-center</div>
+			
+			<div alt="f103" class="gridicons gridicons-align-image-center">s-align-image-center</div>
+			
+			<div alt="f104" class="gridicons gridicons-align-image-left">s-align-image-left</div>
+			
+			<div alt="f105" class="gridicons gridicons-align-image-right">s-align-image-right</div>
+			
+			<div alt="f106" class="gridicons gridicons-align-left">s-align-left</div>
+			
+			<div alt="f107" class="gridicons gridicons-align-right">s-align-right</div>
+			
+			<div alt="f108" class="gridicons gridicons-arrow-down">s-arrow-down</div>
+			
+			<div alt="f109" class="gridicons gridicons-arrow-left">s-arrow-left</div>
+			
+			<div alt="f10a" class="gridicons gridicons-arrow-right">s-arrow-right</div>
+			
+			<div alt="f10b" class="gridicons gridicons-arrow-up">s-arrow-up</div>
+			
+			<div alt="f10c" class="gridicons gridicons-attachment">s-attachment</div>
+			
+			<div alt="f10d" class="gridicons gridicons-backspace">s-backspace</div>
+			
+			<div alt="f10e" class="gridicons gridicons-bell">s-bell</div>
+			
+			<div alt="f10f" class="gridicons gridicons-block">s-block</div>
+			
+			<div alt="f110" class="gridicons gridicons-bold">s-bold</div>
+			
+			<div alt="f111" class="gridicons gridicons-bookmark">s-bookmark</div>
+			
+			<div alt="f112" class="gridicons gridicons-bookmark-outline">s-bookmark-outline</div>
+			
+			<div alt="f113" class="gridicons gridicons-calendar">s-calendar</div>
+			
+			<div alt="f114" class="gridicons gridicons-camera">s-camera</div>
+			
+			<div alt="f115" class="gridicons gridicons-cart">s-cart</div>
+			
+			<div alt="f116" class="gridicons gridicons-checkmark">s-checkmark</div>
+			
+			<div alt="f117" class="gridicons gridicons-chevron-down">s-chevron-down</div>
+			
+			<div alt="f118" class="gridicons gridicons-chevron-left">s-chevron-left</div>
+			
+			<div alt="f119" class="gridicons gridicons-chevron-right">s-chevron-right</div>
+			
+			<div alt="f11a" class="gridicons gridicons-chevron-up">s-chevron-up</div>
+			
+			<div alt="f11b" class="gridicons gridicons-clipboard">s-clipboard</div>
+			
+			<div alt="f11c" class="gridicons gridicons-cloud">s-cloud</div>
+			
+			<div alt="f11d" class="gridicons gridicons-cloud-download">s-cloud-download</div>
+			
+			<div alt="f11e" class="gridicons gridicons-cloud-outline">s-cloud-outline</div>
+			
+			<div alt="f11f" class="gridicons gridicons-cloud-upload">s-cloud-upload</div>
+			
+			<div alt="f120" class="gridicons gridicons-code">s-code</div>
+			
+			<div alt="f121" class="gridicons gridicons-cog">s-cog</div>
+			
+			<div alt="f122" class="gridicons gridicons-comment">s-comment</div>
+			
+			<div alt="f123" class="gridicons gridicons-create">s-create</div>
+			
+			<div alt="f124" class="gridicons gridicons-cross">s-cross</div>
+			
+			<div alt="f125" class="gridicons gridicons-cross-small">s-cross-small</div>
+			
+			<div alt="f126" class="gridicons gridicons-dropdown">s-dropdown</div>
+			
+			<div alt="f127" class="gridicons gridicons-ellipsis">s-ellipsis</div>
+			
+			<div alt="f128" class="gridicons gridicons-external">s-external</div>
+			
+			<div alt="f129" class="gridicons gridicons-flag">s-flag</div>
+			
+			<div alt="f12a" class="gridicons gridicons-folder">s-folder</div>
+			
+			<div alt="f12b" class="gridicons gridicons-globe">s-globe</div>
+			
+			<div alt="f12c" class="gridicons gridicons-heading">s-heading</div>
+			
+			<div alt="f12d" class="gridicons gridicons-heart">s-heart</div>
+			
+			<div alt="f12e" class="gridicons gridicons-heart-outline">s-heart-outline</div>
+			
+			<div alt="f12f" class="gridicons gridicons-help">s-help</div>
+			
+			<div alt="f130" class="gridicons gridicons-help-outline">s-help-outline</div>
+			
+			<div alt="f131" class="gridicons gridicons-house">s-house</div>
+			
+			<div alt="f132" class="gridicons gridicons-image">s-image</div>
+			
+			<div alt="f133" class="gridicons gridicons-image-multiple">s-image-multiple</div>
+			
+			<div alt="f134" class="gridicons gridicons-info">s-info</div>
+			
+			<div alt="f135" class="gridicons gridicons-info-outline">s-info-outline</div>
+			
+			<div alt="f136" class="gridicons gridicons-ink">s-ink</div>
+			
+			<div alt="f137" class="gridicons gridicons-italic">s-italic</div>
+			
+			<div alt="f138" class="gridicons gridicons-layout">s-layout</div>
+			
+			<div alt="f139" class="gridicons gridicons-link">s-link</div>
+			
+			<div alt="f13a" class="gridicons gridicons-link-break">s-link-break</div>
+			
+			<div alt="f13b" class="gridicons gridicons-list-checkmark">s-list-checkmark</div>
+			
+			<div alt="f13c" class="gridicons gridicons-list-ordered">s-list-ordered</div>
+			
+			<div alt="f13d" class="gridicons gridicons-list-unordered">s-list-unordered</div>
+			
+			<div alt="f13e" class="gridicons gridicons-location">s-location</div>
+			
+			<div alt="f13f" class="gridicons gridicons-lock">s-lock</div>
+			
+			<div alt="f140" class="gridicons gridicons-mail">s-mail</div>
+			
+			<div alt="f141" class="gridicons gridicons-menu">s-menu</div>
+			
+			<div alt="f142" class="gridicons gridicons-microphone">s-microphone</div>
+			
+			<div alt="f143" class="gridicons gridicons-minus">s-minus</div>
+			
+			<div alt="f144" class="gridicons gridicons-minus-small">s-minus-small</div>
+			
+			<div alt="f145" class="gridicons gridicons-my-sites">s-my-sites</div>
+			
+			<div alt="f146" class="gridicons gridicons-not-visible">s-not-visible</div>
+			
+			<div alt="f147" class="gridicons gridicons-notice">s-notice</div>
+			
+			<div alt="f148" class="gridicons gridicons-notice-outline">s-notice-outline</div>
+			
+			<div alt="f149" class="gridicons gridicons-pages">s-pages</div>
+			
+			<div alt="f14a" class="gridicons gridicons-pencil">s-pencil</div>
+			
+			<div alt="f14b" class="gridicons gridicons-phone">s-phone</div>
+			
+			<div alt="f14c" class="gridicons gridicons-plus">s-plus</div>
+			
+			<div alt="f14d" class="gridicons gridicons-plus-small">s-plus-small</div>
+			
+			<div alt="f14e" class="gridicons gridicons-posts">s-posts</div>
+			
+			<div alt="f14f" class="gridicons gridicons-quote">s-quote</div>
+			
+			<div alt="f150" class="gridicons gridicons-reader">s-reader</div>
+			
+			<div alt="f151" class="gridicons gridicons-reblog">s-reblog</div>
+			
+			<div alt="f152" class="gridicons gridicons-redo">s-redo</div>
+			
+			<div alt="f153" class="gridicons gridicons-refresh">s-refresh</div>
+			
+			<div alt="f154" class="gridicons gridicons-reply">s-reply</div>
+			
+			<div alt="f155" class="gridicons gridicons-search">s-search</div>
+			
+			<div alt="f156" class="gridicons gridicons-share-ios">s-share-ios</div>
+			
+			<div alt="f157" class="gridicons gridicons-sign-out">s-sign-out</div>
+			
+			<div alt="f158" class="gridicons gridicons-spam">s-spam</div>
+			
+			<div alt="f159" class="gridicons gridicons-star">s-star</div>
+			
+			<div alt="f15a" class="gridicons gridicons-star-outline">s-star-outline</div>
+			
+			<div alt="f15b" class="gridicons gridicons-stats">s-stats</div>
+			
+			<div alt="f15c" class="gridicons gridicons-stats-alt">s-stats-alt</div>
+			
+			<div alt="f15d" class="gridicons gridicons-strikethrough">s-strikethrough</div>
+			
+			<div alt="f15e" class="gridicons gridicons-sync">s-sync</div>
+			
+			<div alt="f15f" class="gridicons gridicons-tablet">s-tablet</div>
+			
+			<div alt="f160" class="gridicons gridicons-tag">s-tag</div>
+			
+			<div alt="f161" class="gridicons gridicons-time">s-time</div>
+			
+			<div alt="f162" class="gridicons gridicons-trash">s-trash</div>
+			
+			<div alt="f163" class="gridicons gridicons-types">s-types</div>
+			
+			<div alt="f164" class="gridicons gridicons-undo">s-undo</div>
+			
+			<div alt="f165" class="gridicons gridicons-user">s-user</div>
+			
+			<div alt="f166" class="gridicons gridicons-user-circle">s-user-circle</div>
+			
+			<div alt="f167" class="gridicons gridicons-video">s-video</div>
+			
+			<div alt="f168" class="gridicons gridicons-video-camera">s-video-camera</div>
+			
+			<div alt="f169" class="gridicons gridicons-visible">s-visible</div>
+			
+
+		</div>
+		
+		<div id="temp" style="display: none;"></div>
+		
+	</div>
+
+	<div id="footer">
+
+		<p id="footer">Copyright &copy; WordPress.com</p>
+	</div>
+
+</div>
+
+</body>
+</html>
