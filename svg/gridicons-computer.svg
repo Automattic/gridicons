@@ -2,9 +2,9 @@
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-<g id="phone">
-	<path d="M16,2H8C6.896,2,6,2.896,6,4v16c0,1.104,0.896,2,2,2h8c1.104,0,2-0.896,2-2V4C18,2.896,17.104,2,16,2z M13,21h-2v-1h2V21z
-		 M16,19H8V5h8V19z"/>
+<g id="computer">
+	<path d="M20,2H4C2.896,2,2,2.896,2,4v12c0,1.104,0.896,2,2,2h6l0,2H7v2h10v-2h-3l0-2h6c1.104,0,2-0.896,2-2V4
+		C22,2.896,21.104,2,20,2z M20,16H4V4h16V16z"/>
 </g>
 <g id="Layer_1">
 </g>
