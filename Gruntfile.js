@@ -125,27 +125,27 @@ module.exports = function(grunt) {
 			content;
 
 		// Start the React component
-		content =	"var React = require( 'react/addons' );\n\n" +
-					"var Gridicon = React.createClass({\n" +
+		content =	"/**\n" +
+					" * External dependencies\n" +
+					" */\n" +
+					"var React = require( 'react' );\n\n" +
+					"var Gridicon = React.createClass( {\n" +
+					"	getDefaultProps: function() {\n" +
+					"		return {\n" +
+					"			size: 24\n" +
+					"		};\n" +
+					"	},\n\n" +
 					"	propTypes: {\n" +
-					"		size: React.PropTypes.number,\n" +
 					"		icon: React.PropTypes.string.isRequired,\n" +
-					"		className: React.PropTypes.string,\n" +
+					"		size: React.PropTypes.number\n" +
 					"	},\n\n" +
 					"	render: function() {\n" +
-					"		var size = '24',\n" +
-					"			icon = this.props.icon,\n" +
-					'			classNames = [ "gridicon" ],\n' +
+					"		var icon = this.props.icon,\n" +
+					"			iconClass = 'gridicon ',\n" +
 					"			svg;\n\n" +
-					"		if ( this.props.size ) {\n" +
-					"			size = this.props.size;\n" +
-					"		}\n\n" +
-					"		if ( this.props.className ) {\n" +
-					"			classNames.push( this.props.className );\n" +
-					"		}\n" +
 					"		switch ( icon ) {\n" +
 					"			default:\n" +
-					"				svg = <svg height={ size } width={ size } />;\n" +
+					"				svg = <svg height={ this.props.size } width={ this.props.size } />;\n" +
 					"				break;\n";
 
 		// Create a switch() case for each svg file
@@ -161,14 +161,13 @@ module.exports = function(grunt) {
 
 			// Add className, height, and width to the svg element
 			fileContent = fileContent.slice( 0, 4 ) +
-						' className={ classNames.join( " " ) } height={ size } width={ size }' +
+						' className={ iconClass } height={ this.props.size } width={ this.props.size }' +
 						fileContent.slice( 4, -6 ) +
-						'{ this.props.children }' +
 						fileContent.slice( -6 );
 
 			// Output the case for each icon
 			var iconComponent = "			case '" + name + "':\n" +
-								'				classNames.push( "' + name + '" );\n' +
+								"				iconClass += '" + name + "';\n" +
 								"				svg = " + fileContent + ";\n" +
 								"				break;\n";
 
@@ -182,8 +181,8 @@ module.exports = function(grunt) {
 					'} );\n\n' +
 					'module.exports = Gridicon;\n';
 
-		// Write the React component to gridicon.jsx
-		grunt.file.write( 'react/gridicon.jsx', content );
+		// Write the React component to gridicon/index.jsx
+		grunt.file.write( 'react/gridicon/index.jsx', content );
 	});
 
 	// Default task(s).
