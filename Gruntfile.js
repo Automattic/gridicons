@@ -122,7 +122,7 @@ module.exports = function(grunt) {
 	// Output React Component
 	grunt.registerTask( 'svgreact', 'Output a react component for SVGs', function() {
 		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] ),
-			content;
+			content, designContent;
 
 		// Start the React component
 		content =	"/**\n" +
@@ -181,8 +181,43 @@ module.exports = function(grunt) {
 					'} );\n\n' +
 					'module.exports = Gridicon;\n';
 
+		// Start design/docs component
+		designContent =	"/**\n" +
+					" * External dependencies\n" +
+					" */\n" +
+					"var React = require( 'react' );\n\n" +
+					"/**\n" +
+					" * Internal dependencies\n" +
+					" */\n" +
+					"var Gridicon = require( 'components/gridicon' );\n\n" +
+					"module.exports = React.createClass( {\n" +
+					"	displayName: 'Gridicons',\n\n" +
+					"	render: function() {\n" +
+					'		return (\n' +
+					'			<div className="design-assets__group">\n' +
+					'				<h2>Gridicons</h2>\n';
+
+		// Create a switch() case for each svg file
+		svgFiles.forEach( function( svgFile ) {
+			// Clean up the filename to use for the react components
+			var name = svgFile.split( '_' );
+			name = name[1];
+			name = name.split( '.' );
+			name = name[0];
+
+			// Output the case for each icon
+			var iconComponent = '				<Gridicon icon="' + name + '" size={ 48 } />\n';
+			designContent += iconComponent;
+		} );
+
+		designContent +=	'			</div>\n' +
+							'		);\n' +
+							'	}\n' +
+							'} );\n';
+
 		// Write the React component to gridicon/index.jsx
 		grunt.file.write( 'react/gridicon/index.jsx', content );
+		grunt.file.write( 'react/gridicon/design.jsx', designContent );
 	});
 
 	// Default task(s).
