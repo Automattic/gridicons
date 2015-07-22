@@ -191,6 +191,10 @@ module.exports = function(grunt) {
 					"var Gridicon = require( 'components/gridicon' );\n\n" +
 					"module.exports = React.createClass( {\n" +
 					"	displayName: 'Gridicons',\n\n" +
+					"	handleClick: function( icon ) {\n" +
+					"		var toCopy = '<Gridicon icon=\"' + icon + '\" />';\n" +
+					"		prompt( 'Copy component code:', toCopy );\n" +
+					"	},\n\n" +
 					"	render: function() {\n" +
 					'		return (\n' +
 					'			<div className="design-assets__group">\n' +
@@ -203,7 +207,7 @@ module.exports = function(grunt) {
 			name = name[0];
 
 			// Output the case for each icon
-			var iconComponent = '				<Gridicon icon="' + name + '" size={ 48 } onClick={ this.handleClick.bind( this, "' + name + '") } />\n';
+			var iconComponent = '				<Gridicon icon="' + name + '" size={ 48 } onClick={ this.handleClick.bind( this, \'' + name + '\' ) } />\n';
 			designContent += iconComponent;
 		} );
 
