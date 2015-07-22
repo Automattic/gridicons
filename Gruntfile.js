@@ -181,7 +181,8 @@ module.exports = function(grunt) {
 					'module.exports = Gridicon;\n';
 
 		// Start design/docs component
-		designContent =	"/**\n" +
+		designContent =	"/* eslint-disable no-alert */\n" +
+					"/**\n" +
 					" * External dependencies\n" +
 					" */\n" +
 					"var React = require( 'react' );\n\n" +
@@ -193,7 +194,7 @@ module.exports = function(grunt) {
 					"	displayName: 'Gridicons',\n\n" +
 					"	handleClick: function( icon ) {\n" +
 					"		var toCopy = '<Gridicon icon=\"' + icon + '\" />';\n" +
-					"		prompt( 'Copy component code:', toCopy );\n" +
+					"		window.prompt( 'Copy component code:', toCopy );\n" +
 					"	},\n\n" +
 					"	render: function() {\n" +
 					'		return (\n' +
