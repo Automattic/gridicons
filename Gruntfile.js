@@ -137,7 +137,8 @@ module.exports = function(grunt) {
 					"	},\n\n" +
 					"	propTypes: {\n" +
 					"		icon: React.PropTypes.string.isRequired,\n" +
-					"		size: React.PropTypes.number\n" +
+					"		size: React.PropTypes.number,\n" +
+					"		onClick: React.PropTypes.func\n" +
 					"	},\n\n" +
 					"	render: function() {\n" +
 					"		var icon = this.props.icon,\n" +
@@ -151,9 +152,7 @@ module.exports = function(grunt) {
 		// Create a switch() case for each svg file
 		svgFiles.forEach( function( svgFile ) {
 			// Clean up the filename to use for the react components
-			var name = svgFile.split( '_' );
-			name = name[1];
-			name = name.split( '.' );
+			var name = svgFile.split( '.' );
 			name = name[0];
 
 			// Grab the relevant bits from the file contents
@@ -161,7 +160,7 @@ module.exports = function(grunt) {
 
 			// Add className, height, and width to the svg element
 			fileContent = fileContent.slice( 0, 4 ) +
-						' className={ iconClass } height={ this.props.size } width={ this.props.size }' +
+						' className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick }' +
 						fileContent.slice( 4, -6 ) +
 						fileContent.slice( -6 );
 
@@ -200,13 +199,11 @@ module.exports = function(grunt) {
 		// Create a switch() case for each svg file
 		svgFiles.forEach( function( svgFile ) {
 			// Clean up the filename to use for the react components
-			var name = svgFile.split( '_' );
-			name = name[1];
-			name = name.split( '.' );
+			var name = svgFile.split( '.' );
 			name = name[0];
 
 			// Output the case for each icon
-			var iconComponent = '				<Gridicon icon="' + name + '" size={ 48 } />\n';
+			var iconComponent = '				<Gridicon icon="' + name + '" size={ 48 } onClick={ this.handleClick.bind( this, "' + name + '") } />\n';
 			designContent += iconComponent;
 		} );
 
