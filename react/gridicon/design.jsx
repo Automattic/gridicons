@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /**
  * External dependencies
  */
@@ -13,7 +14,7 @@ module.exports = React.createClass( {
 
 	handleClick: function( icon ) {
 		var toCopy = '<Gridicon icon="' + icon + '" />';
-		prompt( 'Copy component code:', toCopy );
+		window.prompt( 'Copy component code:', toCopy );
 	},
 
 	render: function() {
@@ -27,6 +28,7 @@ module.exports = React.createClass( {
 				<Gridicon icon="gridicons-align-image-left" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-align-image-left' ) } />
 				<Gridicon icon="gridicons-align-image-none" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-align-image-none' ) } />
 				<Gridicon icon="gridicons-align-image-right" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-align-image-right' ) } />
+				<Gridicon icon="gridicons-align-justify" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-align-justify' ) } />
 				<Gridicon icon="gridicons-align-left" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-align-left' ) } />
 				<Gridicon icon="gridicons-align-right" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-align-right' ) } />
 				<Gridicon icon="gridicons-arrow-down" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-arrow-down' ) } />
@@ -48,6 +50,7 @@ module.exports = React.createClass( {
 				<Gridicon icon="gridicons-chevron-left" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-chevron-left' ) } />
 				<Gridicon icon="gridicons-chevron-right" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-chevron-right' ) } />
 				<Gridicon icon="gridicons-chevron-up" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-chevron-up' ) } />
+				<Gridicon icon="gridicons-clear-formatting" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-clear-formatting' ) } />
 				<Gridicon icon="gridicons-clipboard" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-clipboard' ) } />
 				<Gridicon icon="gridicons-cloud-download" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-cloud-download' ) } />
 				<Gridicon icon="gridicons-cloud-outline" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-cloud-outline' ) } />
@@ -74,6 +77,8 @@ module.exports = React.createClass( {
 				<Gridicon icon="gridicons-house" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-house' ) } />
 				<Gridicon icon="gridicons-image-multiple" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-image-multiple' ) } />
 				<Gridicon icon="gridicons-image" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-image' ) } />
+				<Gridicon icon="gridicons-indent-left" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-indent-left' ) } />
+				<Gridicon icon="gridicons-indent-right" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-indent-right' ) } />
 				<Gridicon icon="gridicons-info-outline" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-info-outline' ) } />
 				<Gridicon icon="gridicons-info" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-info' ) } />
 				<Gridicon icon="gridicons-ink" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-ink' ) } />
@@ -109,8 +114,10 @@ module.exports = React.createClass( {
 				<Gridicon icon="gridicons-reply" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-reply' ) } />
 				<Gridicon icon="gridicons-search" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-search' ) } />
 				<Gridicon icon="gridicons-share-ios" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-share-ios' ) } />
+				<Gridicon icon="gridicons-share" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-share' ) } />
 				<Gridicon icon="gridicons-sign-out" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-sign-out' ) } />
 				<Gridicon icon="gridicons-spam" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-spam' ) } />
+				<Gridicon icon="gridicons-special-character" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-special-character' ) } />
 				<Gridicon icon="gridicons-star-outline" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-star-outline' ) } />
 				<Gridicon icon="gridicons-star" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-star' ) } />
 				<Gridicon icon="gridicons-stats-alt" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-stats-alt' ) } />
@@ -119,9 +126,11 @@ module.exports = React.createClass( {
 				<Gridicon icon="gridicons-sync" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-sync' ) } />
 				<Gridicon icon="gridicons-tablet" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-tablet' ) } />
 				<Gridicon icon="gridicons-tag" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-tag' ) } />
+				<Gridicon icon="gridicons-text-color" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-text-color' ) } />
 				<Gridicon icon="gridicons-time" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-time' ) } />
 				<Gridicon icon="gridicons-trash" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-trash' ) } />
 				<Gridicon icon="gridicons-types" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-types' ) } />
+				<Gridicon icon="gridicons-underline" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-underline' ) } />
 				<Gridicon icon="gridicons-undo" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-undo' ) } />
 				<Gridicon icon="gridicons-user-circle" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-user-circle' ) } />
 				<Gridicon icon="gridicons-user" size={ 48 } onClick={ this.handleClick.bind( this, 'gridicons-user' ) } />
