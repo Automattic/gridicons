@@ -64,6 +64,7 @@ module.exports = React.createClass( {
 				<Gridicon icon="comment" size={ 48 } onClick={ this.handleClick.bind( this, 'comment' ) } />
 				<Gridicon icon="computer" size={ 48 } onClick={ this.handleClick.bind( this, 'computer' ) } />
 				<Gridicon icon="create" size={ 48 } onClick={ this.handleClick.bind( this, 'create' ) } />
+				<Gridicon icon="crop" size={ 48 } onClick={ this.handleClick.bind( this, 'crop' ) } />
 				<Gridicon icon="cross-small" size={ 48 } onClick={ this.handleClick.bind( this, 'cross-small' ) } />
 				<Gridicon icon="cross" size={ 48 } onClick={ this.handleClick.bind( this, 'cross' ) } />
 				<Gridicon icon="custom-post-type" size={ 48 } onClick={ this.handleClick.bind( this, 'custom-post-type' ) } />
@@ -72,6 +73,8 @@ module.exports = React.createClass( {
 				<Gridicon icon="ellipsis" size={ 48 } onClick={ this.handleClick.bind( this, 'ellipsis' ) } />
 				<Gridicon icon="external" size={ 48 } onClick={ this.handleClick.bind( this, 'external' ) } />
 				<Gridicon icon="flag" size={ 48 } onClick={ this.handleClick.bind( this, 'flag' ) } />
+				<Gridicon icon="flip-horizontal" size={ 48 } onClick={ this.handleClick.bind( this, 'flip-horizontal' ) } />
+				<Gridicon icon="flip-vertical" size={ 48 } onClick={ this.handleClick.bind( this, 'flip-vertical' ) } />
 				<Gridicon icon="folder" size={ 48 } onClick={ this.handleClick.bind( this, 'folder' ) } />
 				<Gridicon icon="globe" size={ 48 } onClick={ this.handleClick.bind( this, 'globe' ) } />
 				<Gridicon icon="heading" size={ 48 } onClick={ this.handleClick.bind( this, 'heading' ) } />
@@ -120,6 +123,7 @@ module.exports = React.createClass( {
 				<Gridicon icon="redo" size={ 48 } onClick={ this.handleClick.bind( this, 'redo' ) } />
 				<Gridicon icon="refresh" size={ 48 } onClick={ this.handleClick.bind( this, 'refresh' ) } />
 				<Gridicon icon="reply" size={ 48 } onClick={ this.handleClick.bind( this, 'reply' ) } />
+				<Gridicon icon="rotate" size={ 48 } onClick={ this.handleClick.bind( this, 'rotate' ) } />
 				<Gridicon icon="search" size={ 48 } onClick={ this.handleClick.bind( this, 'search' ) } />
 				<Gridicon icon="share-ios" size={ 48 } onClick={ this.handleClick.bind( this, 'share-ios' ) } />
 				<Gridicon icon="share" size={ 48 } onClick={ this.handleClick.bind( this, 'share' ) } />
