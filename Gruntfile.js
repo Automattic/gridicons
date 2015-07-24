@@ -141,7 +141,7 @@ module.exports = function(grunt) {
 					"		onClick: React.PropTypes.func\n" +
 					"	},\n\n" +
 					"	render: function() {\n" +
-					"		var icon = this.props.icon,\n" +
+					"		var icon = 'gridicons-' + this.props.icon,\n" +
 					"			iconClass = 'gridicon ',\n" +
 					"			svg;\n\n" +
 					"		switch ( icon ) {\n" +
@@ -205,7 +205,7 @@ module.exports = function(grunt) {
 		svgFiles.forEach( function( svgFile ) {
 			// Clean up the filename to use for the react components
 			var name = svgFile.split( '.' );
-			name = name[0];
+			name = name[0].replace( 'gridicons-', '' );
 
 			// Output the case for each icon
 			var iconComponent = '				<Gridicon icon="' + name + '" size={ 48 } onClick={ this.handleClick.bind( this, \'' + name + '\' ) } />\n';
