@@ -16,6 +16,19 @@ An experiment to collaboratively create a new consistent icon set.
 
 These are not rules, they are guidelines that can be broken in style. The purpose of them is to try an ensure a uniform look as we all work on it together. They are also open to growing organically.
 
+### Optical balance
+
+As stated above, icons should be optically balanced using the icon-template.ai file. Please refer to the [Google Chrome icon guidelines](https://developer.chrome.com/webstore/images#iconsize) when balancing icons. From the guidelines:
+
+> As the following figure shows, when you size an icon to fill the available area, square and circular icons are significantly larger than they should be, compared to icons with other shapes.
+
+![Visual Weight](https://developer.chrome.com/webstore/images/visual_weight_1.png)
+
+> Normalizing the icon sizes, as the next figure shows, gives the icons roughly even area and visual weight.
+
+![Visual Weight Balanced](https://developer.chrome.com/webstore/images/visual_weight_2.png)
+
+> The templates show the correct size for a square and a circle, but these are merely guides; icons that have pointy bits might stray outside these areas. If an irregularly shaped icon takes up very little area and is mostly negative space, using the entire [24dp] area might be acceptable.
 
 ## Making a new icon
 
@@ -48,9 +61,9 @@ Make sure you have `grunt` and `grunt-svgstore` installed.
 
 In the commandline, type `grunt`. This will clean up and combine all the SVG icons into a single sprite in the `svg-set` directory, called `gridicons.svg`. 
 
-## Contributing an icon
+## Committing an icon
 
-Currently, icons are added to a big `gridicons.ai` sprite before baked and deployed. In order to avoid merge conflicts, here's a suggested process for contributing icons:
+Currently, icons are added to a big `gridicons.ai` sprite before baked and deployed. In order to avoid merge conflicts, here's a suggested process for committing icons:
 
 1. Draw the icon in Illlustrator on a 24px grid. However you like.
 2. Submit the icon as an SVG file to the `svg` folder as a pull request. 
