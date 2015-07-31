@@ -31,7 +31,7 @@ var Gridicon = React.createClass( {
 				break;
 			case 'gridicons-add':
 				iconClass += 'gridicons-add';
-				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>;
+				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>;
 				break;
 			case 'gridicons-align-center':
 				iconClass += 'gridicons-align-center';
@@ -47,7 +47,7 @@ var Gridicon = React.createClass( {
 				break;
 			case 'gridicons-align-image-none':
 				iconClass += 'gridicons-align-image-none';
-				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7H3V5h18v2zm0 10H3v2h18v-2zM11 9H3v6h8V9z"/></svg>;
+				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M21 7H3V5h18v2zm0 10H3v2h18v-2zM11 9H3v6h8V9z"/></svg>;
 				break;
 			case 'gridicons-align-image-right':
 				iconClass += 'gridicons-align-image-right';
@@ -119,7 +119,7 @@ var Gridicon = React.createClass( {
 				break;
 			case 'gridicons-calendar':
 				iconClass += 'gridicons-calendar';
-				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.105 0-2 .896-2 2v13c0 1.104.895 2 2 2h14c1.104 0 2-.896 2-2V6c0-1.104-.896-2-2-2zm0 15H5V8h14v11z"/></svg>;
+				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.105 0-2 .896-2 2v13c0 1.104.895 2 2 2h14c1.104 0 2-.896 2-2V6c0-1.104-.896-2-2-2zm0 15H5V8h14v11z"/></svg>;
 				break;
 			case 'gridicons-camera':
 				iconClass += 'gridicons-camera';
