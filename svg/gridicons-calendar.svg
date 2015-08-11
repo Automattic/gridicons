@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g id="calendar">
+	<rect x="0" style="fill:none;" width="24" height="24"/>
 	<path d="M19,4h-1V2h-2v2H8V2H6v2H5C3.895,4,3,4.896,3,6v13c0,1.104,0.895,2,2,2h14c1.104,0,2-0.896,2-2V6C21,4.896,20.104,4,19,4z
 		 M19,19H5V8h14V19z"/>
 </g>
