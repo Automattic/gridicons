@@ -77,6 +77,7 @@ module.exports = React.createClass( {
 				<Gridicon icon="flip-vertical" size={ 48 } onClick={ this.handleClick.bind( this, 'flip-vertical' ) } />
 				<Gridicon icon="folder" size={ 48 } onClick={ this.handleClick.bind( this, 'folder' ) } />
 				<Gridicon icon="globe" size={ 48 } onClick={ this.handleClick.bind( this, 'globe' ) } />
+				<Gridicon icon="grid" size={ 48 } onClick={ this.handleClick.bind( this, 'grid' ) } />
 				<Gridicon icon="heading" size={ 48 } onClick={ this.handleClick.bind( this, 'heading' ) } />
 				<Gridicon icon="heart-outline" size={ 48 } onClick={ this.handleClick.bind( this, 'heart-outline' ) } />
 				<Gridicon icon="heart" size={ 48 } onClick={ this.handleClick.bind( this, 'heart' ) } />
@@ -101,6 +102,7 @@ module.exports = React.createClass( {
 				<Gridicon icon="location" size={ 48 } onClick={ this.handleClick.bind( this, 'location' ) } />
 				<Gridicon icon="lock" size={ 48 } onClick={ this.handleClick.bind( this, 'lock' ) } />
 				<Gridicon icon="mail" size={ 48 } onClick={ this.handleClick.bind( this, 'mail' ) } />
+				<Gridicon icon="mention" size={ 48 } onClick={ this.handleClick.bind( this, 'mention' ) } />
 				<Gridicon icon="menu" size={ 48 } onClick={ this.handleClick.bind( this, 'menu' ) } />
 				<Gridicon icon="menus" size={ 48 } onClick={ this.handleClick.bind( this, 'menus' ) } />
 				<Gridicon icon="microphone" size={ 48 } onClick={ this.handleClick.bind( this, 'microphone' ) } />
