@@ -2,11 +2,10 @@
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-<g id="camera">
+<g id="folder-multiple">
 	<rect x="0" style="fill:none;" width="24" height="24"/>
-	<path d="M17,12c0,1.657-1.343,3-3,3s-3-1.343-3-3s1.343-3,3-3S17,10.343,17,12z M22,7v11c0,1.105-0.895,2-2,2H4
-		c-1.105,0-2-0.895-2-2V7c0-1.105,0.895-2,2-2V4h4v1h2l1-2h6l1,2h2C21.105,5,22,5.895,22,7z M7.5,9c0-0.827-0.673-1.5-1.5-1.5
-		S4.5,8.173,4.5,9s0.673,1.5,1.5,1.5S7.5,9.827,7.5,9z M19,12c0-2.761-2.239-5-5-5s-5,2.239-5,5s2.239,5,5,5S19,14.761,19,12z"/>
+	<path d="M4,7L4,7C2.895,7,2,7.895,2,9v10c0,1.1,0.9,2,2,2h14c1.105,0,2-0.895,2-2v0H4V7z M20,17H8c-1.105,0-2-0.895-2-2V5
+		c0-1.105,0.895-2,2-2h3c1.105,0,2,0.895,2,2v0h7c1.105,0,2,0.895,2,2v8C22,16.105,21.105,17,20,17z"/>
 </g>
 <g id="Layer_1">
 </g>

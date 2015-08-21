@@ -75,6 +75,7 @@ module.exports = React.createClass( {
 				<Gridicon icon="flag" size={ 48 } onClick={ this.handleClick.bind( this, 'flag' ) } />
 				<Gridicon icon="flip-horizontal" size={ 48 } onClick={ this.handleClick.bind( this, 'flip-horizontal' ) } />
 				<Gridicon icon="flip-vertical" size={ 48 } onClick={ this.handleClick.bind( this, 'flip-vertical' ) } />
+				<Gridicon icon="folder-multiple" size={ 48 } onClick={ this.handleClick.bind( this, 'folder-multiple' ) } />
 				<Gridicon icon="folder" size={ 48 } onClick={ this.handleClick.bind( this, 'folder' ) } />
 				<Gridicon icon="globe" size={ 48 } onClick={ this.handleClick.bind( this, 'globe' ) } />
 				<Gridicon icon="grid" size={ 48 } onClick={ this.handleClick.bind( this, 'grid' ) } />
@@ -119,6 +120,7 @@ module.exports = React.createClass( {
 				<Gridicon icon="plus-small" size={ 48 } onClick={ this.handleClick.bind( this, 'plus-small' ) } />
 				<Gridicon icon="plus" size={ 48 } onClick={ this.handleClick.bind( this, 'plus' ) } />
 				<Gridicon icon="posts" size={ 48 } onClick={ this.handleClick.bind( this, 'posts' ) } />
+				<Gridicon icon="print" size={ 48 } onClick={ this.handleClick.bind( this, 'print' ) } />
 				<Gridicon icon="quote" size={ 48 } onClick={ this.handleClick.bind( this, 'quote' ) } />
 				<Gridicon icon="reader" size={ 48 } onClick={ this.handleClick.bind( this, 'reader' ) } />
 				<Gridicon icon="reblog" size={ 48 } onClick={ this.handleClick.bind( this, 'reblog' ) } />
