@@ -449,6 +449,10 @@ var Gridicon = React.createClass( {
 				iconClass += 'gridicons-rotate';
 				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18 14v6c0 1.105-.895 2-2 2H6c-1.105 0-2-.895-2-2v-6c0-1.105.895-2 2-2h10c1.105 0 2 .895 2 2zM13.914 2.914L11.828 5H14c4.418 0 8 3.582 8 8h-2c0-3.308-2.692-6-6-6h-2.172l2.086 2.086L12.5 10.5 8 6l1.414-1.414L12.5 1.5l1.414 1.414z"/></svg>;
 				break;
+			case 'gridicons-scheduled':
+				iconClass += 'gridicons-scheduled';
+				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M17.21 11.296L15.797 9.88l-5.294 5.295-2.294-2.294-1.415 1.416L10.498 18"/><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.104 0-2 .896-2 2v13c0 1.104.896 2 2 2h14c1.104 0 2-.896 2-2V6c0-1.104-.896-2-2-2zm0 15H5V8h14v11z"/></svg>;
+				break;
 			case 'gridicons-search':
 				iconClass += 'gridicons-search';
 				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M21 19l-5.154-5.154C16.574 12.742 17 11.42 17 10c0-3.866-3.134-7-7-7s-7 3.134-7 7 3.134 7 7 7c1.42 0 2.742-.426 3.846-1.154L19 21l2-2zM5 10c0-2.757 2.243-5 5-5s5 2.243 5 5-2.243 5-5 5-5-2.243-5-5z"/></svg>;
