@@ -20,7 +20,7 @@ These are not rules, they are guidelines that can be broken in style. The purpos
 ## Propose a New Icon
 
 1. Make sure you have a updated local clone of the repository.
-2. Draw the icon in Illustrator on a 24px grid using the guidelines above. However you like.
+2. Draw the icon in Illustrator on a 24px grid using the guidelines above (use `icon-template.ai` if you'd like).
 3. Submit a Pull Request with the icon as a SVG file (inside the `svg` folder).
 4. Discuss, iterate, review, refine until ready.
 
@@ -51,8 +51,12 @@ These are not rules, they are guidelines that can be broken in style. The purpos
 
 Make sure you have `grunt` and `grunt-svgstore` installed (also might require `grunt-svgmin`). 
 
-In the commandline, type `grunt`. This will clean up and combine all the SVG icons into a single sprite in the `svg-set` directory, called `gridicons.svg`. 
+In the commandline, type `grunt`. This will clean up and combine all the SVG icons into a single sprite in the `svg-set` directory, called `gridicons.svg`.
 
+## Using `icon-template.ai`
+![Icon Template](https://cldup.com/AdRe2pH1mz.png)
+
+Use the `icon-template.ai` file to create a balanced icon for the Gridicon set. Guides are set up for common shapes such as square, circle, and rectangles.
 
 ## Committers
 
