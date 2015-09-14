@@ -28,9 +28,9 @@ These are not rules, they are guidelines that can be broken in style. The purpos
 ## Add a Proposed Icon to Gridicons
 
 1. Switch to the branch (i.e. Pull Request) with the new icon.
-2. Open Illustrator.
+2. Open 'gridicons.ai' in Illustrator.
 3. Add a new containing layer with the name of the icon (i.e. "trophy").
-4. Add the icon from the SVG on that containing layer.
+4. Add the icon from the SVG on that containing layer. Make sure to check pixel preview.
 5. Add the transparent square from another icon behind the SVG on that same containing layer.
 6. Remove the SVG of the new icon (from the `svg` folder).
 7. Re-generated the SVG from IA dragging the script `exporter-multi.jsx` inside the Illustrator window.
