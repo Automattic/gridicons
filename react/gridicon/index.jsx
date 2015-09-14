@@ -273,6 +273,10 @@ var Gridicon = React.createClass( {
 				iconClass += 'gridicons-help';
 				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-2h2v2zm2.003-6.41c-.23.36-.6.704-1.108 1.028-.43.28-.7.482-.808.61-.108.13-.163.283-.163.46V13H11.04v-.528c0-.4.08-.74.245-1.017.163-.276.454-.546.872-.808.332-.21.57-.397.716-.565.145-.168.217-.36.217-.577 0-.172-.077-.308-.233-.41-.156-.1-.358-.15-.608-.15-.62 0-1.342.22-2.17.658l-.854-1.67c1.02-.58 2.084-.872 3.194-.872.913 0 1.63.202 2.15.603.52.4.78.948.78 1.64 0 .495-.116.924-.347 1.286z"/></svg>;
 				break;
+			case 'gridicons-history':
+				iconClass += 'gridicons-history';
+				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M2.12 13.526c.742 4.78 4.902 8.47 9.88 8.47 5.5 0 10-4.5 10-9.998S17.5 2 12 2C8.704 2 5.802 3.6 4 6V2H2.003L2 9h7V7H5.8c1.4-1.8 3.702-3 6.202-3C16.4 4 20 7.6 20 11.998s-3.6 8-8 8c-3.877 0-7.13-2.795-7.848-6.472H2.12z"/><path d="M11.002 7v5.3l3.2 4.298 1.6-1.197-2.8-3.7V7"/></svg>;
+				break;
 			case 'gridicons-house':
 				iconClass += 'gridicons-house';
 				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M22 9L12 1 2 9v2h2v10h5v-4c0-1.657 1.343-3 3-3s3 1.343 3 3v4h5V11h2V9z"/></svg>;
