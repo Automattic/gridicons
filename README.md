@@ -67,7 +67,7 @@ If you'd like to contribute an icon, but are unable to bake the sprite with grun
 - Michael
 - Filipe
 - Davide
-- Dave M.
+- Dave W.
 
 
 ## Todo
