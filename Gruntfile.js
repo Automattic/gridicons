@@ -128,8 +128,9 @@ module.exports = function(grunt) {
 		content =	"/**\n" +
 					" * External dependencies\n" +
 					" */\n" +
-					"var React = require( 'react' );\n\n" +
-					"var Gridicon = React.createClass( {\n" +
+					"var React = require( 'react/addons' );\n\n" +
+					"var Gridicon = React.createClass( {\n\n" +
+					"	mixins: [ React.addons.PureRenderMixin ],\n\n" +
 					"	getDefaultProps: function() {\n" +
 					"		return {\n" +
 					"			size: 24\n" +
