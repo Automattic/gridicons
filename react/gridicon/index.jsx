@@ -1,9 +1,12 @@
 /**
  * External dependencies
  */
-var React = require( 'react' );
+var React = require( 'react/addons' );
 
 var Gridicon = React.createClass( {
+
+	mixins: [ React.addons.PureRenderMixin ],
+
 	getDefaultProps: function() {
 		return {
 			size: 24
@@ -196,6 +199,10 @@ var Gridicon = React.createClass( {
 			case 'gridicons-create':
 				iconClass += 'gridicons-create';
 				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M21 11v8c0 1.105-.895 2-2 2H5c-1.105 0-2-.895-2-2V5c0-1.105.895-2 2-2h8l-2 2H5v14h14v-6l2-2zM7 17h3l7.5-7.5-3-3L7 14v3zm9.94-12.94L15.5 5.5l3 3 1.44-1.44c.585-.585.585-1.535 0-2.12l-.88-.88c-.585-.585-1.535-.585-2.12 0z"/></svg>;
+				break;
+			case 'gridicons-credit-card':
+				iconClass += 'gridicons-credit-card';
+				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M20 4H4c-1.105 0-2 .895-2 2v12c0 1.105.895 2 2 2h16c1.105 0 2-.895 2-2V6c0-1.105-.895-2-2-2zm0 2v2H4V6h16zM4 18v-6h16v6H4zm2-4h7v2H6v-2zm9 0h3v2h-3v-2z"/></svg>;
 				break;
 			case 'gridicons-crop':
 				iconClass += 'gridicons-crop';
