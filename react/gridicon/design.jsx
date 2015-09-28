@@ -157,7 +157,6 @@ module.exports = React.createClass( {
 				<Gridicon icon="video-camera" size={ 48 } onClick={ this.handleClick.bind( this, 'video-camera' ) } />
 				<Gridicon icon="video" size={ 48 } onClick={ this.handleClick.bind( this, 'video' ) } />
 				<Gridicon icon="visible" size={ 48 } onClick={ this.handleClick.bind( this, 'visible' ) } />
-				<Gridicon icon="trophy-new" size={ 48 } onClick={ this.handleClick.bind( this, 'trophy-new' ) } />
 			</div>
 		);
 	}
