@@ -1,9 +1,12 @@
 /**
  * External dependencies
  */
-var React = require( 'react' );
+var React = require( 'react/addons' );
 
 var Gridicon = React.createClass( {
+
+	mixins: [ React.addons.PureRenderMixin ],
+
 	getDefaultProps: function() {
 		return {
 			size: 24
@@ -459,7 +462,7 @@ var Gridicon = React.createClass( {
 				break;
 			case 'gridicons-scheduled':
 				iconClass += 'gridicons-scheduled';
-				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M17.21 11.296L15.797 9.88l-5.294 5.295-2.294-2.294-1.415 1.416L10.498 18"/><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.104 0-2 .896-2 2v13c0 1.104.896 2 2 2h14c1.104 0 2-.896 2-2V6c0-1.104-.896-2-2-2zm0 15H5V8h14v11z"/></svg>;
+				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M10.498 18l-3.705-3.704 1.415-1.415 2.294 2.295 5.293-5.293 1.415 1.415L10.498 18zM21 6v13c0 1.104-.896 2-2 2H5c-1.104 0-2-.896-2-2V6c0-1.104.896-2 2-2h1V2h2v2h8V2h2v2h1c1.104 0 2 .896 2 2zm-2 2H5v11h14V8z"/></svg>;
 				break;
 			case 'gridicons-search':
 				iconClass += 'gridicons-search';
@@ -535,7 +538,7 @@ var Gridicon = React.createClass( {
 				break;
 			case 'gridicons-trophy':
 				iconClass += 'gridicons-trophy';
-				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M15.7 12h.9c4.1 0 5.3-4.6 5.4-7 0-.3-.1-.5-.3-.7-.2-.2-.4-.3-.7-.3h-2.7c-.1-.6-.1-1.3-.3-2H6c-.2.7-.2 1.4-.3 2H3c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7.1 2.4 1.3 7 5.4 7h.9c1.3 1.6 2.7 2.7 2.7 4v2H9l-3 4h12l-3-4h-2v-2c0-1.3 1.3-2.4 2.7-4zm1.4-2.1c.6-1.1 1.1-2.4 1.2-3.9h1.6c-.2 1.4-.9 3.6-2.8 3.9zM4.1 6h1.6c.1 1.6.6 2.9 1.2 3.9C5 9.6 4.3 7.4 4.1 6z"/></svg>;
+				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18 5.062V3H6v2.062H2V8c0 2.525 1.89 4.598 4.324 4.932.7 2.058 2.485 3.61 4.676 3.978V18c0 1.105-.895 2-2 2H8v2h8v-2h-1c-1.105 0-2-.895-2-2v-1.09c2.19-.368 3.976-1.92 4.676-3.978C20.11 12.598 22 10.525 22 8V5.062h-4zM4 8v-.938h2v3.766C4.836 10.416 4 9.304 4 8zm16 0c0 1.304-.836 2.416-2 2.83V7.06h2V8z"/></svg>;
 				break;
 			case 'gridicons-types':
 				iconClass += 'gridicons-types';

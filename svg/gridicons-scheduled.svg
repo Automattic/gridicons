@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g id="scheduled">
-	<rect style="fill:none;" width="24" height="24"/>
-	<g>
-		<polygon points="17.211,11.296 15.796,9.881 10.502,15.175 8.208,12.881 6.793,14.296 10.498,18.001 		"/>
-		<path d="M19,4h-1V2h-2v2H8V2H6v2H5C3.896,4,3,4.896,3,6v13c0,1.104,0.896,2,2,2h14c1.104,0,2-0.896,2-2V6C21,4.896,20.104,4,19,4z
-			 M19,19H5V8h14V19z"/>
-	</g>
+	<rect x="0" style="fill:none;" width="24" height="24"/>
+	<path d="M10.498,18.001l-3.705-3.705l1.415-1.415l2.294,2.294l5.293-5.293l1.415,1.415L10.498,18.001z M21,6v13
+		c0,1.104-0.896,2-2,2H5c-1.104,0-2-0.896-2-2V6c0-1.104,0.896-2,2-2h1V2h2v2h8V2h2v2h1C20.104,4,21,4.896,21,6z M19,8H5v11h14V8z"
+		/>
 </g>
 <g id="Layer_1">
 </g>
