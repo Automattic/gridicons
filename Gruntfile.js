@@ -140,10 +140,11 @@ module.exports = function(grunt) {
 					"		icon: React.PropTypes.string.isRequired,\n" +
 					"		size: React.PropTypes.number,\n" +
 					"		onClick: React.PropTypes.func\n" +
+					"		className: React.PropTypes.string\n" +
 					"	},\n\n" +
 					"	render: function() {\n" +
 					"		var icon = 'gridicons-' + this.props.icon,\n" +
-					"			iconClass = 'gridicon ',\n" +
+					"			iconClass = 'gridicon ' + this.props.className + ' ',\n" +
 					"			svg;\n\n" +
 					"		switch ( icon ) {\n" +
 					"			default:\n" +

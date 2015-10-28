@@ -16,12 +16,13 @@ var Gridicon = React.createClass( {
 	propTypes: {
 		icon: React.PropTypes.string.isRequired,
 		size: React.PropTypes.number,
-		onClick: React.PropTypes.func
+		onClick: React.PropTypes.func,
+		className: React.PropTypes.string
 	},
 
 	render: function() {
 		var icon = 'gridicons-' + this.props.icon,
-			iconClass = 'gridicon ',
+			iconClass = 'gridicon ' + this.props.className + ' ',
 			svg;
 
 		switch ( icon ) {
