@@ -201,7 +201,7 @@ module.exports = function(grunt) {
 					"	render: function() {\n" +
 					'		return (\n' +
 					'			<div className="design-assets__group">\n' +
-					'				<h2>Gridicons</h2>\n';
+					'				<h2><a href="/devdocs/design/gridicons">Gridicons</a></h2>\n';
 
 		// Create a switch() case for each svg file
 		svgFiles.forEach( function( svgFile ) {
