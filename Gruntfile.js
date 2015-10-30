@@ -122,7 +122,7 @@ module.exports = function(grunt) {
 	// Output React Component
 	grunt.registerTask( 'svgreact', 'Output a react component for SVGs', function() {
 		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] ),
-			content, designContent;
+			content, designContent, scssContent;
 
 		// Start the React component
 		content =	"/**\n" +
@@ -218,9 +218,26 @@ module.exports = function(grunt) {
 							'	}\n' +
 							'} );\n';
 
+		// Start design/_gridicons.scss file
+		scssContent =	'// Gridicons \n\n';
+
+		svgFiles.forEach( function( svgFile ) {
+			var name = svgFile.split( '.' );
+			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
+			var scssVar = '$' + name[0] + ': \'<path fill="none"' + fileContent.slice( 4, -6 ).split('<path fill="none"')[1] + '\';\n';
+
+			scssContent += scssVar;
+		} );
+
+		scssContent += 	'\n@function gridicons($type, $color:$gray){ ' +
+						'@return url(\'data:image/svg+xml;utf8,<svg fill="\' + $color + \'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\' + $type + \'</svg>\') ' +
+						'}';
+
+
 		// Write the React component to gridicon/index.jsx
 		grunt.file.write( 'react/gridicon/index.jsx', content );
 		grunt.file.write( 'react/gridicon/design.jsx', designContent );
+		grunt.file.write( 'react/gridicon/_gridicons.scss', scssContent );
 	});
 
 	// Default task(s).
