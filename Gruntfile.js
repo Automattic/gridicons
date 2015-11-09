@@ -139,7 +139,7 @@ module.exports = function(grunt) {
 					"	propTypes: {\n" +
 					"		icon: React.PropTypes.string.isRequired,\n" +
 					"		size: React.PropTypes.number,\n" +
-					"		onClick: React.PropTypes.func\n" +
+					"		onClick: React.PropTypes.func,\n" +
 					"		className: React.PropTypes.string\n" +
 					"	},\n\n" +
 					"	render: function() {\n" +
