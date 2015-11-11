@@ -9,6 +9,7 @@ var Gridicon = React.createClass( {
 
 	getDefaultProps: function() {
 		return {
+			className: '',
 			size: 24
 		};
 	},
