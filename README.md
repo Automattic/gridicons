@@ -12,7 +12,7 @@ The WordPress.com consistent collaborative icon set.
 - 2dp radius rounded corners only when necessary
 - no logos
 - hollow means inactive, solid means active (for example a hollow bookmark star is solid when checked)
-- icons should be sized optically so they are balanced against eachother, see icon-template.ai
+- icons should be sized optically so they are balanced against each other, see icon-template.ai
 
 These are not rules, they are guidelines that can be broken in style. The purpose of them is to try an ensure a uniform look as we all work on it together. They are also open to growing organically. They are meant to guide you to create an icon that fits with all the others (style, alignment, size, ...), if you break any of the above to make it fit, that works too.
 
