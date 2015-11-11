@@ -133,6 +133,7 @@ module.exports = function(grunt) {
 					"	mixins: [ React.addons.PureRenderMixin ],\n\n" +
 					"	getDefaultProps: function() {\n" +
 					"		return {\n" +
+					"			className: '',\n" +
 					"			size: 24\n" +
 					"		};\n" +
 					"	},\n\n" +
