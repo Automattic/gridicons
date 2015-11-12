@@ -20,7 +20,7 @@ module.exports = React.createClass( {
 	render: function() {
 		return (
 			<div className="design-assets__group">
-				<h2>Gridicons</h2>
+				<h2><a href="/devdocs/design/gridicons">Gridicons</a></h2>
 				<Gridicon icon="add-outline" size={ 48 } onClick={ this.handleClick.bind( this, 'add-outline' ) } />
 				<Gridicon icon="add" size={ 48 } onClick={ this.handleClick.bind( this, 'add' ) } />
 				<Gridicon icon="align-center" size={ 48 } onClick={ this.handleClick.bind( this, 'align-center' ) } />
