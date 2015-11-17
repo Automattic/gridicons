@@ -222,7 +222,7 @@ module.exports = function(grunt) {
 
 		// Write the React component to gridicon/index.jsx
 		grunt.file.write( 'react/gridicon/index.jsx', content );
-		grunt.file.write( 'react/gridicon/design.jsx', designContent );
+		grunt.file.write( 'react/gridicon/example.jsx', designContent );
 	});
 
 	// Default task(s).
