@@ -1,7 +1,7 @@
-            }
+        }
 
-            return ( svg );
-      }
+        return ( svg );
+  }
 } );
 
 module.exports = Gridicon;
