@@ -94,69 +94,10 @@ var Gridicon = React.createClass( {
 		}
 	},
 
-	getStandardizedIconSize: function() {
-		// if a standard size is being used, just use that
-		if(
-			this.props.size === 12 ||
-			this.props.size === 18 ||
-			this.props.size === 24 ||
-			this.props.size === 36 ||
-			this.props.size === 48 ||
-			this.props.size === 54 ||
-			this.props.size === 72 ){
-			return this.props.size;
-		}
-		// if it's less than 12, just use 12 [cohort of 12 sizes]
-		else if( this.props.size < 12 ){
-			return 12;
-		}
-
-		// if it's more than 12 but less than 16 [cohort of 4 sizes]
-		else if( this.props.size > 12 && this.props.size < 16 ){
-			return 12;
-		}
-
-		// if it's between 16 and 20, use 18 [cohort of 4 sizes]
-		else if( this.props.size >= 16 && this.props.size <= 20 ){
-			return 18;
-		}
-
-		// if it's between 20 and 28, use 24 [cohort of 8 sizes]
-		else if( this.props.size > 20 && this.props.size < 28){
-			return 24;
-		}
-
-		// if it's between 28 and 40, use 36 [cohort of 12 sizes]
-		else if( this.props.size >=28 && this.props.size <= 40 ){
-			return 36;
-		}
-
-		// if it's between 40 and 52, use 48 [cohort of 12 sizes]
-		else if( this.props.size > 40 && this.props.size < 52 ){
-			return 48;
-		}
-
-		// if it's between 52 and 64, use 54 [cohort of 12 sizes]
-		else if( this.props.size >=52 && this.props.size <= 64 ){
-			return 54;
-		}
-
-		// if it's between 64 and 80, use 72 [cohort of 16 sizes]
-		else if( this.props.size > 64 && this.props.size < 80 ){
-			return 72;
-		}
-
-		// if it's 80 or higher, use 96
-		else if( this.props.size >= 80 ){
-			return 96;
-		}
-	},
-
 	render: function() {
 		var icon = 'gridicons-' + this.props.icon,
 				svg,
-				iconSize = this.getStandardizedIconSize(),
-				needsOffset = this.needsOffset( icon, iconSize );
+				needsOffset = this.needsOffset( icon, this.props.size );
 
 				var iconClass = classNames(
 					this.props.className,
@@ -167,5 +108,5 @@ var Gridicon = React.createClass( {
 
 		switch ( icon ) {
 			default:
-				svg = <svg height={ iconSize } width={ iconSize } />;
+				svg = <svg height={ this.props.size } width={ this.props.size } />;
 				break;

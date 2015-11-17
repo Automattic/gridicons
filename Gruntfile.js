@@ -138,7 +138,7 @@ module.exports = function(grunt) {
 
 			// Add className, height, and width to the svg element
 			fileContent = fileContent.slice( 0, 4 ) +
-						' className={ iconClass } height={ iconSize } width={ iconSize } onClick={ this.props.onClick }' +
+						' className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick }' +
 						fileContent.slice( 4, -6 ) +
 						fileContent.slice( -6 );
 
