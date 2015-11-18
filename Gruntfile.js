@@ -125,32 +125,7 @@ module.exports = function(grunt) {
 			content, designContent;
 
 		// Start the React component
-		content =	"/**\n" +
-					" * External dependencies\n" +
-					" */\n" +
-					"var React = require( 'react/addons' );\n\n" +
-					"var Gridicon = React.createClass( {\n\n" +
-					"	mixins: [ React.addons.PureRenderMixin ],\n\n" +
-					"	getDefaultProps: function() {\n" +
-					"		return {\n" +
-					"			className: '',\n" +
-					"			size: 24\n" +
-					"		};\n" +
-					"	},\n\n" +
-					"	propTypes: {\n" +
-					"		icon: React.PropTypes.string.isRequired,\n" +
-					"		size: React.PropTypes.number,\n" +
-					"		onClick: React.PropTypes.func,\n" +
-					"		className: React.PropTypes.string\n" +
-					"	},\n\n" +
-					"	render: function() {\n" +
-					"		var icon = 'gridicons-' + this.props.icon,\n" +
-					"			iconClass = 'gridicon ' + this.props.className + ' ',\n" +
-					"			svg;\n\n" +
-					"		switch ( icon ) {\n" +
-					"			default:\n" +
-					"				svg = <svg height={ this.props.size } width={ this.props.size } />;\n" +
-					"				break;\n";
+		content =	grunt.file.read( 'react/gridicon/index-header.jsx' );
 
 		// Create a switch() case for each svg file
 		svgFiles.forEach( function( svgFile ) {
@@ -169,7 +144,6 @@ module.exports = function(grunt) {
 
 			// Output the case for each icon
 			var iconComponent = "			case '" + name + "':\n" +
-								"				iconClass += '" + name + "';\n" +
 								"				svg = " + fileContent + ";\n" +
 								"				break;\n";
 
@@ -177,11 +151,7 @@ module.exports = function(grunt) {
 		} );
 
 		// Finish up the React component
-		content +=	'		}\n\n' +
-					'		return ( svg );\n' +
-					'	}\n' +
-					'} );\n\n' +
-					'module.exports = Gridicon;\n';
+		content += grunt.file.read( 'react/gridicon/index-footer.jsx' );
 
 		// Start design/docs component
 		designContent =	"/* eslint-disable no-alert */\n" +
