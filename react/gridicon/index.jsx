@@ -458,6 +458,9 @@ var Gridicon = React.createClass( {
 			case 'gridicons-spam':
 				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M17 2H7L2 7v10l5 5h10l5-5V7l-5-5zm-4 15h-2v-2h2v2zm0-4h-2l-.5-6h3l-.5 6z"/></svg>;
 				break;
+			case 'gridicons-speaker':
+				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#231F20" d="M19 9v6c1.7 0 3-1.3 3-3s-1.3-3-3-3zM11 8H4c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h1v3c0 1.1.9 2 2 2h2v-5h2l4 4h2V4h-2l-4 4z"/></svg>;
+				break;
 			case 'gridicons-special-character':
 				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12.005 7.418c-1.237 0-2.19.376-2.86 1.128s-1.005 1.812-1.005 3.18c0 1.387.226 2.513.677 3.377.45.865 1.135 1.543 2.05 2.036V20H5v-2.666h3.12c-1.04-.636-1.842-1.502-2.405-2.6-.564-1.097-.846-2.322-.846-3.676 0-1.258.29-2.363.875-3.317.585-.952 1.417-1.685 2.497-2.198s2.334-.77 3.763-.77c2.18 0 3.915.572 5.204 1.713s1.932 2.673 1.932 4.594c0 1.353-.283 2.57-.852 3.65-.567 1.08-1.38 1.947-2.44 2.603H19V20h-5.908v-2.86c.95-.493 1.65-1.18 2.102-2.062s.677-2.006.677-3.374c0-1.36-.336-2.415-1.01-3.164-.672-.747-1.624-1.122-2.855-1.122z"/></svg>;
 				break;
@@ -523,6 +526,15 @@ var Gridicon = React.createClass( {
 				break;
 			case 'gridicons-visible':
 				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 6C5.188 6 1 12 1 12s4.188 6 11 6 11-6 11-6-4.188-6-11-6zm0 10c-3.943 0-6.926-2.484-8.38-4 1.04-1.085 2.863-2.657 5.255-3.47C8.335 9.214 8 10.064 8 11c0 2.21 1.79 4 4 4s4-1.79 4-4c0-.937-.335-1.787-.875-2.47 2.393.813 4.216 2.386 5.254 3.47-1.456 1.518-4.438 4-8.38 4z"/></svg>;
+				break;
+			case 'gridicons_book':
+				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 3h2v18H4zM18 3H7v18h11c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 6h-6V8h6v1zm0-2h-6V6h6v1z"/></svg>;
+				break;
+			case 'gridicons_briefcase':
+				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 6h-4V3c0-.5-.5-1-1-1H8c-.5 0-1 .5-1 1v3H3c-.6 0-1 .4-1 1v5h20V7c0-.6-.4-1-1-1zm-6 0H9V4h6v2zM14 15h-4v-2H2v8c0 .6.4 1 1 1h18c.6 0 1-.4 1-1v-8h-8v2z"/></svg>;
+				break;
+			case 'gridicons_institution':
+				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 19h20v3H2zM12 2L2 6v2h20V6M17 10h3v7h-3zM10.5 10h3v7h-3zM4 10h3v7H4z"/></svg>;
 				break;
         }
 
