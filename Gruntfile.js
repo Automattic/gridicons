@@ -11,44 +11,28 @@ module.exports = function(grunt) {
 	// Project configuration.
 	grunt.initConfig({
 
-		// Rename files first
-		copy: {
-			main: {
+		// Minify SVGs from svg directory, output to svg-min
+		svgmin: {
+			dist: {
 				files: [{
+					attrs: 'fill',
 					expand: true,
-					cwd: 'svg-min/',
-					src: ['**/*.svg'],
-					dest: 'svg/output/',
-					rename: function(dest, src) {
-						return dest + src.split('_')[1];
-					}
+					cwd: 'svg',
+					src: ['*.svg'],
+					dest: 'svg-min/',
+					ext: '.svg'
 				}]
 			},
+			options: {
+				plugins: [
+					{ removeAttrs: ['fill'] },
+					{ removeViewBox: false },
+					{ removeEmptyAttrs: false }
+				]
+			}
 		},
 
-		// minifies SVGs
-		svgmin: {
-				options: {
-						plugins: [
-								{
-										removeViewBox: false
-								}, {
-										removeUselessStrokeAndFill: false
-								}
-						]
-				},
-				dist: {
-						files: [{
-							expand: true,
-							cwd: 'svg',
-							src: ['*.svg'],
-							dest: 'svg-min/',
-							ext: '.svg'
-						}]
-				}
-		},
-
-		// Configuration to be run (and then tested).
+		// Create single SVG sprite for use outside of React environments (needs work)
 		svgstore: {
 			withCustomTemplate:{
 				options: {
@@ -94,7 +78,7 @@ module.exports = function(grunt) {
 
 				},
 				files: {
-					'svg-set/gridicons.svg': ['svg/output/*.svg']
+					'svg-set/gridicons.svg': ['svg/*.svg']
 				}
 			},
 		},
@@ -196,6 +180,6 @@ module.exports = function(grunt) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('default', ['svgmin', 'copy', 'svgstore', 'rename', 'svgreact']);
+	grunt.registerTask('default', ['svgmin']); //, 'svgstore', 'rename', 'svgreact']);
 
 };
