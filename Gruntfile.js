@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 			},
 			options: {
 				plugins: [
-					{ removeAttrs: ['fill'] },
+					{ removeAttrs: { attrs: ['fill'] } },
 					{ removeViewBox: false },
 					{ removeEmptyAttrs: false }
 				]
