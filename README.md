@@ -20,7 +20,7 @@ These are not rules, they are guidelines that can be broken in style. The purpos
 ## Propose a New Icon
 
 1. Make sure you have a updated local clone of the repository.
-2. Draw the icon in Illustrator on a 24px grid using the guidelines above (use `icon-template.ai` if you'd like).
+2. Draw the icon in Illustrator on a 24px grid using the guidelines above (use `icon-template.ai` if you'd like). Tip: tap CMD + Option + Y in Illustrator to see the pixel grid version.
 3. Submit a Pull Request with the icon as a SVG file (inside the `svg` folder).
 4. Discuss, iterate, review, refine until ready.
 
@@ -68,10 +68,3 @@ If you'd like to contribute an icon, but are unable to bake the sprite with grun
 - Filipe
 - Davide
 - Dave W.
-
-
-## Todo
-
-- implement svgo (grunt-svgmin) for compression
-- implement search and permalinks in demo page
-- find alternative to picking Style Properties in exporting -- a grunt cleaner that doesn't just remove the entire style block in other words
