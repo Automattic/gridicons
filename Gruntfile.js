@@ -32,7 +32,7 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// Create single SVG sprite for use outside of React environments (needs work)
+		// Create single SVG sprite for use outside of React environments, output to svg-set
 		svgstore: {
 			withCustomTemplate:{
 				options: {
@@ -103,7 +103,30 @@ module.exports = function(grunt) {
 	// Load svgmin
 	grunt.loadNpmTasks('grunt-svgmin');
 
-	// Output React Component
+
+	// Update all files in svg-min to add transparent square, this ensures copy/pasting to Sketch maintains a 24x24 size
+	grunt.registerTask( 'addsquare', 'Add transparent square to SVGs', function() {
+		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] );
+
+		// Add stuff
+		svgFiles.forEach( function( svgFile ) {
+
+			// Grab the relevant bits from the file contents
+			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
+
+			// Add transparent rectangle to each file
+			fileContent = fileContent.slice( 0, -6 ) +
+						'<rect x="0" style="fill:none;" width="24" height="24"/>' +
+						fileContent.slice( -6 );
+
+			// Save and overwrite the files in svg-min
+			grunt.file.write( 'svg-min/' + svgFile, fileContent );
+
+		} );
+
+	});
+
+	// Create React component, output to react
 	grunt.registerTask( 'svgreact', 'Output a react component for SVGs', function() {
 		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] ),
 			content, designContent;
@@ -180,6 +203,6 @@ module.exports = function(grunt) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('default', ['svgmin', 'svgstore', 'rename', 'svgreact']);
+	grunt.registerTask('default', ['svgmin', 'svgstore', 'rename', 'svgreact', 'addsquare']);
 
 };
