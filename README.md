@@ -31,8 +31,6 @@ These are not rules, they are guidelines that can be broken in style. The purpos
 2. Open 'gridicons.ai' in Illustrator.
 3. Add a new containing layer with the name of the icon (i.e. "trophy").
 4. Add the icon from the SVG on that containing layer. Make sure to check pixel preview.
-5. Copy a transparent square from another layer and paste it behind the icon on your new layer.
-6. Remove the SVG of the new icon (from the `svg` folder).
 7. Generate an SVG by dragging the script `exporter-multi.jsx` inside the Illustrator window.
 8. In the dialog, select your new icon layer from the "Export layers" dropdown and click Export.
 9. Run `grunt` command from terminal, to generate the svg-min, react, and svg-set files.
