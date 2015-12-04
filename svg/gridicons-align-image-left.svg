@@ -3,7 +3,6 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g id="align-image-left">
-	<rect x="0" style="fill:none;" width="24" height="24"/>
 	<path d="M3,5h18v2H3V5z M3,19h18v-2H3V19z M3,15h8V9H3V15z M13,15h8v-2h-8V15z M13,11h8V9h-8V11z"/>
 </g>
 <g id="Layer_1">

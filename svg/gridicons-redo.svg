@@ -3,7 +3,6 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g id="redo">
-	<rect x="0" style="fill:none;" width="24" height="24"/>
 	<path d="M18,6v3.586l-3.657-3.657c-1.172-1.172-2.707-1.757-4.243-1.757S7.029,4.757,5.858,5.929c-2.343,2.343-2.343,6.142,0,8.485
 		l5.364,5.364l1.414-1.414L7.272,13c-1.56-1.56-1.56-4.097,0-5.657c0.755-0.755,1.76-1.172,2.828-1.172
 		c1.068,0,2.073,0.416,2.828,1.172L16.586,11H13v2h7V6H18z"/>

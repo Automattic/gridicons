@@ -3,7 +3,6 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g id="video-camera">
-	<rect x="0" style="fill:none;" width="24" height="24"/>
 	<path d="M17,9V7c0-1.105-0.895-2-2-2H4C2.895,5,2,5.895,2,7v10c0,1.105,0.895,2,2,2h11c1.105,0,2-0.895,2-2v-2l5,4V5L17,9z"/>
 </g>
 <g id="Layer_1">
