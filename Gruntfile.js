@@ -114,9 +114,11 @@ module.exports = function(grunt) {
 			// Grab the relevant bits from the file contents
 			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
 
+
 			// Add transparent rectangle to each file
-			fileContent = fileContent.slice( 0, -6 ) +
-						'<rect x="0" style="fill:none;" width="24" height="24"/>' +
+			fileContent = fileContent.slice( 0, 60 ) +
+						'<rect x="0" fill="none" width="24" height="24"/>' +
+						fileContent.slice( 60, -6 ) + 
 						fileContent.slice( -6 );
 
 			// Save and overwrite the files in svg-min
