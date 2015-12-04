@@ -3,7 +3,6 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g id="list-ordered">
-	<rect x="0" style="fill:none;" width="24" height="24"/>
 	<path d="M8,19h13v-2H8V19z M8,13h13v-2H8V13z M8,5v2h13V5H8z M3.575,5.252c0.107-0.096,0.197-0.188,0.269-0.275
 		c-0.012,0.228-0.018,0.48-0.018,0.756V8h1.175V3.717H3.959L2.488,4.915l0.601,0.738L3.575,5.252z M3.909,13.016
 		c0.475-0.426,0.785-0.715,0.93-0.867c0.146-0.152,0.262-0.297,0.35-0.435c0.088-0.138,0.153-0.278,0.195-0.42

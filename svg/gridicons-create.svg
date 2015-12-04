@@ -3,7 +3,6 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g id="create">
-	<rect x="0" style="fill:none;" width="24" height="24"/>
 	<path d="M21,11v8c0,1.105-0.895,2-2,2H5c-1.105,0-2-0.895-2-2V5c0-1.105,0.895-2,2-2h8l-2,2H5v14h14v-6L21,11z M7,17h3l7.5-7.5
 		l-3-3L7,14V17z M16.939,4.061L15.5,5.5l3,3l1.439-1.439c0.586-0.586,0.586-1.536,0-2.121l-0.879-0.879
 		C18.475,3.475,17.525,3.475,16.939,4.061z"/>

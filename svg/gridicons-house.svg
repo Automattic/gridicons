@@ -3,7 +3,6 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g id="house">
-	<rect x="0" style="fill:none;" width="24" height="24"/>
 	<path d="M22,9L12,1L2,9v2h2v10h5v-4c0-1.657,1.343-3,3-3s3,1.343,3,3v4h5V11h2V9z"/>
 </g>
 <g id="Layer_1">

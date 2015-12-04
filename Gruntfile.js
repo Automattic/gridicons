@@ -180,6 +180,6 @@ module.exports = function(grunt) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('default', ['svgmin']); //, 'svgstore', 'rename', 'svgreact']);
+	grunt.registerTask('default', ['svgmin', 'svgstore', 'rename', 'svgreact']);
 
 };
