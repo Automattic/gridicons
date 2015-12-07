@@ -32,11 +32,11 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// Create single SVG sprite for use outside of React environments, output to svg-set
+		// Create single SVG sprite for use outside of React environments, output to svg-sprite
 		svgstore: {
 			withCustomTemplate:{
 				options: {
-					prefix : 'gridicon-', // This will prefix each ID
+					prefix : '', // This will prefix each ID
 					svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
 						viewBox : '0 0 24 24',
 						xmlns: 'http://www.w3.org/2000/svg'
@@ -57,14 +57,14 @@ module.exports = function(grunt) {
 					<body>
 
 					<h1>Gridicons</h1>
-					<p><em>Tap icon to get insertion code. <a href="gridicons.svg" title="Right-click -> Save as...">Download the SVG sprite</a>.</em></p>
+					<p><strong>This <code>use</code> based technique doesn't work in IE yet. It's here for a future where it will work.<strong></p>
 
 					{{{svg}}}
 
 					<div id="icons">
 					{{#each icons}}
 						<div>
-							<svg>
+							<svg width="24" height="24" class="gridicon {{name}}">
 							<use xlink:href="#{{name}}" />
 							</svg>
 							<p>{{title}}</p>
@@ -78,15 +78,15 @@ module.exports = function(grunt) {
 
 				},
 				files: {
-					'svg-set/gridicons.svg': ['svg/*.svg']
+					'svg-sprite/gridicons.svg': ['svg/*.svg']
 				}
 			},
 		},
 
 		rename: {
 			moveThis: {
-					src: 'svg-set/gridicons-demo.html',
-					dest: 'svg-set/index.html'
+					src: 'svg-sprite/gridicons-demo.html',
+					dest: 'svg-sprite/index.html'
 			},
 		},
 	});

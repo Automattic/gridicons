@@ -33,10 +33,9 @@ These are not rules, they are guidelines that can be broken in style. The purpos
 4. Add the icon from the SVG on that containing layer. Make sure to check pixel preview.
 7. Generate an SVG by dragging the script `exporter-multi.jsx` inside the Illustrator window.
 8. In the dialog, select your new icon layer from the "Export layers" dropdown and click Export.
-9. Run `grunt` command from terminal, to generate the svg-min, react, and svg-set files.
+9. Run `grunt` command from terminal, to generate the svg-min, react, and svg-sprite directories.
 10. Commit
 11. Merge & delete branch
-
 
 ### Grunt: Installing
 
@@ -49,9 +48,16 @@ These are not rules, they are guidelines that can be broken in style. The purpos
 
 Make sure you have `grunt` and `grunt-svgstore` installed (also might require `grunt-svgmin`). 
 
-In the commandline, type `grunt`. This will clean up and combine all the SVG icons into a single sprite in the `svg-set` directory, called `gridicons.svg`.
+In the commandline, type `grunt`. This will clean up, polish, and generate the following:
+
+- A folder called `svg-min`. This folder contains minimized SVGs of every gridicon. These SVGs can be dragged directly into Sketch for mockups.
+- A folder called `svg-sprite`. This folder contains a single SVG sprite called `gridicons.svg`, which can be referenced using `use`. But this doesn't work in IE at all yet, eventually it will work in Edge and newer. 
+- A folder called `react`. This folder contains a gridicons component for use in React based environment. 
+
+Do remember to update the React components where they are used, when you add a new icon. 
 
 ## Using `icon-template.ai`
+
 ![Icon Template](https://cldup.com/AdRe2pH1mz.png)
 
 Use the `icon-template.ai` file to create a balanced icon for the Gridicon set. Guides are set up for common shapes such as square, circle, and rectangles.
