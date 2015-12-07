@@ -57,7 +57,7 @@ module.exports = function(grunt) {
 					<body>
 
 					<h1>Gridicons</h1>
-					<p><em>Tap icon to get insertion code.</em></p>
+					<p><strong>This <code>use</code> based technique doesn't work in IE yet. It's here for a future where it will work.<strong></p>
 
 					{{{svg}}}
 

@@ -51,10 +51,10 @@ Make sure you have `grunt` and `grunt-svgstore` installed (also might require `g
 In the commandline, type `grunt`. This will clean up, polish, and generate the following:
 
 - A folder called `svg-min`. This folder contains minimized SVGs of every gridicon. These SVGs can be dragged directly into Sketch for mockups.
-- A folder called `svg-sprite`. This folder contains a single SVG sprite called `gridicons.svg`, which can be referenced using `use`. See the example page for copy/paste code.
+- A folder called `svg-sprite`. This folder contains a single SVG sprite called `gridicons.svg`, which can be referenced using `use`. But this doesn't work in IE at all yet, eventually it will work in Edge and newer. 
 - A folder called `react`. This folder contains a gridicons component for use in React based environment. 
 
-Do remember to update the SVG sprite or React components, where they are used, when you add a new icon. 
+Do remember to update the React components where they are used, when you add a new icon. 
 
 ## Using `icon-template.ai`
 
