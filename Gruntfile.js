@@ -223,7 +223,7 @@ module.exports = function(grunt) {
 
 			// Add className, height, and width to the svg element
 			fileContent = fileContent.slice( 0, 4 ) +
-						' className="gridicon" height="24" width="24"' +
+						' class="gridicon '+ name +'" height="24" width="24"' +
 						fileContent.slice( 4, -6 ) +
 						fileContent.slice( -6 );
 

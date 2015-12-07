@@ -9,8 +9,9 @@
 /* !!!
 IF YOU ARE EDITING gridicons.php
 THEN YOU ARE EDITING A FILE THAT GETS OUTPUT FROM THE GRIDICONS REPO!
-DO NOT EDIT THAT FILE! EDIT index-header.php and index-footer.php instead
-OR if you're looking to change now SVGs get output, you'll need to edit strings in the Gruntfile :)
+DO NOT EDIT THAT FILE! 
+Edit index-header.php and index-footer.php in the Gridicons repo instead
+OR if you're looking to change how SVGs get output, you'll need to edit strings in the Gruntfile :)
 !!! */
 
 
