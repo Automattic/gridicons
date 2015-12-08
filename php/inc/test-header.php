@@ -12,7 +12,7 @@ body {
 	margin: 100px auto;
 }
 svg {
-	margin: 0 20px 20px;
+	margin: 0 10px 10px;
 }
 </style>
 </head>
@@ -20,6 +20,8 @@ svg {
 
 <h1>All Gridicons</h1>
 <?php
+
+require('gridicons.php');
 
 /**
  * Outputs every gridicon from the plugin, great way to test it
