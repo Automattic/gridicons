@@ -207,10 +207,13 @@ module.exports = function(grunt) {
 	// Create PHP WordPress plugin, output to php
 	grunt.registerTask( 'svgphp', 'Output a PHP WordPress plugin for SVGs', function() {
 		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] ),
-			content;
+			content, testContent;
 
 		// Start the plugin
-		content =	grunt.file.read( 'php/index-header.php' );
+		content = grunt.file.read( 'php/inc/index-header.php' );
+
+		// Start the test page
+		testContent = grunt.file.read( 'php/inc/test-header.php' );
 
 		// Create a switch() case for each svg file
 		svgFiles.forEach( function( svgFile ) {
@@ -223,7 +226,7 @@ module.exports = function(grunt) {
 
 			// Add className, height, and width to the svg element
 			fileContent = fileContent.slice( 0, 4 ) +
-						' class="gridicon '+ name +'" height="24" width="24"' +
+						' class="gridicon ' + name + '" height="24" width="24"' +
 						fileContent.slice( 4, -6 ) +
 						fileContent.slice( -6 );
 
@@ -233,13 +236,19 @@ module.exports = function(grunt) {
 								"			break;\n";
 
 			content += iconComponent;
+
+			// Add to test file
+			testContent += "echo get_gridicon( '" + name + "' );\n";
 		} );
 
-		// Finish up the plugin
-		content += grunt.file.read( 'php/index-footer.php' );
-
-		// Write the plugin to gridicons.php
+		// Finish up and write the plugin
+		content += grunt.file.read( 'php/inc/index-footer.php' );
 		grunt.file.write( 'php/gridicons.php', content );
+
+		// Finish up and write the test
+		testContent += grunt.file.read( 'php/inc/test-footer.php' );
+		grunt.file.write( 'php/gridicons-test.php', testContent );
+
 	});
 
 	// Default task(s).
