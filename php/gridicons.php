@@ -447,6 +447,7 @@ function get_gridicon( $gridicon ) {
 			break;
 		default: 
 			$svg = 'Need to specify a gridicon';
+			break;
 	}
 
 	return $svg;

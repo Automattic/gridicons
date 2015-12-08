@@ -207,13 +207,10 @@ module.exports = function(grunt) {
 	// Create PHP WordPress plugin, output to php
 	grunt.registerTask( 'svgphp', 'Output a PHP WordPress plugin for SVGs', function() {
 		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] ),
-			content, testContent;
+			content;
 
 		// Start the plugin
 		content = grunt.file.read( 'php/inc/index-header.php' );
-
-		// Start the test page
-		testContent = grunt.file.read( 'php/inc/test-header.php' );
 
 		// Create a switch() case for each svg file
 		svgFiles.forEach( function( svgFile ) {
@@ -236,18 +233,11 @@ module.exports = function(grunt) {
 								"			break;\n";
 
 			content += iconComponent;
-
-			// Add to test file
-			testContent += "echo get_gridicon( '" + name + "' );\n";
 		} );
 
 		// Finish up and write the plugin
 		content += grunt.file.read( 'php/inc/index-footer.php' );
 		grunt.file.write( 'php/gridicons.php', content );
-
-		// Finish up and write the test
-		testContent += grunt.file.read( 'php/inc/test-footer.php' );
-		grunt.file.write( 'php/gridicons-test.php', testContent );
 
 	});
 
