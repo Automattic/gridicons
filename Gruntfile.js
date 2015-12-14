@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 		svgstore: {
 			withCustomTemplate:{
 				options: {
-					prefix : '', // This will prefix each ID
+					prefix : '', // Unused by us, but svgstore demands this variable
 					svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
 						viewBox : '0 0 24 24',
 						xmlns: 'http://www.w3.org/2000/svg'
@@ -204,7 +204,44 @@ module.exports = function(grunt) {
 		grunt.file.write( 'react/gridicon/example.jsx', designContent );
 	});
 
+	// Create PHP WordPress plugin, output to php
+	grunt.registerTask( 'svgphp', 'Output a PHP WordPress plugin for SVGs', function() {
+		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] ),
+			content;
+
+		// Start the plugin
+		content = grunt.file.read( 'php/inc/index-header.php' );
+
+		// Create a switch() case for each svg file
+		svgFiles.forEach( function( svgFile ) {
+			// Clean up the filename to use for the react components
+			var name = svgFile.split( '.' );
+			name = name[0];
+
+			// Grab the relevant bits from the file contents
+			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
+
+			// Add className, height, and width to the svg element
+			fileContent = fileContent.slice( 0, 4 ) +
+						' class="gridicon ' + name + '" height="24" width="24"' +
+						fileContent.slice( 4, -6 ) +
+						fileContent.slice( -6 );
+
+			// Output the case for each icon
+			var iconComponent = "		case '" + name + "':\n" +
+								"			$svg = '" + fileContent + "';\n" +
+								"			break;\n";
+
+			content += iconComponent;
+		} );
+
+		// Finish up and write the plugin
+		content += grunt.file.read( 'php/inc/index-footer.php' );
+		grunt.file.write( 'php/gridicons.php', content );
+
+	});
+
 	// Default task(s).
-	grunt.registerTask('default', ['svgmin', 'svgstore', 'rename', 'svgreact', 'addsquare']);
+	grunt.registerTask('default', ['svgmin', 'svgstore', 'rename', 'svgreact', 'svgphp', 'addsquare']);
 
 };
