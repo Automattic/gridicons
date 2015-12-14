@@ -55,7 +55,6 @@ var Gridicon = React.createClass( {
 			'gridicons-clear-formatting',
 			'gridicons-create',
 			'gridicons-custom-post-type',
-			'gridicons-external',
 			'gridicons-flag',
 			'gridicons-folder',
 			'gridicons-heading',
