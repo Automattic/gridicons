@@ -103,9 +103,8 @@ module.exports = function(grunt) {
 	// Load svgmin
 	grunt.loadNpmTasks('grunt-svgmin');
 
-
-	// Update all files in svg-min to add transparent square, this ensures copy/pasting to Sketch maintains a 24x24 size
-	grunt.registerTask( 'addsquare', 'Add transparent square to SVGs', function() {
+	// Update all files in svg-min to add a <g> group tag
+	grunt.registerTask( 'group', 'Add <g> tag to SVGs', function() {
 		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] );
 
 		// Add stuff
@@ -114,12 +113,12 @@ module.exports = function(grunt) {
 			// Grab the relevant bits from the file contents
 			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
 
-
 			// Add transparent rectangle to each file
-			fileContent = fileContent.slice( 0, 60 ) +
-						'<rect x="0" fill="none" width="24" height="24"/>' +
-						fileContent.slice( 60, -6 ) + 
-						fileContent.slice( -6 );
+			fileContent = fileContent.slice( 0, fileContent.indexOf('viewBox="0 0 24 24">') + 20 ) +	// opening SVG tag
+						'<g>' +
+						fileContent.slice( fileContent.indexOf('viewBox="0 0 24 24">') + 20, -6 ) + 	// child elements of SVG
+						'</g>' +
+						fileContent.slice( -6 );	// closing SVG tag
 
 			// Save and overwrite the files in svg-min
 			grunt.file.write( 'svg-min/' + svgFile, fileContent );
@@ -134,7 +133,7 @@ module.exports = function(grunt) {
 			content, designContent;
 
 		// Start the React component
-		content =	grunt.file.read( 'react/gridicon/index-header.jsx' );
+		content =	grunt.file.read( 'react/gridicon/inc/index-header.jsx' );
 
 		// Create a switch() case for each svg file
 		svgFiles.forEach( function( svgFile ) {
@@ -160,7 +159,7 @@ module.exports = function(grunt) {
 		} );
 
 		// Finish up the React component
-		content += grunt.file.read( 'react/gridicon/index-footer.jsx' );
+		content += grunt.file.read( 'react/gridicon/inc/index-footer.jsx' );
 
 		// Start design/docs component
 		designContent =	"/* eslint-disable no-alert */\n" +
@@ -241,7 +240,31 @@ module.exports = function(grunt) {
 
 	});
 
+	// Update all files in svg-min to add transparent square, this ensures copy/pasting to Sketch maintains a 24x24 size
+	grunt.registerTask( 'addsquare', 'Add transparent square to SVGs', function() {
+		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] );
+
+		// Add stuff
+		svgFiles.forEach( function( svgFile ) {
+
+			// Grab the relevant bits from the file contents
+			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
+
+
+			// Add transparent rectangle to each file
+			fileContent = fileContent.slice( 0, fileContent.indexOf('viewBox="0 0 24 24">') + 20 ) +
+						'<rect x="0" fill="none" width="24" height="24"/>' +
+						fileContent.slice( fileContent.indexOf('viewBox="0 0 24 24">') + 20, -6 ) + 
+						fileContent.slice( -6 );
+
+			// Save and overwrite the files in svg-min
+			grunt.file.write( 'svg-min/' + svgFile, fileContent );
+
+		} );
+
+	});
+
 	// Default task(s).
-	grunt.registerTask('default', ['svgmin', 'svgstore', 'rename', 'svgreact', 'svgphp', 'addsquare']);
+	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'svgreact', 'svgphp', 'addsquare']);
 
 };
