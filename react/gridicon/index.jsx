@@ -34,31 +34,27 @@ var Gridicon = React.createClass( {
 		var iconNeedsOffset = [
 			'gridicons-add-outline',
 			'gridicons-add',
-			'gridicons-align-center',
 			'gridicons-align-image-center',
 			'gridicons-align-image-left',
 			'gridicons-align-image-none',
 			'gridicons-align-image-right',
-			'gridicons-align-justify',
-			'gridicons-align-left',
-			'gridicons-align-right',
-			'gridicons-arrow-down',
-			'gridicons-arrow-left',
-			'gridicons-arrow-right',
-			'gridicons-arrow-up',
 			'gridicons-attachment',
 			'gridicons-backspace',
 			'gridicons-bold',
 			'gridicons-bookmark-outline',
 			'gridicons-bookmark',
 			'gridicons-calendar',
-			'gridicons-clear-formatting',
+			'gridicons-cart',
 			'gridicons-create',
 			'gridicons-custom-post-type',
-			'gridicons-flag',
+			'gridicons-external',
 			'gridicons-folder',
 			'gridicons-heading',
-			'gridicons-house',
+			'gridicons-help-outline',
+			'gridicons-help',
+			'gridicons-history',
+			'gridicons-info-outline',
+			'gridicons-info',
 			'gridicons-italic',
 			'gridicons-layout-blocks',
 			'gridicons-link-break',
@@ -67,27 +63,73 @@ var Gridicon = React.createClass( {
 			'gridicons-list-ordered',
 			'gridicons-list-unordered',
 			'gridicons-menus',
-			'gridicons-minus-small',
 			'gridicons-minus',
+			'gridicons-my-sites',
+			'gridicons-notice-outline',
+			'gridicons-notice',
 			'gridicons-plus-small',
 			'gridicons-plus',
+			'gridicons-popout',
 			'gridicons-posts',
-			'gridicons-reader',
 			'gridicons-scheduled',
 			'gridicons-share-ios',
-			'gridicons-sign-out',
 			'gridicons-star-outline',
 			'gridicons-star',
-			'gridicons-stats-alt',
 			'gridicons-stats',
 			'gridicons-textcolor',
+			'gridicons-time',
 			'gridicons-trophy',
-			'gridicons-underline',
-			'gridicons-video-camera'
-		 ];
+			'gridicons-user-circle'
+		];
 
 		if( iconNeedsOffset.indexOf( icon ) >= 0 ){
-			return( size % 18 === 0);
+			return( size % 18 === 0 );
+		} else {
+			return false;
+		}
+	},
+
+	needsOffsetX: function( icon, size ) {
+		var iconNeedsOffsetX = [
+			'gridicons-arrow-down',
+			'gridicons-arrow-up',
+			'gridicons-comment'
+			'gridicons-clear-formatting',
+			'gridicons-flag',
+			'gridicons-menu',
+			'gridicons-reader',
+			'gridicons-strikethrough'
+		];
+
+		if( iconNeedsOffsetX.indexOf( icon ) >= 0 ){
+			return( size % 18 === 0 );
+		} else {
+			return false;
+		}
+	},
+
+	needsOffsetY: function( icon, size ) {
+		var iconNeedsOffsetY = [
+			'gridicons-align-center',
+			'gridicons-align-justify',
+			'gridicons-align-left',
+			'gridicons-align-right',
+			'gridicons-arrow-left',
+			'gridicons-arrow-right',
+			'gridicons-house',
+			'gridicons-indent-left',
+			'gridicons-indent-right',
+			'gridicons-minus-small',
+			'gridicons-print',
+			'gridicons-sign-out',
+			'gridicons-stats-alt',
+			'gridicons-trash',
+			'gridicons-underline',
+			'gridicons-video-camera'
+		];
+
+		if( iconNeedsOffsetY.indexOf( icon ) >= 0 ){
+			return( size % 18 === 0 );
 		} else {
 			return false;
 		}
@@ -96,13 +138,19 @@ var Gridicon = React.createClass( {
 	render: function() {
 		var icon = 'gridicons-' + this.props.icon,
 				svg,
-				needsOffset = this.needsOffset( icon, this.props.size );
+				needsOffset = this.needsOffset( icon, this.props.size ),
+				needsOffsetX = this.needsOffsetX( icon, this.props.size ),
+				needsOffsetY = this.needsOffsetY( icon, this.props.size );
 
 				var iconClass = classNames(
 					this.props.className,
 					icon,
 					'gridicon',
-					{ 'needs-offset': needsOffset }
+					{
+						'needs-offset': needsOffset,
+						'needs-offset-x': needsOffsetX,
+						'needs-offset-y': needsOffsetY,
+					}
 				);
 
 		switch ( icon ) {
@@ -422,7 +470,7 @@ var Gridicon = React.createClass( {
 				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"/></g></svg>;
 				break;
 			case 'gridicons-popout':
-				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 7V5c0-1.105.895-2 2-2h11c1.105 0 2 .895 2 2v14c0 1.105-.895 2-2 2H8c-1.105 0-2-.895-2-2v-2h2v2h11V5H8v2H6zm5.5-.5l-1.414 1.414L13.172 11H3v2h10.172l-3.086 3.086L11.5 17.5 17 12l-5.5-5.5z"/></svg>;
+				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M6 7V5c0-1.105.895-2 2-2h11c1.105 0 2 .895 2 2v14c0 1.105-.895 2-2 2H8c-1.105 0-2-.895-2-2v-2h2v2h11V5H8v2H6zm5.5-.5l-1.414 1.414L13.172 11H3v2h10.172l-3.086 3.086L11.5 17.5 17 12l-5.5-5.5z"/></g></svg>;
 				break;
 			case 'gridicons-posts':
 				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M16 19H3v-2h13v2zm5-10H3v2h18V9zM3 5v2h11V5H3zm14 0v2h4V5h-4zm-6 8v2h10v-2H11zm-8 0v2h5v-2H3z"/></g></svg>;
