@@ -137,21 +137,21 @@ var Gridicon = React.createClass( {
 
 	render: function() {
 		var icon = 'gridicons-' + this.props.icon,
-				svg,
-				needsOffset = this.needsOffset( icon, this.props.size ),
-				needsOffsetX = this.needsOffsetX( icon, this.props.size ),
-				needsOffsetY = this.needsOffsetY( icon, this.props.size );
+			svg,
+			needsOffset = this.needsOffset( icon, this.props.size ),
+			needsOffsetX = this.needsOffsetX( icon, this.props.size ),
+			needsOffsetY = this.needsOffsetY( icon, this.props.size );
 
-				var iconClass = classNames(
-					this.props.className,
-					icon,
-					'gridicon',
-					{
-						'needs-offset': needsOffset,
-						'needs-offset-x': needsOffsetX,
-						'needs-offset-y': needsOffsetY,
-					}
-				);
+			var iconClass = classNames(
+				this.props.className,
+				icon,
+				'gridicon',
+				{
+					'needs-offset': needsOffset,
+					'needs-offset-x': needsOffsetX,
+					'needs-offset-y': needsOffsetY,
+				}
+			);
 
 		switch ( icon ) {
 			default:
