@@ -93,7 +93,7 @@ var Gridicon = React.createClass( {
 		var iconNeedsOffsetX = [
 			'gridicons-arrow-down',
 			'gridicons-arrow-up',
-			'gridicons-comment'
+			'gridicons-comment',
 			'gridicons-clear-formatting',
 			'gridicons-flag',
 			'gridicons-menu',
