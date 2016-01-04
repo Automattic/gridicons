@@ -76,6 +76,8 @@ var Gridicon = React.createClass( {
 			'gridicons-star-outline',
 			'gridicons-star',
 			'gridicons-stats',
+			'gridicons-status',
+			'gridicons-thumbs-up',
 			'gridicons-textcolor',
 			'gridicons-time',
 			'gridicons-trophy',
