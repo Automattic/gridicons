@@ -85,8 +85,8 @@ var Gridicon = React.createClass( {
 			'gridicons-user-circle'
 		];
 
-		if( iconNeedsOffset.indexOf( icon ) >= 0 ){
-			return( size % 18 === 0 );
+		if ( iconNeedsOffset.indexOf( icon ) >= 0 ) {
+			return ( size % 18 === 0 );
 		} else {
 			return false;
 		}
@@ -104,8 +104,8 @@ var Gridicon = React.createClass( {
 			'gridicons-strikethrough'
 		];
 
-		if( iconNeedsOffsetX.indexOf( icon ) >= 0 ){
-			return( size % 18 === 0 );
+		if ( iconNeedsOffsetX.indexOf( icon ) >= 0 ) {
+			return ( size % 18 === 0 );
 		} else {
 			return false;
 		}
@@ -131,8 +131,8 @@ var Gridicon = React.createClass( {
 			'gridicons-video-camera'
 		];
 
-		if( iconNeedsOffsetY.indexOf( icon ) >= 0 ){
-			return( size % 18 === 0 );
+		if ( iconNeedsOffsetY.indexOf( icon ) >= 0 ) {
+			return ( size % 18 === 0 );
 		} else {
 			return false;
 		}
@@ -140,21 +140,16 @@ var Gridicon = React.createClass( {
 
 	render: function() {
 		var icon = 'gridicons-' + this.props.icon,
-				svg,
-				needsOffset = this.needsOffset( icon, this.props.size ),
-				needsOffsetX = this.needsOffsetX( icon, this.props.size ),
-				needsOffsetY = this.needsOffsetY( icon, this.props.size );
+			needsOffset = this.needsOffset( icon, this.props.size ),
+			needsOffsetX = this.needsOffsetX( icon, this.props.size ),
+			needsOffsetY = this.needsOffsetY( icon, this.props.size ),
+			svg, iconClass;
 
-				var iconClass = classNames(
-					this.props.className,
-					icon,
-					'gridicon',
-					{
-						'needs-offset': needsOffset,
-						'needs-offset-x': needsOffsetX,
-						'needs-offset-y': needsOffsetY,
-					}
-				);
+		iconClass = classNames( 'gridicon', icon, this.props.className, {
+			'needs-offset': needsOffset,
+			'needs-offset-x': needsOffsetX,
+			'needs-offset-y': needsOffsetY,
+		} );
 
 		switch ( icon ) {
 			default:
