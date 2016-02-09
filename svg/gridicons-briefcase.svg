@@ -2,12 +2,9 @@
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-<g id="Artwork">
-	<g>
-		<path d="M14,15h-4v-2H2v6c0,1.105,0.895,2,2,2h16c1.105,0,2-0.895,2-2v-6h-8V15z"/>
-		<path d="M20,6h-2V4c0-1.105-0.895-2-2-2H8C6.895,2,6,2.895,6,4v2H4C2.895,6,2,6.895,2,8v4h20V8C22,6.895,21.105,6,20,6z M16,6H8V4
-			h8V6z"/>
-	</g>
+<g id="briefcase">
+	<path d="M14,15h-4v-2H2v6c0,1.105,0.895,2,2,2h16c1.105,0,2-0.895,2-2v-6h-8V15z M20,6h-2V4c0-1.105-0.895-2-2-2H8
+		C6.895,2,6,2.895,6,4v2H4C2.895,6,2,6.895,2,8v4h20V8C22,6.895,21.105,6,20,6z M16,6H8V4h8V6z"/>
 </g>
 <g id="Layer_1">
 </g>
