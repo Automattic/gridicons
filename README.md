@@ -9,7 +9,7 @@ The WordPress.com consistent collaborative icon set.
 - straight 45 degree angles
 - flat, bidimensional look (no faux 3D whatsoever)
 - 2dp lines
-- 2dp radius rounded corners only when necessary
+- 2dp radius rounded corners
 - no logos
 - hollow means inactive, solid means active (for example a hollow bookmark star is solid when checked)
 - icons should be sized optically so they are balanced against each other, see icon-template.ai
@@ -32,7 +32,7 @@ These are not rules, they are guidelines that can be broken in style. The purpos
 3. Add a new containing layer with the name of the icon (i.e. "trophy").
 4. Add the icon from the SVG on that containing layer. Make sure to check pixel preview.
 7. Generate an SVG by dragging the script `exporter-multi.jsx` inside the Illustrator window.
-8. In the dialog, select your new icon layer from the "Export layers" dropdown and click Export.
+8. In the dialog, select your new icon layer from the "Export layers" dropdown and click Export (make sure the output directory is `gridicons/svg`).
 9. Run `grunt` command from terminal, to generate the svg-min, react, and svg-sprite directories.
 10. Commit
 11. Merge & delete branch
