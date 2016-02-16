@@ -56,6 +56,26 @@ In the commandline, type `grunt`. This will clean up, polish, and generate the f
 
 Do remember to update the React components where they are used, when you add a new icon. 
 
+## Making PDF versions
+
+Gridicons comes with a shell-script that will make highly optimized 1:1 size PDF versions of every SVG found in `svg-min`. These are not automatically make by the grunt script. 
+
+You need to have CairoSVG installed:
+
+```
+sudo easy_install pip
+sudo pip install cairosvg
+brew install cairo
+```
+
+To make PDF versions, open a commandline in the gridicons directory type:
+
+`sh makepdfs.sh`
+
+Now every icon in the `svg-min` folder will have been converted to PDFs in the `pdf` folder.
+
+Since this script isn't automatically run by `grunt` (due to the extra dependencies not installed by `npm install`), we should just run this script every once in a while (when you need a PDF icon that isn't baked, basically). 
+
 ## Using `icon-template.ai`
 
 ![Icon Template](https://cldup.com/AdRe2pH1mz.png)
