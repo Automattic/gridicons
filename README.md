@@ -92,3 +92,7 @@ If you'd like to contribute an icon, but are unable to bake the sprite with grun
 - Filipe
 - Davide
 - Dave W.
+
+## License
+
+Gridicons is licensed under [GNU General Public License v2 (or later)](./LICENSE.md).
