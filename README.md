@@ -53,17 +53,6 @@ Note that the icons in this set are tied to be used in [Calypso](https://github.
 This icon set uses a few automation scripts to ease the generation of new icons in a reliable way. In short, we require `node` and `grunt`. For detailed instructions check [the installation page](https://github.com/Automattic/gridicons/wiki/Installation).
 
 
-## Committers
-
-If you'd like to contribute an icon, but are unable to bake the sprite with grunt, or upload it, you can ping someone on this list and they'll help you compile and deploy:
-
-- Joen
-- Kevin
-- Michael
-- Filipe
-- Davide
-- Dave W.
-
 ## License
 
 Gridicons is licensed under [GNU General Public License v2 (or later)](./LICENSE.md).
