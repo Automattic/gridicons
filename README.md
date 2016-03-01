@@ -16,6 +16,8 @@ The WordPress.com consistent collaborative icon set.
 
 These are not rules, they are guidelines that can be broken in style. The purpose of them is to try an ensure a uniform look as we all work on it together. They are also open to growing organically. They are meant to guide you to create an icon that fits with all the others (style, alignment, size, ...), if you break any of the above to make it fit, that works too.
 
+**Note**: the bundled file, `gridicons-32.ai`, will only ever contain 5 icons used for WordPress.com main navigation. It's only there to add some flexibility to the sizing of this navigation. 
+
 
 ## Propose a New Icon
 
