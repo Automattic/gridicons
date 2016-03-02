@@ -3,15 +3,45 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g id="domains">
-	<path d="M12,2C6.477,2,2,6.477,2,12c0,5.523,4.477,10,10,10s10-4.477,10-10C22,6.477,17.523,2,12,2z M12,20l2-2l1-1v-2h-2v-1l-1-1
-		H9v3l2,2v1.931C7.06,19.436,4,16.072,4,12l1,1h2v-2h2l3-3V6h-2L9,5V4.589C9.927,4.212,10.939,4,12,4s2.073,0.212,3,0.589V6l-1,1v2
-		l1,1l3.13-3.13c0.752,0.897,1.304,1.964,1.606,3.13H18l-2,2v2l1,1h2l0.286,0.286C18.029,18.061,15.239,20,12,20z"/>
-	<g>
-		<polygon style="fill:#FFFFFF;" points="13.693,21 11,13.818 11,11 12.788,11 21,14.649 21,21 		"/>
-		<path style="fill:#FFFFFF;" d="M12.576,12L20,15.3V20h-5.614L12,13.637V12H12.576 M13,10h-3v4l3,8h9v-8L13,10L13,10z"/>
+	<g style="display:none;">
+		<path style="display:inline;" d="M0-5C-5.523-5-10-0.523-10,5c0,5.523,4.477,10,10,10s10-4.477,10-10C10-0.523,5.523-5,0-5z M0,13
+			l2-2l1-1V8H1V7L0,6h-3v3l2,2v1.931C-4.94,12.436-8,9.072-8,5l1,1h2V4h2l3-3v-2h-2l-1-1v-0.411C-2.073-2.788-1.061-3,0-3
+			s2.073,0.212,3,0.589V-1L2,0v2l1,1l3.13-3.13C6.883,0.767,7.435,1.833,7.737,3H6L4,5v2l1,1h2l0.286,0.286
+			C6.029,11.061,3.239,13,0,13z"/>
+		<g style="display:inline;">
+			<polygon style="fill:#FFFFFF;" points="1.693,14 -1,6.819 -1,4 0.788,4 9,7.65 9,14 			"/>
+			<path style="fill:#FFFFFF;" d="M0.576,5L8,8.3V13H2.386L0,6.637V5H0.576 M1,3h-3v4l3,8h9V7L1,3L1,3z"/>
+		</g>
+		<polygon style="display:inline;fill:#FFFFFF;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="7,9 1,6 3,12 		"/>
+		<line style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" x1="5" y1="11" x2="7" y2="13"/>
 	</g>
-	<polygon style="fill:#FFFFFF;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" points="19,16 13,13 15,19 	"/>
-	<line style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" x1="17" y1="18" x2="19" y2="20"/>
+	<g id="O5Nmtk.tif">
+		
+			<image style="overflow:visible;" width="47" height="37" id="Layer_0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAlCAIAAABd3iedAAAACXBIWXMAAAsSAAALEgHS3X78AAAA
+GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAk5JREFUeNrsV03IaVEU/S4GFBOF
+3sCAb0QpysBPFEYmRjL1ipJiLIUJJXMlRTExeEMTJigSZUApRhi+opQor/y99Tml1/spblfd72UP
+dmuds/e962zn7nNQP652Pp/fWGAc9kj5UMMeKR9q3thkLzUvNXSMRzvzcDiMx+PZbDafz+EpilIq
+le9X02g0PB6dJ1Pr9ZpG2mAwKJfLy+Xyr7Mymczr9er1+qerQX8qlUr1eh1YIpGcTic8QafTgQ6H
+Q7FYzOVyV6sVqNPphCYOh/PEfVOpVCAFP4Tb7Y7H45vNBq//ejUAUAxiCgG1Wg3BT9zFo9GoWq0K
+BAK80uPxdDod1MZoNH65GgAoBjEVi8UQhmCkPEXN8XgsFosAfr9fpVIB9Pt9eLvdTgIIIINqtdrn
+8wEgBYnM75t2u53NZmls+VAoZLVaGa5Nt9ul1wvuT3ygK6CpwGcyGYVCAdBoNPL5vM1mCwaDt5hc
+LtdqtQKBgMPhAF0sFpFIhCQyXJvtdgsvlUoJ3e128CKR6NcYQsnULZgk/tfnFFn3rf8KhcI/100o
+mboF/1Y/Zr6pdDqNbktjxejU0WiU4dqYzWZ69b8/8QE1JpMJxyFAOBz+djW5XA6aSCQIBQDFIKFo
+M+QERSLzanD0kPZaKBSm0ymAwWCAbzabJIAAMjiZTEjjRsr9t4vHvimtVutyufb7fTKZxOotFgtO
+yl6v9/1qAKAYxFQqlUIYgpHyWW8Un/y2xcab6OsfzEvNS82/1DzUnZ6uhs/ns0cQdblc2FObnwIM
+AN2UScfwUTszAAAAAElFTkSuQmCC" transform="matrix(1 0 0 1 -49 -6)">
+		</image>
+	</g>
+	<path d="M12,2C6.477,2,2,6.477,2,12c0,5.523,4.477,10,10,10s10-4.477,10-10C22,6.477,17.523,2,12,2z M18.918,8h-3.215
+		c-0.188-1.424-0.42-2.651-0.565-3.357C16.731,5.325,18.054,6.513,18.918,8z M13.014,4.072C13.082,4.424,13.401,6.11,13.659,8
+		h-3.318c0.258-1.89,0.577-3.576,0.645-3.928C11.319,4.029,11.656,4,12,4S12.681,4.029,13.014,4.072z M14,12
+		c0,0.598-0.043,1.286-0.109,2h-3.782C10.043,13.286,10,12.598,10,12s0.043-1.286,0.109-2h3.782C13.957,10.714,14,11.402,14,12z
+		 M8.862,4.643C8.717,5.349,8.485,6.576,8.297,8H5.082C5.946,6.513,7.269,5.325,8.862,4.643z M4.263,10h3.821
+		C8.033,10.668,8,11.344,8,12s0.033,1.332,0.085,2H4.263C4.097,13.359,4,12.692,4,12S4.098,10.641,4.263,10z M5.082,16h3.215
+		c0.188,1.424,0.42,2.65,0.565,3.357C7.269,18.675,5.946,17.487,5.082,16z M10.986,19.928c-0.068-0.353-0.388-2.038-0.645-3.928
+		h3.318c-0.258,1.89-0.577,3.576-0.645,3.928C12.681,19.971,12.344,20,12,20S11.319,19.971,10.986,19.928z M15.138,19.357
+		c0.145-0.707,0.377-1.933,0.565-3.357h3.215C18.054,17.487,16.731,18.675,15.138,19.357z M19.737,14h-3.821
+		C15.967,13.332,16,12.656,16,12s-0.033-1.332-0.085-2h3.821C19.902,10.641,20,11.308,20,12S19.903,13.359,19.737,14z"/>
 </g>
 <g id="Layer_1">
 </g>
