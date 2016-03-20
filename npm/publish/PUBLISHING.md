@@ -11,7 +11,7 @@ If you are reading this document and are preparing to publish the contents of th
 ## Generate a new npm package version
 It is highly recommended that you take the time to review the material provided by npm on [semantic versioning](https://docs.npmjs.com/getting-started/semantic-versioning).
 
-To update the version of the package that you need to publish you need to executed the following command:
+To update the version of the package that you need to publish you need to execute the following command:
 
 `npm version <version_type>`
 

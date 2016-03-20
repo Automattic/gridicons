@@ -6,7 +6,8 @@ The npm package generation has three folders:
 - npm/publish
 - npm/test
 
-**npm/generate**
+**npm/generate**:
+
 This folder contains files that are to be used by `grunt` in order to generate the `npm/publish/index.js` javascript module that is to be published to npm. This is the javascript module that will be exposed to the world via npm installs. 
 
 There are two files in this folder
@@ -15,12 +16,14 @@ There are two files in this folder
 
 `grunt` will simply take the header and footer files and add in a body based on the list of gridicons that need to get published.
 
-**npm/publish**
+**npm/publish**:
+
 This folder holds the contents that gets published to npm and will be made available to the world via npm. So if `npm install wp-gridicons` is run in another project, npm will create a `node_modules` folder in that project's root directory (if one does not already exist) and will make the contents of this folder available under the `<project>/node_modules/wp-gridicons` folder. 
 
 Also note that any files outlined by the `.npmignore` file will not be published to npm i.e., they will be ignored when publishing to npm.
 
-**npm/test**
+**npm/test**:
+
 This folder contains files that will be used for testing the `npm/publish/index.js` module. It contains the following files:
 1. index.html
  This is a client-side html page that displays the various gridicons to ensure they look good before pulishing to npm.

@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/Automattic/gridicons#readme",
   "dependencies": {
-    "classnames", "2.2.3"
+    "classnames": "2.2.3"
   }
 }
