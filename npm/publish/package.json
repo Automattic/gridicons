@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Automattic/gridicons/issues"
   },
-  "homepage": "https://github.com/Automattic/gridicons#readme"
+  "homepage": "https://github.com/Automattic/gridicons#readme",
+  "dependencies": {
+    "classnames", "2.2.3"
+  }
 }
