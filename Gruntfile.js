@@ -203,6 +203,39 @@ module.exports = function(grunt) {
 		grunt.file.write( 'react/gridicon/example.jsx', designContent );
 	});
 
+	grunt.registerTask( 'npm', 'Output a JS module for NPM Publishing', function() {
+		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] ),
+			content;
+
+		// Start the index.js javascript module
+		content = grunt.file.read( 'npm/inc/index-header.js' );
+
+		// Create a switch() case for each svg file
+		svgFiles.forEach( function( svgFile ) {
+			// Clean up the filename to use for the react components
+			var name = svgFile.split( '.' );
+			name = name[0];
+
+			// Grab the relevant bits from the file contents
+			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
+
+			// Add className, height, and width to the svg element
+			fileContent = fileContent.slice( 108, -6 );
+
+			// Output the case for each icon
+			var iconComponent = "			case '" + name + "':\n" +
+								"				path = `" + fileContent + "`;\n" +
+								"				break;\n";
+
+			content += iconComponent;
+		} );
+
+		// Finish up the index.js javascript module
+		content += grunt.file.read( 'npm/inc/index-footer.js' );
+
+		grunt.file.write( 'npm/publish/index.js', content );
+	});
+
 	// Create PHP WordPress plugin, output to php
 	grunt.registerTask( 'svgphp', 'Output a PHP WordPress plugin for SVGs', function() {
 		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] ),
@@ -265,6 +298,6 @@ module.exports = function(grunt) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'svgreact', 'svgphp', 'addsquare']);
+	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'svgreact', 'svgphp', 'addsquare', 'npm']);
 
 };

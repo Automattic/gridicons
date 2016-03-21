@@ -2,11 +2,11 @@ In this Readme file you will learn about the contents of the npm folder and how 
 
 # npm
 The npm package generation has three folders:
-- npm/generate
+- npm/inc
 - npm/publish
 - npm/test
 
-**npm/generate**:
+**npm/inc**:
 
 This folder contains files that are to be used by `grunt` in order to generate the `npm/publish/index.js` javascript module that is to be published to npm. This is the javascript module that will be exposed to the world via npm installs. 
 
