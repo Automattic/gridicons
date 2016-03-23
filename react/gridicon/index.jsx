@@ -41,7 +41,6 @@ var Gridicon = React.createClass( {
 			'gridicons-align-image-none',
 			'gridicons-align-image-right',
 			'gridicons-attachment',
-			'gridicons-backspace',
 			'gridicons-bold',
 			'gridicons-bookmark-outline',
 			'gridicons-bookmark',
