@@ -41,7 +41,6 @@ var Gridicon = React.createClass( {
 			'gridicons-align-image-none',
 			'gridicons-align-image-right',
 			'gridicons-attachment',
-			'gridicons-backspace',
 			'gridicons-bold',
 			'gridicons-bookmark-outline',
 			'gridicons-bookmark',
@@ -209,9 +208,6 @@ var Gridicon = React.createClass( {
 				break;
 			case 'gridicons-audio':
 				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M8 4v10.184C7.686 14.072 7.353 14 7 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V7h7v4.184c-.314-.112-.647-.184-1-.184-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V4H8z"/></g></svg>;
-				break;
-			case 'gridicons-backspace':
-				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M19 7H8l-5 5 5 5h11c1.104 0 2-.896 2-2V9c0-1.104-.896-2-2-2zm-.647 6.646l-.707.707L16 12.707l-1.647 1.647-.707-.707L15.293 12l-1.647-1.646.707-.707L16 11.293l1.646-1.647.707.707L16.707 12l1.646 1.646z"/></g></svg>;
 				break;
 			case 'gridicons-bell':
 				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M6.14 14.97l2.828 2.827c-.362.362-.862.586-1.414.586-1.105 0-2-.895-2-2 0-.552.224-1.052.586-1.414zm8.867 5.324L14.3 21 3 9.7l.706-.707 1.102.157c.754.108 1.69-.122 2.077-.51l3.885-3.884c2.34-2.34 6.135-2.34 8.475 0s2.34 6.135 0 8.475l-3.885 3.886c-.388.388-.618 1.323-.51 2.077l.157 1.1z"/></g></svg>;
