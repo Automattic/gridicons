@@ -39,7 +39,6 @@ module.exports = React.createClass( {
 				<Gridicon icon="aside" size={ 48 } onClick={ this.handleClick.bind( this, 'aside' ) } />
 				<Gridicon icon="attachment" size={ 48 } onClick={ this.handleClick.bind( this, 'attachment' ) } />
 				<Gridicon icon="audio" size={ 48 } onClick={ this.handleClick.bind( this, 'audio' ) } />
-				<Gridicon icon="backspace" size={ 48 } onClick={ this.handleClick.bind( this, 'backspace' ) } />
 				<Gridicon icon="bell" size={ 48 } onClick={ this.handleClick.bind( this, 'bell' ) } />
 				<Gridicon icon="block" size={ 48 } onClick={ this.handleClick.bind( this, 'block' ) } />
 				<Gridicon icon="bold" size={ 48 } onClick={ this.handleClick.bind( this, 'bold' ) } />
