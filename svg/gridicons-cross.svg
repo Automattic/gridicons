@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-<g id="cross">
-	<path d="M18.36,19.78L12,13.41l-6.36,6.37l-1.42-1.42L10.59,12L4.22,5.64l1.42-1.42L12,10.59l6.36-6.36l1.41,1.41L13.41,12
-		l6.36,6.36L18.36,19.78z"/>
-</g>
-<g id="Layer_1">
-</g>
-</svg>
+<svg id="Artwork" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>gridicons-cross</title><g id="plus"><path d="M18.36,19.78L12,13.41,5.64,19.78,4.22,18.36,10.59,12,4.22,5.64,5.64,4.22,12,10.59l6.36-6.36,1.41,1.41L13.41,12l6.36,6.36Z"/></g></svg>
