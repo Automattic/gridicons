@@ -1,1 +1,11 @@
-<svg id="Artwork" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>gridicons-caption</title><path d="M20,15l2-2v5a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V6A2,2,0,0,1,4,4H17L15,6H4V18H20V15Zm2.44-8.56-0.88-.88a1.5,1.5,0,0,0-2.12,0L12,13v2H6v2h9V16l7.44-7.44A1.5,1.5,0,0,0,22.44,6.44Z"/></svg>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<g id="caption">
+	<path d="M20,15l2-2v5c0,1.105-0.895,2-2,2H4c-1.105,0-2-0.895-2-2V6c0-1.105,0.895-2,2-2h13l-2,2H4v12h16V15z M22.44,6.44
+		l-0.88-0.88c-0.586-0.585-1.534-0.585-2.12,0L12,13v2H6v2h9v-1l7.44-7.44C23.025,7.974,23.025,7.026,22.44,6.44z"/>
+</g>
+<g id="Layer_1">
+</g>
+</svg>
