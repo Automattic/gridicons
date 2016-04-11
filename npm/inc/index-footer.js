@@ -1,14 +1,16 @@
-	};
+var defaultClickHandler = function() {
+	console.log( 'Default Click handler.' );
+}
 
-	return( path );
-};
-
-var gridicons = function( iconName, size, onClick ) {
+var wpGridicon = function( iconName, size, onClick ) {
 	var icon = 'gridicons-' + iconName,
-		needOffset = needsOffset( icon, size ),
-		needOffsetX = needsOffsetX( icon, size ),
-		needOffsetY = needsOffsetY( icon, size ),
-		svg, iconClass;
+		iconSize = size || 24,
+		onClickHandler = onClick || defaultClickHandler,
+		needOffset, needOffsetX, needOffsetY, svg, iconClass;
+
+	needOffset = needsOffset( icon, iconSize );
+	needOffsetX = needsOffsetX( icon, iconSize );
+	needOffsetY = needsOffsetY( icon, iconSize );
 
 	iconClass = classNames( 'gridicon', icon, '', {
 		'needs-offset': needOffset,
@@ -16,9 +18,12 @@ var gridicons = function( iconName, size, onClick ) {
 		'needs-offset-y': needOffsetY,
 	} );
 	
-	svg = `<svg className=${ iconClass } height=${ size } width=${ size } onClick="${ onClick }()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">${ getSvgPath( icon ) }</svg>`;
+	svg = `<svg class=${ iconClass } height=${ iconSize } width=${ iconSize } onClick="(${ onClickHandler })()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">${ getSvgPath( icon ) }</svg>`;
 	
-	return ( svg );
+	return( svg );
 };
 
-module.exports = gridicons;
+module.exports = {
+	wpGridicon: wpGridicon,
+	wpAllIcons: wpAllIcons,
+};

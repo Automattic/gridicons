@@ -230,6 +230,22 @@ module.exports = function(grunt) {
 			content += iconComponent;
 		} );
 
+		content += 	"		};\n" +
+				   	"		return( path );\n" +
+				   	"};\n\n" +
+				   	"var wpAllIcons = function() {\n" +
+				   	"	var icons = [\n";
+
+		svgFiles.forEach( function( svgFile ) {
+			var name = svgFile.split( '.' );
+			name = name[0].slice( 10 );
+			content += "		'" + name + "',\n";	
+		} );
+
+		content += 	"	];\n\n" +
+					"	return( icons );\n" +
+					"}\n\n";
+
 		// Finish up the index.js javascript module
 		content += grunt.file.read( 'npm/inc/index-footer.js' );
 

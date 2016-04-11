@@ -1,6 +1,12 @@
 # README
 The `wp-gridicons` package allows you to make use of the Icon Set that is developed for the WordPress Admin (Calypso).
 
+## Quick Steps for using wp-gridicons
+1. **Install wp-gridicons**: Execute the following command in your project's root folder `npm install wp-gridicons`.
+2. **Import wp-gridicons**: Import the wp-gridicons package in your javascript file via `var gridicons = require( 'wp-gridicons' );`.
+3. **Call the gridicons api**: Retrieve a gridicon by calling the gridicons api e.g., `gridicons( 'add-image', 24, 'onClickHandler' );`.
+
+## Detailed Steps for using wp-gridicons
 To make use of the `wp-gridicons` package you just need to:
 1. **Install it via npm**
 To install `wp-gridicons`, execute the following command in your project's root directory:
@@ -17,7 +23,7 @@ Now, simply import the `gridicons` javascript module for use in your project.
 Or in __ES6 style__...
 > `import gridicons from 'wp-gridicons';`
 
-3. ****
+3. **Calling the gridicons module**
 ...and then call the API with the iconName, it's size and an onClickHandler...
 
 > `gridicons( 'add-image', 24, 'onClickHandler' );`

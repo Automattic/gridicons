@@ -1,3 +1,54 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+/*!
+  Copyright (c) 2016 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg)) {
+				classes.push(classNames.apply(null, arg));
+			} else if (argType === 'object') {
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = classNames;
+	} else if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
+		// register as 'classnames', consistent with npm package name
+		define('classnames', [], function () {
+			return classNames;
+		});
+	} else {
+		window.classNames = classNames;
+	}
+}());
+
+},{}],2:[function(require,module,exports){
 /**
  * External Dependencies
  */
@@ -742,3 +793,32 @@ module.exports = {
 	wpGridicon: wpGridicon,
 	wpAllIcons: wpAllIcons,
 };
+
+},{"classnames":1}],3:[function(require,module,exports){
+var wpGridicon = require( '../publish/index.js' ).wpGridicon;
+var wpAllIcons = require( '../publish/index.js' ).wpAllIcons;
+
+var clickHandler = function() {
+	console.log( 'This is a test onClickHandler' );
+}
+
+function getGridIconHtml() {
+	var iconList = wpAllIcons(),
+		html = '';
+
+	for (var i = 0; i < iconList.length; i++) {
+		html += wpGridicon( iconList[i], 18 );
+		html += wpGridicon( iconList[i] );
+		html += wpGridicon( iconList[i], 32 );
+		html += wpGridicon( iconList[i], 48 );
+		html += wpGridicon( iconList[i], 48, clickHandler );
+		html += wpGridicon( iconList[i], null, clickHandler );
+		html += '<br>';
+	}
+
+	return( html );
+}
+
+document.getElementById( 'display-gridicons' ).innerHTML = getGridIconHtml(); 
+
+},{"../publish/index.js":2}]},{},[3]);
