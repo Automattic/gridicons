@@ -2,6 +2,7 @@
   "name": "gridicons",
   "version": "0.1.0",
   "devDependencies": {
+    "classnames": "^2.2.3",
     "grunt": "~0.4.1",
     "grunt-contrib-copy": "^0.6.0",
     "grunt-rename": "^0.1.4",
