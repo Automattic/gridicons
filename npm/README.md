@@ -1,4 +1,4 @@
-In this Readme file you will learn about the contents of the npm folder and how the gridicons npm package is generated, tested and published to npm.
+In this Readme file you will learn about the contents of the npm folder and how the `wp-gridicons` npm package is generated, tested and published to npm.
 
 # npm
 The npm package generation has three folders:

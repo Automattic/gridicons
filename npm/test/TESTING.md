@@ -1,7 +1,7 @@
-# Testing the gridicons npm package
+# Testing the wp-gridicons npm package
 
 ## Getting Started
-This instruction set only applies to the gridicons admin who generates and publishes the gridicons npm package.
+This instruction set only applies to the gridicons admin who generates and publishes the `wp-gridicons` npm package.
 
 As an admin, before you publish the index.js module which is auto-generated via grunt, it is important that you test the module locally in your browser. There are a few steps involved in doing this, however, before you proceed this document assumes that you have already used grunt to auto-generate a new set of index.js files under:
 - npm/publish/index.js
@@ -9,7 +9,7 @@ As an admin, before you publish the index.js module which is auto-generated via 
 
 ## Background
 In order for your browser to be able to use and hence test the `index.js`
-file, it will need to be able to understand the `node` based `require` form of importing modules. This is because the `gridicons` package is dependent on certain node packages like `classnames` (and potentially others may be added in the future). In general, this is not available on the client side browser because node is on the server side.
+file, it will need to be able to understand the `node` based `require` form of importing modules. This is because the `wp-gridicons` package is dependent on certain node packages like `classnames` (and potentially others may be added in the future). In general, this is not available on the client side browser because node is on the server side.
 
 In order to make any node package dependencies available on the client side we use Browserify which simply traces through all node package dependencies in your file and pulls them in to a single `*.js` file that you simply include into your client side `html` document.
 
