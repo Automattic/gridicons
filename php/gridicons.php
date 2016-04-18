@@ -355,6 +355,12 @@ function get_gridicon( $gridicon ) {
 		case 'gridicons-quote':
 			$svg = '<svg class="gridicon gridicons-quote" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.956.76-3.022.66-1.065 1.515-1.867 2.558-2.403L9.373 5c-.8.396-1.56.898-2.26 1.505-.71.607-1.34 1.305-1.9 2.094s-.98 1.68-1.25 2.69-.346 2.04-.217 3.1c.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.368l.002.003zm9.124 0c0-.88-.23-1.618-.69-2.217-.326-.42-.77-.692-1.327-.817-.56-.124-1.074-.13-1.54-.022-.16-.94.09-1.95.75-3.02.66-1.06 1.514-1.86 2.557-2.4L18.49 5c-.8.396-1.555.898-2.26 1.505-.708.607-1.34 1.305-1.894 2.094-.556.79-.97 1.68-1.24 2.69-.273 1-.345 2.04-.217 3.1.165 1.4.615 2.52 1.35 3.35.732.833 1.646 1.25 2.742 1.25.967 0 1.768-.29 2.402-.876.627-.576.942-1.365.942-2.368v.01z"/></g></svg>';
 			break;
+		case 'gridicons-reader-follow':
+			$svg = '<svg class="gridicon gridicons-reader-follow" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M20 16v-3h-2v3h-3v2h3v3h2v-3h3v-2"/><path d="M16 11h4V2H2v14c0 1.1.9 2 2 2h9v-4h3v-3zm-8 2H4v-1h4v1zm3-2H4v-1h7v1zm0-2H4V8h7v1zM4 6V4h14v2H4z"/></g></svg>';
+			break;
+		case 'gridicons-reader-following':
+			$svg = '<svg class="gridicon gridicons-reader-following" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M21.6 12.1l-6.1 6.1-2.1-2.2-1.4 1.4 3.5 3.6 7.5-7.5"/><path d="M15.5 15.3l4.5-4.5V2H2v14c0 1.1.9 2 2 2h4.5l4.9-4.8 2.1 2.1zM4 13v-1h4v1H4zm7-2H4v-1h7v1zm0-2H4V8h7v1zm7-3H4V4h14v2z"/></g></svg>';
+			break;
 		case 'gridicons-reader':
 			$svg = '<svg class="gridicon gridicons-reader" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M3 4v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4H3zm7 11H5v-1h5v1zm2-2H5v-1h7v1zm0-2H5v-1h7v1zm7 4h-5v-5h5v5zm0-7H5V6h14v2z"/></g></svg>';
 			break;
