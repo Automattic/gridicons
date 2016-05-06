@@ -472,6 +472,9 @@ function get_gridicon( $gridicon ) {
 		case 'gridicons-visible':
 			$svg = '<svg class="gridicon gridicons-visible" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M12 6C5.188 6 1 12 1 12s4.188 6 11 6 11-6 11-6-4.188-6-11-6zm0 10c-3.943 0-6.926-2.484-8.38-4 1.04-1.085 2.863-2.657 5.255-3.47C8.335 9.214 8 10.064 8 11c0 2.21 1.79 4 4 4s4-1.79 4-4c0-.937-.335-1.787-.875-2.47 2.393.813 4.216 2.386 5.254 3.47-1.456 1.518-4.438 4-8.38 4z"/></g></svg>';
 			break;
+		case 'more':
+			$svg = '<svg class="gridicon more" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M3 5h18v4H3V5zm0 14h18v-4H3v4zm6-6h6v-2H9v2zm-6 0h4v-2H3v2zm14 0h4v-2h-4v2z"/></g></svg>';
+			break;
 		default: 
 			$svg = 'Need to specify a gridicon';
 			break;
