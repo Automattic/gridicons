@@ -116,6 +116,7 @@ module.exports = React.createClass( {
 				<Gridicon icon="microphone" size={ 48 } onClick={ this.handleClick.bind( this, 'microphone' ) } />
 				<Gridicon icon="minus-small" size={ 48 } onClick={ this.handleClick.bind( this, 'minus-small' ) } />
 				<Gridicon icon="minus" size={ 48 } onClick={ this.handleClick.bind( this, 'minus' ) } />
+				<Gridicon icon="more" size={ 48 } onClick={ this.handleClick.bind( this, 'more' ) } />
 				<Gridicon icon="my-sites-horizon" size={ 48 } onClick={ this.handleClick.bind( this, 'my-sites-horizon' ) } />
 				<Gridicon icon="my-sites" size={ 48 } onClick={ this.handleClick.bind( this, 'my-sites' ) } />
 				<Gridicon icon="not-visible" size={ 48 } onClick={ this.handleClick.bind( this, 'not-visible' ) } />
@@ -170,7 +171,6 @@ module.exports = React.createClass( {
 				<Gridicon icon="video-camera" size={ 48 } onClick={ this.handleClick.bind( this, 'video-camera' ) } />
 				<Gridicon icon="video" size={ 48 } onClick={ this.handleClick.bind( this, 'video' ) } />
 				<Gridicon icon="visible" size={ 48 } onClick={ this.handleClick.bind( this, 'visible' ) } />
-				<Gridicon icon="more" size={ 48 } onClick={ this.handleClick.bind( this, 'more' ) } />
 			</div>
 		);
 	}
