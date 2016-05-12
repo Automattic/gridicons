@@ -82,7 +82,9 @@ var Gridicon = React.createClass( {
 			'gridicons-textcolor',
 			'gridicons-time',
 			'gridicons-trophy',
-			'gridicons-user-circle'
+			'gridicons-user-circle',
+			'gridicons-reader-follow',
+			'gridicons-reader-following'
 		];
 
 		if ( iconNeedsOffset.indexOf( icon ) >= 0 ) {
