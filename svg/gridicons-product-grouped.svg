@@ -7,15 +7,9 @@
 <g id="Guides">
 </g>
 <g id="Artwork">
-	<g id="Layer_1_1_">
-	</g>
-	<g id="Layer_1_2_">
-	</g>
-	<g id="Layer_1_3_">
-	</g>
 	<g>
-		<path d="M4,7h8v1h2V5l-2-3H4L2,5v2v7h6v-1v-0.6L8.3,12H4V7z M5,4h5.9l0.7,1H4.3L5,4z"/>
 		<path d="M20,10h-6h-2l-2,3v1v1v7h12v-9L20,10z M13,12h1h4.9l0.7,1H14h-1.7L13,12z M20,20h-8v-5h8V20z"/>
+		<path d="M4,7h8v1h2V5l-2-3H4L2,5v2v7h6v-1v-0.6V12H4V7z M5,4h5.9l0.7,1H4.3L5,4z"/>
 	</g>
 </g>
 </svg>
