@@ -179,8 +179,7 @@ module.exports = function(grunt) {
 					"	},\n\n" +
 					"	render: function() {\n" +
 					'		return (\n' +
-					'			<div className="design-assets__group">\n' +
-					'				<h2><a href="/devdocs/design/gridicons">Gridicons</a></h2>\n';
+					'			<div>\n';
 
 		// Create a switch() case for each svg file
 		svgFiles.forEach( function( svgFile ) {
@@ -254,7 +253,7 @@ module.exports = function(grunt) {
 			// Add transparent rectangle to each file
 			fileContent = fileContent.slice( 0, fileContent.indexOf('viewBox="0 0 24 24">') + 20 ) +
 						'<rect x="0" fill="none" width="24" height="24"/>' +
-						fileContent.slice( fileContent.indexOf('viewBox="0 0 24 24">') + 20, -6 ) + 
+						fileContent.slice( fileContent.indexOf('viewBox="0 0 24 24">') + 20, -6 ) +
 						fileContent.slice( -6 );
 
 			// Save and overwrite the files in svg-min
