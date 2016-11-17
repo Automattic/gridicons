@@ -50,18 +50,93 @@ module.exports = function(grunt) {
 					<head>
 					<title>Gridicons</title>
 					<meta name="robots" content="noindex">
-					<link rel="stylesheet" type="text/css" href="gridicons-demo.css" />
-					<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-					<script src="gridicons-demo.js"></script>
+					<style type="text/css">
+					html {
+						background: #fff;
+						font: 10pt/1 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+						color: #999;
+					}
+
+					a:link, a:visited {
+						color: #999;
+					}
+
+					a:active {
+						color: #1fc1ad;
+					}
+
+					h1 {
+						text-align: center;
+						font-size: 24pt;
+					}
+
+					body > p {
+						text-align: center;
+						margin-bottom: 2em;
+					}
+
+					body {
+						max-width: 900px;
+						margin: 100px auto;
+					}
+
+					.icons {
+						padding: 0 20px;
+						overflow: hidden;
+						margin-bottom: 50px;
+					}
+
+					.icons div {
+						width: 64px;
+						height: 64px;
+						float: left;
+						padding: 6px 2px;
+						position: relative;
+						font-size: 7pt;
+						cursor: pointer;
+						text-align: center;
+					}
+
+					.icons div p {
+						margin: 0;
+						color: #bbb;
+						text-align: center;
+						overflow: hidden;
+						max-height: 1.9em;
+						word-break: break-word;
+					}
+
+					.icons div svg {
+						width: 48px;
+						height: 48px;
+						fill: #000;
+					}
+
+					.icons div:hover svg {
+						fill: #1fc1ad;
+					}
+					</style>
+					<script type="text/javascript">
+					window.onload = function () {
+					    var rows = document.getElementsByTagName( 'svg' );
+					    for ( i=0; i<rows.length; i++ ) {
+					        rows[i].onclick = function () {
+					            var cssClass = this.getAttribute( 'class' );
+					            var iconID = cssClass.split(' gridicons-')[1];
+					            var suggestion = '<Gridicon icon="'+ iconID +'" />';
+					            window.prompt( 'Copy this, paste in your React component.', suggestion );
+					        }
+					    }
+					}
+					</script>
 					</head>
 					<body>
 
 					<h1>Gridicons</h1>
-					<p><strong>This <code>use</code> based technique doesn't work in IE yet. It's here for a future where it will work.<strong></p>
 
 					{{{svg}}}
 
-					<div id="icons">
+					<div class="icons">
 					{{#each icons}}
 						<div>
 							<svg width="24" height="24" class="gridicon {{name}}">
@@ -71,6 +146,8 @@ module.exports = function(grunt) {
 						</div>
 					{{/each}}
 					</div>
+
+					<p><a href="https://github.com/Automattic/gridicons">GitHub</a></p>
 
 					</body>
 					</html>
@@ -89,6 +166,14 @@ module.exports = function(grunt) {
 					dest: 'svg-sprite/index.html'
 			},
 		},
+
+		copy: {
+			main: {
+				src: 'svg-sprite/index.html',
+				dest: 'docs/index.html'
+			}
+		},
+
 	});
 
 	// Load the copier
@@ -264,6 +349,6 @@ module.exports = function(grunt) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'svgreact', 'svgphp', 'addsquare']);
+	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'copy', 'svgreact', 'svgphp', 'addsquare']);
 
 };
