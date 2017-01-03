@@ -337,6 +337,9 @@ var Gridicon = React.createClass( {
 			case 'gridicons-external':
 				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M19 13v6c0 1.105-.895 2-2 2H5c-1.105 0-2-.895-2-2V7c0-1.105.895-2 2-2h6v2H5v12h12v-6h2zM13 3v2h4.586l-7.793 7.793 1.414 1.414L19 6.414V11h2V3h-8z"/></g></svg>;
 				break;
+			case 'gridicons-filter':
+				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M18.595 4H5.415c-.552-.003-1.003.442-1.006.994-.002.27.104.527.295.716l5.3 5.29v6l4 4V11l5.29-5.29c.392-.39.395-1.022.006-1.414-.186-.188-.44-.295-.705-.296z"/></g></svg>;
+				break;
 			case 'gridicons-flag':
 				svg = <svg className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick } xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M15 6c0-1.105-.895-2-2-2H5v17h2v-7h5c0 1.105.895 2 2 2h6V6h-5z"/></g></svg>;
 				break;
