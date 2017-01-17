@@ -158,7 +158,7 @@ export default React.createClass( {
 			needsOffset ? 'needs-offset' : false,
 			needsOffsetX ? 'needs-offset-x': false,
 			needsOffsetY ? 'needs-offset-y': false,
-		].filter( Boolean ).join();
+		].filter( Boolean ).join( ' ' );
 
 		switch ( icon ) {
 			default:

@@ -2,6 +2,32 @@
 
 The [Calypso](https://github.com/Automattic/wp-calypso/) / [WordPress.com](https://wordpress.com) official icon set.
 
+## Using the Gridicon Component in your project:
+
+Note that this component requires [react](https://www.npmjs.com/package/react) to be installed in your project.
+
+Gridicon renders a single svg icon based on an `icon` prop. It takes a size property but defaults to 24px. For greater sharpness, the icons should only be shown at either 18px, 24px, 36px or 48px. 
+
+There's a gallery with all the available icons in https://wpcalypso.wordpress.com/devdocs/design/gridicons.
+
+```
+npm install gridicons --save
+```
+#### Usage
+
+```
+import Gridicon from 'gridicons';
+//...
+render() {
+    return <Gridicon icon="add-image" />;
+}
+```
+
+#### Props
+
+* `icon`: String - the icon name.
+* `size`: Number - (default: 24) set the size of the icon.
+* `onClick`: Function - (optional) if you need a click callback.
 
 ## Icon Set Style Guidelines
 
@@ -52,6 +78,15 @@ Note that the icons in this set are tied to be used in [Calypso](https://github.
 
 This icon set uses a few automation scripts to ease the generation of new icons in a reliable way. In short, we require `node` and `grunt`. For detailed instructions check [the installation page](https://github.com/Automattic/gridicons/wiki/Installation).
 
+
+### Publishing to NPM
+
+- Follow install instructions
+- Check in changes if any and follow PR process.
+- Bump package version in package.json to the next desired version and add an alpha postfix `1.1.0-alpha.1`
+- While testing changes publish using the next tag `npm publish --tag next`
+- If changes look good remove postfix in the version `1.1.0`
+- Publish using the latest tag `npm publish --tag latest`
 
 ## License
 
