@@ -1,14 +1,19 @@
 {
   "name": "gridicons",
   "version": "0.1.0",
+  "scripts": {
+    "build": "grunt --verbose"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-cli": "^1.2.0",
     "grunt-contrib-copy": "^0.6.0",
     "grunt-rename": "^0.1.4",
     "grunt-svgmin": "^2.0.1",
     "grunt-svgstore": "^0.3.6",
     "handlebars": "^2.0.0",
     "jit-grunt": "^0.10.0",
-    "multiline": "^0.3.4"
+    "multiline": "^0.3.4",
+    "xml2js": "^0.4.17"
   }
 }
