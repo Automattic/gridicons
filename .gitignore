@@ -1,4 +1,7 @@
 node_modules/
 svg/output/
-/npm-debug.log*
+/npm-debug.log
 .idea/
+svg-min/
+svg-sprite/
+build/

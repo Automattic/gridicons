@@ -10,11 +10,12 @@ OR if you're looking to change now SVGs get output, you'll need to edit strings 
 /**
  * External dependencies
  */
-var React = require( 'react' ),
-	PureRenderMixin = require( 'react-pure-render/mixin' ),
-	classNames = require( 'classnames' );
+import React from 'react';
+import PureRenderMixin from 'react-pure-render/mixin';
 
-var Gridicon = React.createClass( {
+export default React.createClass( {
+
+	displayName: 'Gridicon',
 
 	mixins: [ PureRenderMixin ],
 
@@ -141,19 +142,25 @@ var Gridicon = React.createClass( {
 	},
 
 	render: function() {
-		var icon = 'gridicons-' + this.props.icon,
-			needsOffset = this.needsOffset( icon, this.props.size ),
-			needsOffsetX = this.needsOffsetX( icon, this.props.size ),
-			needsOffsetY = this.needsOffsetY( icon, this.props.size ),
-			svg, iconClass;
 
-		iconClass = classNames( 'gridicon', icon, this.props.className, {
-			'needs-offset': needsOffset,
-			'needs-offset-x': needsOffsetX,
-			'needs-offset-y': needsOffsetY,
-		} );
+		const { size, onClick, icon: iconProp } = this.props;
+		const icon = 'gridicons-' + iconProp;
+		const needsOffset = this.needsOffset( icon, size );
+		const needsOffsetX = this.needsOffsetX( icon, size );
+		const needsOffsetY = this.needsOffsetY( icon, size );
+		
+		let svg;
+
+		const iconClass = [
+			'gridicon',
+			icon,
+			this.props.className,
+			needsOffset ? 'needs-offset' : false,
+			needsOffsetX ? 'needs-offset-x': false,
+			needsOffsetY ? 'needs-offset-y': false,
+		].filter( Boolean ).join();
 
 		switch ( icon ) {
 			default:
-				svg = <svg height={ this.props.size } width={ this.props.size } />;
+				svg = <svg height={ size } width={ size } />;
 				break;

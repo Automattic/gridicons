@@ -20,7 +20,9 @@ function kabobToCamelCase( name ) {
 	} );
 }
 
-module.exports = function(grunt) {
+module.exports = function( grunt ) {
+
+	require( 'load-grunt-tasks' )( grunt );
 
 	// Project configuration.
 	grunt.initConfig({
@@ -188,6 +190,33 @@ module.exports = function(grunt) {
 			}
 		},
 
+		babel: {
+			options: {
+				sourceMap: false,
+				presets: [
+					'es2015',
+					'stage-2',
+					'babili'
+				],
+				comments: false,
+				plugins: [
+					'transform-runtime',
+					'transform-class-properties',
+					'transform-export-extensions',
+					'add-module-exports',
+					'syntax-jsx',
+					'transform-react-jsx',
+					'transform-react-display-name'
+				]
+			},
+			dist: {
+				files: {
+					"build/index.js": "build/index.jsx",
+					"build/example.js": "build/example.jsx"
+				}
+			}
+		}
+
 	});
 
 	// Load the copier
@@ -261,7 +290,7 @@ module.exports = function(grunt) {
 
 			// Add className, height, and width to the svg element
 			fileContent = fileContent.slice( 0, 4 ) +
-						' className={ iconClass } height={ this.props.size } width={ this.props.size } onClick={ this.props.onClick }' +
+						' className={ iconClass } height={ size } width={ size } onClick={ onClick }' +
 						fileContent.slice( 4, -6 ) +
 						fileContent.slice( -6 );
 
@@ -285,7 +314,7 @@ module.exports = function(grunt) {
 					"/**\n" +
 					" * Internal dependencies\n" +
 					" */\n" +
-					"var Gridicon = require( 'components/gridicon' );\n\n" +
+					"import Gridicon from './index.js';\n\n" +
 					"module.exports = React.createClass( {\n" +
 					"	displayName: 'Gridicons',\n\n" +
 					"	handleClick: function( icon ) {\n" +
@@ -313,8 +342,8 @@ module.exports = function(grunt) {
 							'} );\n';
 
 		// Write the React component to gridicon/index.jsx
-		grunt.file.write( 'react/gridicon/index.jsx', content );
-		grunt.file.write( 'react/gridicon/example.jsx', designContent );
+		grunt.file.write( 'build/index.jsx', content );
+		grunt.file.write( 'build/example.jsx', designContent );
 	});
 
 	// Create PHP WordPress plugin, output to php
@@ -379,6 +408,6 @@ module.exports = function(grunt) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'copy', 'svgreact', 'svgphp', 'addsquare']);
+	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'copy', 'svgreact', 'babel', 'svgphp', 'addsquare']);
 
 };
