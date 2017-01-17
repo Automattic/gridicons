@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-<g id="microphone">
-	<path d="M12,13c1.104,0,2-0.896,2-2V6c0-1.104-0.896-2-2-2c-1.105,0-2,0.896-2,2v5C10,12.104,10.895,13,12,13z M16,11
-		c0,2.209-1.791,4-4,4s-4-1.791-4-4H6c0,2.972,2.164,5.433,5,5.91V20h2v-3.09c2.836-0.478,5-2.939,5-5.91H16z"/>
-</g>
-<g id="Layer_1">
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>gridicons-microphone</title><g id="Artwork"><path d="M19,9v1a7,7,0,0,1-6,6.92V20h3v2H8V20h3V16.92A7,7,0,0,1,5,10V9H7v1a5,5,0,0,0,10,0V9Zm-7,4a3,3,0,0,0,3-3V5A3,3,0,0,0,9,5v5A3,3,0,0,0,12,13Z"/></g></svg>
