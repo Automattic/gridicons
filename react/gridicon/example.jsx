@@ -80,11 +80,14 @@ module.exports = React.createClass( {
 				<Gridicon icon="ellipsis-circle" size={ 48 } onClick={ this.handleClick.bind( this, 'ellipsis-circle' ) } />
 				<Gridicon icon="ellipsis" size={ 48 } onClick={ this.handleClick.bind( this, 'ellipsis' ) } />
 				<Gridicon icon="external" size={ 48 } onClick={ this.handleClick.bind( this, 'external' ) } />
+				<Gridicon icon="filter" size={ 48 } onClick={ this.handleClick.bind( this, 'filter' ) } />
 				<Gridicon icon="flag" size={ 48 } onClick={ this.handleClick.bind( this, 'flag' ) } />
 				<Gridicon icon="flip-horizontal" size={ 48 } onClick={ this.handleClick.bind( this, 'flip-horizontal' ) } />
 				<Gridicon icon="flip-vertical" size={ 48 } onClick={ this.handleClick.bind( this, 'flip-vertical' ) } />
 				<Gridicon icon="folder-multiple" size={ 48 } onClick={ this.handleClick.bind( this, 'folder-multiple' ) } />
 				<Gridicon icon="folder" size={ 48 } onClick={ this.handleClick.bind( this, 'folder' ) } />
+				<Gridicon icon="fullscreen-exit" size={ 48 } onClick={ this.handleClick.bind( this, 'fullscreen-exit' ) } />
+				<Gridicon icon="fullscreen" size={ 48 } onClick={ this.handleClick.bind( this, 'fullscreen' ) } />
 				<Gridicon icon="globe" size={ 48 } onClick={ this.handleClick.bind( this, 'globe' ) } />
 				<Gridicon icon="grid" size={ 48 } onClick={ this.handleClick.bind( this, 'grid' ) } />
 				<Gridicon icon="heading" size={ 48 } onClick={ this.handleClick.bind( this, 'heading' ) } />
@@ -150,6 +153,7 @@ module.exports = React.createClass( {
 				<Gridicon icon="refresh" size={ 48 } onClick={ this.handleClick.bind( this, 'refresh' ) } />
 				<Gridicon icon="refund" size={ 48 } onClick={ this.handleClick.bind( this, 'refund' ) } />
 				<Gridicon icon="reply" size={ 48 } onClick={ this.handleClick.bind( this, 'reply' ) } />
+				<Gridicon icon="resize" size={ 48 } onClick={ this.handleClick.bind( this, 'resize' ) } />
 				<Gridicon icon="rotate" size={ 48 } onClick={ this.handleClick.bind( this, 'rotate' ) } />
 				<Gridicon icon="scheduled" size={ 48 } onClick={ this.handleClick.bind( this, 'scheduled' ) } />
 				<Gridicon icon="search" size={ 48 } onClick={ this.handleClick.bind( this, 'search' ) } />
@@ -178,6 +182,7 @@ module.exports = React.createClass( {
 				<Gridicon icon="types" size={ 48 } onClick={ this.handleClick.bind( this, 'types' ) } />
 				<Gridicon icon="underline" size={ 48 } onClick={ this.handleClick.bind( this, 'underline' ) } />
 				<Gridicon icon="undo" size={ 48 } onClick={ this.handleClick.bind( this, 'undo' ) } />
+				<Gridicon icon="user-add" size={ 48 } onClick={ this.handleClick.bind( this, 'user-add' ) } />
 				<Gridicon icon="user-circle" size={ 48 } onClick={ this.handleClick.bind( this, 'user-circle' ) } />
 				<Gridicon icon="user" size={ 48 } onClick={ this.handleClick.bind( this, 'user' ) } />
 				<Gridicon icon="video-camera" size={ 48 } onClick={ this.handleClick.bind( this, 'video-camera' ) } />
