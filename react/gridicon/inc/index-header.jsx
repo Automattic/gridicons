@@ -10,31 +10,23 @@ OR if you're looking to change now SVGs get output, you'll need to edit strings 
 /**
  * External dependencies
  */
-import React from 'react';
-import PureRenderMixin from 'react-pure-render/mixin';
+import React, { PureComponent, PropTypes } from 'react';
 
-export default React.createClass( {
+export default class Gridicon extends PureComponent {
 
-	displayName: 'Gridicon',
+	static defaultProps = {
+		size: 24
+	};
 
-	mixins: [ PureRenderMixin ],
+	static propTypes = {
+		icon: PropTypes.string.isRequired,
+		size: PropTypes.number,
+		onClick: PropTypes.func,
+		className: PropTypes.string
+	};
 
-	getDefaultProps: function() {
-		return {
-			className: '',
-			size: 24
-		};
-	},
-
-	propTypes: {
-		icon: React.PropTypes.string.isRequired,
-		size: React.PropTypes.number,
-		onClick: React.PropTypes.func,
-		className: React.PropTypes.string
-	},
-
-	needsOffset: function( icon, size ) {
-		var iconNeedsOffset = [
+	needsOffset( icon, size ) {
+		const iconNeedsOffset = [
 			'gridicons-add-outline',
 			'gridicons-add',
 			'gridicons-align-image-center',
@@ -93,10 +85,10 @@ export default React.createClass( {
 		} else {
 			return false;
 		}
-	},
+	}
 
-	needsOffsetX: function( icon, size ) {
-		var iconNeedsOffsetX = [
+	needsOffsetX( icon, size ) {
+		const iconNeedsOffsetX = [
 			'gridicons-arrow-down',
 			'gridicons-arrow-up',
 			'gridicons-comment',
@@ -112,10 +104,10 @@ export default React.createClass( {
 		} else {
 			return false;
 		}
-	},
+	}
 
-	needsOffsetY: function( icon, size ) {
-		var iconNeedsOffsetY = [
+	needsOffsetY( icon, size ) {
+		const iconNeedsOffsetY = [
 			'gridicons-align-center',
 			'gridicons-align-justify',
 			'gridicons-align-left',
@@ -139,9 +131,9 @@ export default React.createClass( {
 		} else {
 			return false;
 		}
-	},
+	}
 
-	render: function() {
+	render() {
 
 		const { size, onClick, icon: iconProp } = this.props;
 		const icon = 'gridicons-' + iconProp;
