@@ -7,15 +7,15 @@
 var multiline = require('multiline'),
 	xml2js = require('xml2js');
 
-var KABOB_REGEX = /\-(\w)/g;
+var KEBAB_REGEX = /\-(\w)/g;
 
 /**
  * Transforms kabob case names to camel case
  * @param name        ex: foo-bar-baz
  * @returns {String}  ex: fooBarBaz
  */
-function kabobToCamelCase( name ) {
-	return name.replace( KABOB_REGEX, function replacer( match, capture ) {
+function kebabToCamelCase( name ) {
+	return name.replace( KEBAB_REGEX, function replacer( match, capture ) {
 		return capture.toUpperCase();
 	} );
 }
@@ -245,7 +245,7 @@ module.exports = function( grunt ) {
 			xml2js.parseString( fileContent, {
 					async: false, // set callback is sync, since this task is sync
 					trim: true,
-					attrNameProcessors: [ kabobToCamelCase ]
+					attrNameProcessors: [ kebabToCamelCase ]
 				},
 				function ( err, result ) {
 					if ( ! err ) {
