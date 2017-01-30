@@ -4,8 +4,8 @@
 
 'use strict';
 
-var multiline = require('multiline'),
-	xml2js = require('xml2js');
+var multiline = require( 'multiline' ),
+	xml2js = require( 'xml2js' );
 
 var KEBAB_REGEX = /\-(\w)/g;
 
