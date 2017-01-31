@@ -1,6 +1,6 @@
 {
   "name": "gridicons",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.5",
   "main": "build/index.js",
   "scripts": {
     "build": "grunt --verbose",

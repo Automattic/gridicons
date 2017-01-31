@@ -10,7 +10,7 @@ var multiline = require( 'multiline' ),
 var KEBAB_REGEX = /\-(\w)/g;
 
 /**
- * Transforms kabob case names to camel case
+ * Transforms kebab case names to camel case
  * @param name        ex: foo-bar-baz
  * @returns {String}  ex: fooBarBaz
  */
@@ -241,6 +241,29 @@ module.exports = function( grunt ) {
 			// Grab the relevant bits from the file contents
 			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
 
+			// Add transparent rectangle to each file
+			fileContent = fileContent.slice( 0, fileContent.indexOf('viewBox="0 0 24 24">') + 20 ) +	// opening SVG tag
+						'<g>' +
+						fileContent.slice( fileContent.indexOf('viewBox="0 0 24 24">') + 20, -6 ) + 	// child elements of SVG
+						'</g>' +
+						fileContent.slice( -6 );	// closing SVG tag
+
+			// Save and overwrite the files in svg-min
+			grunt.file.write( 'svg-min/' + svgFile, fileContent );
+
+		} );
+
+	});
+
+	grunt.registerTask( 'kebabToCamelCase', 'Rename any svg attributes to camel case for react', function() {
+		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] );
+
+		// Add stuff
+		svgFiles.forEach( function( svgFile ) {
+
+			// Grab the relevant bits from the file contents
+			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
+
 			// Rename any attributes to camel case for react
 			xml2js.parseString( fileContent, {
 					async: false, // set callback is sync, since this task is sync
@@ -255,14 +278,7 @@ module.exports = function( grunt ) {
 						} );
 						fileContent = builder.buildObject( result );
 					}
-			} );
-
-			// Add transparent rectangle to each file
-			fileContent = fileContent.slice( 0, fileContent.indexOf('viewBox="0 0 24 24">') + 20 ) +	// opening SVG tag
-						'<g>' +
-						fileContent.slice( fileContent.indexOf('viewBox="0 0 24 24">') + 20, -6 ) + 	// child elements of SVG
-						'</g>' +
-						fileContent.slice( -6 );	// closing SVG tag
+				} );
 
 			// Save and overwrite the files in svg-min
 			grunt.file.write( 'svg-min/' + svgFile, fileContent );
@@ -408,6 +424,6 @@ module.exports = function( grunt ) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'copy', 'svgreact', 'babel', 'svgphp', 'addsquare']);
+	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'copy', 'svgphp', 'kebabToCamelCase', 'svgreact', 'babel', 'addsquare']);
 
 };
