@@ -411,9 +411,13 @@ module.exports = function( grunt ) {
 			// Grab the relevant bits from the file contents
 			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
 
+			// Grab the filename
+			var name = svgFile.split( '.' );
+			name = name[0];
 
 			// Add transparent rectangle to each file
 			fileContent = fileContent.slice( 0, fileContent.indexOf('viewBox="0 0 24 24">') + 20 ) +
+						'<title>' + name + '</title>' +
 						'<rect x="0" fill="none" width="24" height="24"/>' +
 						fileContent.slice( fileContent.indexOf('viewBox="0 0 24 24">') + 20, -6 ) +
 						fileContent.slice( -6 );
