@@ -1,3 +1,6 @@
 node_modules/
 svg/output/
-/npm-debug.log*
+/npm-debug.log
+.idea/
+svg-min-react/
+build/
