@@ -298,22 +298,27 @@ module.exports = function( grunt ) {
 		// Create a switch() case for each svg file
 		svgFiles.forEach( function( svgFile ) {
 			// Clean up the filename to use for the react components
-			var name = svgFile.split( '.' );
+			var name, fileContent, iconComponent, pathMatches;
+
+			name = svgFile.split( '.' )
 			name = name[0];
 
 			// Grab the relevant bits from the file contents
-			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
+			fileContent = grunt.file.read( 'svg-min/' + svgFile );
 
 			// Add className, height, and width to the svg element
-			fileContent = fileContent.slice( 0, 4 ) +
-						' className={ iconClass } height={ size } width={ size } onClick={ onClick }' +
-						fileContent.slice( 4, -6 ) +
-						fileContent.slice( -6 );
+			fileContent = fileContent.replace( /(^<svg.*?>|<\/svg>$)/g, '' );
 
 			// Output the case for each icon
-			var iconComponent = "			case '" + name + "':\n" +
-								"				svg = " + fileContent + ";\n" +
-								"				break;\n";
+			iconComponent = "			case '" + name + "':\n";
+
+			if ( 4 === fileContent.split( '<' ).length && ( pathMatches = fileContent.match( /<path\sd="(.*?)"\s*\/?>/ ) ) ) {
+				iconComponent += "				d = '" + pathMatches[ 1 ] + "';\n";
+			} else {
+				iconComponent += "				svg = " + fileContent + ";\n";
+			}
+			
+			iconComponent += "				break;\n";
 
 			content += iconComponent;
 		} );
