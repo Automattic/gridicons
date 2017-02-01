@@ -46,7 +46,8 @@ module.exports = function( grunt ) {
 				plugins: [
 					{ removeAttrs: { attrs: ['fill'] } },
 					{ removeViewBox: false },
-					{ removeEmptyAttrs: false }
+					{ removeEmptyAttrs: false },
+					{ removeTitle: true } // addtitle will add it back in later
 				]
 			}
 		},
@@ -412,9 +413,9 @@ module.exports = function( grunt ) {
 			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
 
 			// Add transparent rectangle to each file
-			fileContent = fileContent.slice( 0, fileContent.indexOf('viewBox="0 0 24 24">') + 20 ) +
+			fileContent = fileContent.slice( 0, fileContent.indexOf( '</title>' ) + 8 ) +
 						'<rect x="0" fill="none" width="24" height="24"/>' +
-						fileContent.slice( fileContent.indexOf('viewBox="0 0 24 24">') + 20, -6 ) +
+						fileContent.slice( fileContent.indexOf( '</title>' ) + 8, -6 ) +
 						fileContent.slice( -6 );
 
 			// Save and overwrite the files in svg-min
@@ -443,9 +444,9 @@ module.exports = function( grunt ) {
 			 } ).join( ' ' );
 
 			// Add transparent rectangle to each file
-			fileContent = fileContent.slice( 0, fileContent.indexOf('viewBox="0 0 24 24">') + 20 ) +
+			fileContent = fileContent.slice( 0, fileContent.indexOf( 'viewBox="0 0 24 24">' ) + 20 ) +
 						'<title>' + title + '</title>' +
-						fileContent.slice( fileContent.indexOf('viewBox="0 0 24 24">') + 20, -6 ) +
+						fileContent.slice( fileContent.indexOf( 'viewBox="0 0 24 24">' ) + 20, -6 ) +
 						fileContent.slice( -6 );
 
 			// Save and overwrite the files in svg-min
@@ -456,6 +457,6 @@ module.exports = function( grunt ) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'copy', 'svgphp', 'kebabToCamelCase', 'svgreact', 'babel', 'addsquare', 'addtitle', 'clean' ]);
+	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'copy', 'addtitle', 'svgphp', 'kebabToCamelCase', 'svgreact', 'babel', 'addsquare', 'clean' ]);
 
 };
