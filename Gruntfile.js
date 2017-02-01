@@ -456,6 +456,6 @@ module.exports = function( grunt ) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'copy', 'svgphp', 'kebabToCamelCase', 'svgreact', 'babel', 'addsquare', 'addtitle', 'clean' ]);
+	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'copy', 'addtitle', 'svgphp', 'kebabToCamelCase', 'svgreact', 'babel', 'addsquare', 'clean' ]);
 
 };
