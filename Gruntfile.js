@@ -46,7 +46,8 @@ module.exports = function( grunt ) {
 				plugins: [
 					{ removeAttrs: { attrs: ['fill'] } },
 					{ removeViewBox: false },
-					{ removeEmptyAttrs: false }
+					{ removeEmptyAttrs: false },
+					{ removeTitle: true } // addtitle will add it back in later
 				]
 			}
 		},
