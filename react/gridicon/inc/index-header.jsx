@@ -141,7 +141,7 @@ export default class Gridicon extends PureComponent {
 		const needsOffsetX = this.needsOffsetX( icon, size );
 		const needsOffsetY = this.needsOffsetY( icon, size );
 		
-		let svg;
+		let svg, d;
 
 		const iconClass = [
 			'gridicon',
