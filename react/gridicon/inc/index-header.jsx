@@ -10,30 +10,23 @@ OR if you're looking to change now SVGs get output, you'll need to edit strings 
 /**
  * External dependencies
  */
-var React = require( 'react' ),
-	PureRenderMixin = require( 'react-pure-render/mixin' ),
-	classNames = require( 'classnames' );
+import React, { PureComponent, PropTypes } from 'react';
 
-var Gridicon = React.createClass( {
+export default class Gridicon extends PureComponent {
 
-	mixins: [ PureRenderMixin ],
+	static defaultProps = {
+		size: 24
+	};
 
-	getDefaultProps: function() {
-		return {
-			className: '',
-			size: 24
-		};
-	},
+	static propTypes = {
+		icon: PropTypes.string.isRequired,
+		size: PropTypes.number,
+		onClick: PropTypes.func,
+		className: PropTypes.string
+	};
 
-	propTypes: {
-		icon: React.PropTypes.string.isRequired,
-		size: React.PropTypes.number,
-		onClick: React.PropTypes.func,
-		className: React.PropTypes.string
-	},
-
-	needsOffset: function( icon, size ) {
-		var iconNeedsOffset = [
+	needsOffset( icon, size ) {
+		const iconNeedsOffset = [
 			'gridicons-add-outline',
 			'gridicons-add',
 			'gridicons-align-image-center',
@@ -92,10 +85,10 @@ var Gridicon = React.createClass( {
 		} else {
 			return false;
 		}
-	},
+	}
 
-	needsOffsetX: function( icon, size ) {
-		var iconNeedsOffsetX = [
+	needsOffsetX( icon, size ) {
+		const iconNeedsOffsetX = [
 			'gridicons-arrow-down',
 			'gridicons-arrow-up',
 			'gridicons-comment',
@@ -111,10 +104,10 @@ var Gridicon = React.createClass( {
 		} else {
 			return false;
 		}
-	},
+	}
 
-	needsOffsetY: function( icon, size ) {
-		var iconNeedsOffsetY = [
+	needsOffsetY( icon, size ) {
+		const iconNeedsOffsetY = [
 			'gridicons-align-center',
 			'gridicons-align-justify',
 			'gridicons-align-left',
@@ -138,22 +131,28 @@ var Gridicon = React.createClass( {
 		} else {
 			return false;
 		}
-	},
+	}
 
-	render: function() {
-		var icon = 'gridicons-' + this.props.icon,
-			needsOffset = this.needsOffset( icon, this.props.size ),
-			needsOffsetX = this.needsOffsetX( icon, this.props.size ),
-			needsOffsetY = this.needsOffsetY( icon, this.props.size ),
-			svg, iconClass;
+	render() {
 
-		iconClass = classNames( 'gridicon', icon, this.props.className, {
-			'needs-offset': needsOffset,
-			'needs-offset-x': needsOffsetX,
-			'needs-offset-y': needsOffsetY,
-		} );
+		const { size, onClick, icon: iconProp } = this.props;
+		const icon = 'gridicons-' + iconProp;
+		const needsOffset = this.needsOffset( icon, size );
+		const needsOffsetX = this.needsOffsetX( icon, size );
+		const needsOffsetY = this.needsOffsetY( icon, size );
+		
+		let svg;
+
+		const iconClass = [
+			'gridicon',
+			icon,
+			this.props.className,
+			needsOffset ? 'needs-offset' : false,
+			needsOffsetX ? 'needs-offset-x': false,
+			needsOffsetY ? 'needs-offset-y': false,
+		].filter( Boolean ).join( ' ' );
 
 		switch ( icon ) {
 			default:
-				svg = <svg height={ this.props.size } width={ this.props.size } />;
+				svg = <svg height={ size } width={ size } />;
 				break;
