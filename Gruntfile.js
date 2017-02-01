@@ -411,13 +411,8 @@ module.exports = function( grunt ) {
 			// Grab the relevant bits from the file contents
 			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
 
-			// Grab the filename
-			var name = svgFile.split( '.' );
-			name = name[0];
-
 			// Add transparent rectangle to each file
 			fileContent = fileContent.slice( 0, fileContent.indexOf('viewBox="0 0 24 24">') + 20 ) +
-						'<title>' + name + '</title>' +
 						'<rect x="0" fill="none" width="24" height="24"/>' +
 						fileContent.slice( fileContent.indexOf('viewBox="0 0 24 24">') + 20, -6 ) +
 						fileContent.slice( -6 );
@@ -429,7 +424,38 @@ module.exports = function( grunt ) {
 
 	});
 
+	// Update all files in svg-min to add a title element for accessibility
+	grunt.registerTask( 'addtitle', 'Add title element to SVGs', function() {
+		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] );
+
+		// Add stuff
+		svgFiles.forEach( function( svgFile ) {
+
+			// Grab the relevant bits from the file contents
+			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
+
+			// Grab the filename without 'gridicons-' and the .svg extension
+			var name = svgFile.substring( 10, svgFile.lastIndexOf( '.' ) );
+
+			// Remove hyphens and convert to Title Case
+			var title = name.split( '-' ).map( function( item ) {
+				return item.charAt( 0 ).toUpperCase() + item.slice( 1 );
+			 } ).join( ' ' );
+
+			// Add transparent rectangle to each file
+			fileContent = fileContent.slice( 0, fileContent.indexOf('viewBox="0 0 24 24">') + 20 ) +
+						'<title>' + title + '</title>' +
+						fileContent.slice( fileContent.indexOf('viewBox="0 0 24 24">') + 20, -6 ) +
+						fileContent.slice( -6 );
+
+			// Save and overwrite the files in svg-min
+			grunt.file.write( 'svg-min/' + svgFile, fileContent );
+
+		} );
+
+	});
+
 	// Default task(s).
-	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'copy', 'svgphp', 'kebabToCamelCase', 'svgreact', 'babel', 'addsquare', 'clean' ]);
+	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'copy', 'svgphp', 'kebabToCamelCase', 'svgreact', 'babel', 'addsquare', 'addtitle', 'clean' ]);
 
 };
