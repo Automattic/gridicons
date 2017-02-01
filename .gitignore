@@ -2,6 +2,5 @@ node_modules/
 svg/output/
 /npm-debug.log
 .idea/
-svg-min/
-svg-sprite/
+svg-min-react/
 build/

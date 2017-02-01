@@ -27,6 +27,9 @@ module.exports = function( grunt ) {
 	// Project configuration.
 	grunt.initConfig({
 
+		// clean up tmp dirs
+		clean: [ 'svg-min-react' ],
+
 		// Minify SVGs from svg directory, output to svg-min
 		svgmin: {
 			dist: {
@@ -280,8 +283,7 @@ module.exports = function( grunt ) {
 					}
 				} );
 
-			// Save and overwrite the files in svg-min
-			grunt.file.write( 'svg-min/' + svgFile, fileContent );
+			grunt.file.write( 'svg-min-react/' + svgFile, fileContent );
 
 		} );
 
@@ -289,7 +291,7 @@ module.exports = function( grunt ) {
 
 	// Create React component, output to react
 	grunt.registerTask( 'svgreact', 'Output a react component for SVGs', function() {
-		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] ),
+		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min-react/' }, [ '**/*.svg' ] ),
 			content, designContent;
 
 		// Start the React component
@@ -302,7 +304,7 @@ module.exports = function( grunt ) {
 			name = name[0];
 
 			// Grab the relevant bits from the file contents
-			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
+			var fileContent = grunt.file.read( 'svg-min-react/' + svgFile );
 
 			// Add className, height, and width to the svg element
 			fileContent = fileContent.slice( 0, 4 ) +
@@ -424,6 +426,6 @@ module.exports = function( grunt ) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'copy', 'svgphp', 'kebabToCamelCase', 'svgreact', 'babel', 'addsquare']);
+	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'copy', 'svgphp', 'kebabToCamelCase', 'svgreact', 'babel', 'addsquare', 'clean' ]);
 
 };
