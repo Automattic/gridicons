@@ -427,6 +427,9 @@ function get_gridicon( $gridicon ) {
 		case 'gridicons-resize':
 			$svg = '<svg class="gridicon gridicons-resize" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Resize</title><g><path d="M13 4v2h3.59L6 16.59V13H4v7h7v-2H7.41L18 7.41V11h2V4h-7"/></g></svg>';
 			break;
+		case 'gridicons-rewind':
+			$svg = '<svg class="gridicon gridicons-rewind" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Rewind</title><g><path d="M6.02 14c.48 2.833 2.944 5 5.91 5 3.31 0 6-2.692 6-6s-2.69-6-6-6H9.76l2.085 2.086L10.43 10.5 5.93 6l4.5-4.5 1.415 1.414L9.76 5h2.17c4.42 0 8 3.582 8 8s-3.58 8-8 8C7.853 21 4.494 17.945 4 14h2.02z"/></g></svg>';
+			break;
 		case 'gridicons-rotate':
 			$svg = '<svg class="gridicon gridicons-rotate" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Rotate</title><g><path d="M18 14v6c0 1.105-.895 2-2 2H6c-1.105 0-2-.895-2-2v-6c0-1.105.895-2 2-2h10c1.105 0 2 .895 2 2zM13.914 2.914L11.828 5H14c4.418 0 8 3.582 8 8h-2c0-3.308-2.692-6-6-6h-2.172l2.086 2.086L12.5 10.5 8 6l1.414-1.414L12.5 1.5l1.414 1.414z"/></g></svg>';
 			break;
