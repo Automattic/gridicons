@@ -192,6 +192,10 @@ module.exports = function( grunt ) {
 			main: {
 				src: 'svg-sprite/index.html',
 				dest: 'docs/index.html'
+			},
+			sprite: {
+				src: 'svg-sprite/gridicons.svg',
+				dest: 'docs/gridicons.svg'
 			}
 		},
 
