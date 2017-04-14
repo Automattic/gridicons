@@ -23,6 +23,9 @@ render() {
 }
 ```
 
+**Notes**: the icon set is made to be used exactly at these pixel sizes: 12, 18, 24, 36, 48, 54, 72. However, `gridicon-my-sites` as it's a small-size version of the WordPress logo, shouldn't be used larger than 36px.
+
+
 #### Props
 
 * `icon`: String - the icon name.
