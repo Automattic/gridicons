@@ -29,7 +29,10 @@ render() {
 * `size`: Number - (default: 24) set the size of the icon.
 * `onClick`: Function - (optional) if you need a click callback.
 
-**Notes**: the icon set is made to be used exactly at these pixel sizes: 12, 18, 24, 36, 48, 54, 72. However, `gridicon-my-sites` as it's a small-size version of the WordPress logo, shouldn't be used larger than 36px.
+**Notes**:
+
+* The icon set is made to be used exactly at these pixel sizes: 12, 18, 24, 36, 48, 54, 72.
+* `gridicon-my-sites` as it's a small-size version of the WordPress logo, shouldn't be used larger than 36px. If you need to use the WordPress logo in larger sizes, see the [Social Logos project](https://github.com/Automattic/social-logos).
 
 
 ## Icon Set Style Guidelines
