@@ -56,7 +56,7 @@ module.exports = function( grunt ) {
 		svgstore: {
 			withCustomTemplate:{
 				options: {
-					prefix : '', // Unused by us, but svgstore demands this variable
+                    includeTitleElement: false,
 					svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
 						viewBox : '0 0 24 24',
 						xmlns: 'http://www.w3.org/2000/svg'
@@ -176,16 +176,16 @@ module.exports = function( grunt ) {
 
 				},
 				files: {
-					'svg-sprite/gridicons.svg': ['svg/*.svg']
+					'svg-sprite/gridicons.svg': ['svg-min/*.svg']
 				}
-			},
+			}
 		},
 
 		rename: {
 			moveThis: {
 					src: 'svg-sprite/gridicons-demo.html',
 					dest: 'svg-sprite/index.html'
-			},
+			}
 		},
 
 		copy: {
