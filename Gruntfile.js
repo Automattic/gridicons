@@ -209,7 +209,6 @@ module.exports = function( grunt ) {
 				],
 				comments: false,
 				plugins: [
-					'transform-runtime',
 					'transform-class-properties',
 					'transform-export-extensions',
 					'add-module-exports',
