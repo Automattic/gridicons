@@ -36,7 +36,7 @@ module.exports = function( grunt ) {
 				files: [{
 					attrs: 'fill',
 					expand: true,
-					cwd: 'svg',
+					cwd: 'sources/svg/',
 					src: ['*.svg'],
 					dest: 'svg-min/',
 					ext: '.svg'
