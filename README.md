@@ -61,7 +61,7 @@ Note that the icons in this set are tied to be used in [Calypso](https://github.
 1. Make sure you have a updated local clone of the repository.
 2. Draw the icon in Illustrator on a 24px grid using the guidelines above (use [icon-template.ai](https://github.com/Automattic/gridicons/wiki/Icon-Template) if you'd like).  
    _Tip: tap CMD + Option + Y in Illustrator to see the pixel grid version._
-3. Submit a Pull Request with the icon as a SVG file (inside the `svg` folder).
+3. Submit a Pull Request with the icon as a SVG file (inside the `sources/svg` folder).
 4. Discuss, iterate, review, refine until ready.
 5. Once ready, an admin will proceed adding it.
 
