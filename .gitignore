@@ -4,3 +4,4 @@ svg/output/
 .idea/
 svg-min-react/
 build/
+.DS_Store
