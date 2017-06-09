@@ -69,12 +69,9 @@ Note that the icons in this set are tied to be used in [Calypso](https://github.
 ## Add a Proposed Icon to Gridicons (Admins Only)
 
 1. Switch to the branch (i.e. Pull Request) with the new icon.
-2. Open 'gridicons.ai' in Illustrator.
-3. Add a new containing layer with the name of the icon (i.e. "trophy").
-4. Add the icon from the SVG on that containing layer. Make sure to check pixel preview.
-7. Generate an SVG by dragging the script `exporter-multi.jsx` inside the Illustrator window.
-8. In the dialog, select your new icon layer from the "Export layers" dropdown and click Export (make sure the output directory is `gridicons/svg`).
-9. Run `grunt` command from terminal, to generate the `svg-min`, `react`, and `svg-sprite` directories.  
+2. Review the SVG source of the new icons to make sure they are clean.
+3. Check pixel sharpness: open in Illustrator (with "Pixel Preview") or Sketch (with "Show Pixels"), adjust if needed.
+4. Run `grunt` command from terminal. It will generate `svg-min`, `react`, and `svg-sprite`.
    _Optional: if you need to update pdf files, [generate these too](https://github.com/Automattic/gridicons/wiki/Installation)._
 10. Commit
 11. Merge & delete branch
