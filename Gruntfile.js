@@ -298,13 +298,13 @@ module.exports = function( grunt ) {
 	});
 
   // ****************************************************************************************************
-  // Create React component (`svg-min-react/` --> `react/`)
+  // Create React component (`svg-min-react/` --> `build/`)
 	grunt.registerTask( 'svgreact', 'Output a react component for SVGs', function() {
 		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min-react/' }, [ '**/*.svg' ] ),
 			content, designContent;
 
 		// Start the React component
-		content =	grunt.file.read( 'react/gridicon/inc/index-header.jsx' );
+		content =	grunt.file.read( 'sources/react/index-header.jsx' );
 
 		// Create a switch() case for each svg file
 		svgFiles.forEach( function( svgFile ) {
@@ -330,7 +330,7 @@ module.exports = function( grunt ) {
 		} );
 
 		// Finish up the React component
-		content += grunt.file.read( 'react/gridicon/inc/index-footer.jsx' );
+		content += grunt.file.read( 'sources/react/index-footer.jsx' );
 
 		// Start design/docs component
 		designContent =	"/* eslint-disable no-alert */\n" +
