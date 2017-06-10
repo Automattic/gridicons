@@ -264,6 +264,8 @@ module.exports = function( grunt ) {
 
 	});
 
+  // ****************************************************************************************************
+  // Create temporary SVGs with React syntax (`svg-min/` --> `svg-min-react/`)
 	grunt.registerTask( 'kebabToCamelCase', 'Rename any svg attributes to camel case for react', function() {
 		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] );
 
