@@ -36,7 +36,7 @@ module.exports = function( grunt ) {
 				files: [{
 					attrs: 'fill',
 					expand: true,
-					cwd: 'svg',
+					cwd: 'sources/svg/',
 					src: ['*.svg'],
 					dest: 'svg-min/',
 					ext: '.svg'
@@ -239,7 +239,8 @@ module.exports = function( grunt ) {
 	// Load svgmin
 	grunt.loadNpmTasks('grunt-svgmin');
 
-	// Update all files in svg-min to add a <g> group tag
+  // ****************************************************************************************************
+  // Rewrite to add <g> group tag in `svg-min/`
 	grunt.registerTask( 'group', 'Add <g> tag to SVGs', function() {
 		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] );
 
@@ -263,6 +264,8 @@ module.exports = function( grunt ) {
 
 	});
 
+  // ****************************************************************************************************
+  // Create temporary SVGs with React syntax (`svg-min/` --> `svg-min-react/`)
 	grunt.registerTask( 'kebabToCamelCase', 'Rename any svg attributes to camel case for react', function() {
 		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] );
 
@@ -294,13 +297,14 @@ module.exports = function( grunt ) {
 
 	});
 
-	// Create React component, output to react
+  // ****************************************************************************************************
+  // Create React component (`svg-min-react/` --> `build/`)
 	grunt.registerTask( 'svgreact', 'Output a react component for SVGs', function() {
 		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min-react/' }, [ '**/*.svg' ] ),
 			content, designContent;
 
 		// Start the React component
-		content =	grunt.file.read( 'react/gridicon/inc/index-header.jsx' );
+		content =	grunt.file.read( 'sources/react/index-header.jsx' );
 
 		// Create a switch() case for each svg file
 		svgFiles.forEach( function( svgFile ) {
@@ -326,7 +330,7 @@ module.exports = function( grunt ) {
 		} );
 
 		// Finish up the React component
-		content += grunt.file.read( 'react/gridicon/inc/index-footer.jsx' );
+		content += grunt.file.read( 'sources/react/index-footer.jsx' );
 
 		// Start design/docs component
 		designContent =	"/* eslint-disable no-alert */\n" +
@@ -369,7 +373,8 @@ module.exports = function( grunt ) {
 		grunt.file.write( 'build/example.jsx', designContent );
 	});
 
-	// Create PHP WordPress plugin, output to php
+  // ****************************************************************************************************
+	// Create PHP WordPress plugin (`svg-min/` --> `php/`)
 	grunt.registerTask( 'svgphp', 'Output a PHP WordPress plugin for SVGs', function() {
 		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] ),
 			content;
@@ -406,7 +411,9 @@ module.exports = function( grunt ) {
 
 	});
 
-	// Update all files in svg-min to add transparent square, this ensures copy/pasting to Sketch maintains a 24x24 size
+  // ****************************************************************************************************
+	// Rewrite to add transparent square in `svg-min/`
+  // This ensures precise 24x24 pixel copy/pasting and placement to design apps (i.e. Sketch)
 	grunt.registerTask( 'addsquare', 'Add transparent square to SVGs', function() {
 		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] );
 
@@ -429,7 +436,19 @@ module.exports = function( grunt ) {
 
 	});
 
-	// Default task(s).
-	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'copy', 'svgphp', 'kebabToCamelCase', 'svgreact', 'babel', 'addsquare', 'clean' ]);
-
+  // ****************************************************************************************************
+	// Default task
+	grunt.registerTask('default', [
+    'svgmin',
+    'group',
+    'svgstore',
+    'rename',
+    'copy',
+    'svgphp',
+    'kebabToCamelCase',
+    'svgreact',
+    'babel',
+    'addsquare',
+    'clean'
+  ]);
 };
