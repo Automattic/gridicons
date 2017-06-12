@@ -13,6 +13,7 @@ There's a gallery with all the available icons in https://wpcalypso.wordpress.co
 ```
 npm install gridicons --save
 ```
+
 #### Usage
 
 ```
@@ -50,8 +51,8 @@ These are not rules, they are guidelines that can be broken with the proper reas
 
 **Notes**:
 
-* the bundled file, `gridicons-32.ai`, will only ever contain 5 icons used for WordPress.com main navigation. It's only there to add some flexibility to the sizing of this navigation.
 * the `svg-min` files can both be used in production directly or dragged to Sketch to create designs.
+* the `sources/svg-32` folder contains a subset of icons optimized at 32px, for the iOS navigation bar.
 
 
 ## Propose a New Icon
@@ -59,9 +60,9 @@ These are not rules, they are guidelines that can be broken with the proper reas
 Note that the icons in this set are tied to be used in [Calypso](https://github.com/Automattic/wp-calypso/), but there might be exceptions for more general icons that make sense to be added.
 
 1. Make sure you have a updated local clone of the repository.
-2. Draw the icon in Illustrator on a 24px grid using the guidelines above (use [icon-template.ai](https://github.com/Automattic/gridicons/wiki/Icon-Template) if you'd like).  
+2. Draw the icon in Illustrator on a 24px grid using the guidelines above (use [icon-template.ai](https://github.com/Automattic/gridicons/wiki/Icon-Template) as starting point).  
    _Tip: tap CMD + Option + Y in Illustrator to see the pixel grid version._
-3. Submit a Pull Request with the icon as a SVG file (inside the `svg` folder).
+3. Submit a Pull Request with the icon as a SVG file (inside the `sources/svg` folder), make sure to include a screenshot, ideally containing side by side comparison with some other Gridicons as a visual reference.
 4. Discuss, iterate, review, refine until ready.
 5. Once ready, an admin will proceed adding it.
 
@@ -69,12 +70,9 @@ Note that the icons in this set are tied to be used in [Calypso](https://github.
 ## Add a Proposed Icon to Gridicons (Admins Only)
 
 1. Switch to the branch (i.e. Pull Request) with the new icon.
-2. Open 'gridicons.ai' in Illustrator.
-3. Add a new containing layer with the name of the icon (i.e. "trophy").
-4. Add the icon from the SVG on that containing layer. Make sure to check pixel preview.
-7. Generate an SVG by dragging the script `exporter-multi.jsx` inside the Illustrator window.
-8. In the dialog, select your new icon layer from the "Export layers" dropdown and click Export (make sure the output directory is `gridicons/svg`).
-9. Run `grunt` command from terminal, to generate the `svg-min`, `react`, and `svg-sprite` directories.  
+2. Review the SVG source of the new icons to make sure they are clean.
+3. Check pixel sharpness: open in Illustrator (with "Pixel Preview") or Sketch (with "Show Pixels"), adjust if needed.
+4. Run `grunt` command from terminal. It will generate `svg-min`, React (`build`), `svg-sprite`, `php`, and `docs`.
    _Optional: if you need to update pdf files, [generate these too](https://github.com/Automattic/gridicons/wiki/Installation)._
 10. Commit
 11. Merge & delete branch
