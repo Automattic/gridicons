@@ -457,6 +457,9 @@ function get_gridicon( $gridicon ) {
 		case 'gridicons-search':
 			$svg = '<svg class="gridicon gridicons-search" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M21 19l-5.154-5.154C16.574 12.742 17 11.42 17 10c0-3.866-3.134-7-7-7s-7 3.134-7 7 3.134 7 7 7c1.42 0 2.742-.426 3.846-1.154L19 21l2-2zM5 10c0-2.757 2.243-5 5-5s5 2.243 5 5-2.243 5-5 5-5-2.243-5-5z"/></g></svg>';
 			break;
+		case 'gridicons-share-computer':
+			$svg = '<svg class="gridicon gridicons-share-computer" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M20 2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6v2H7v2h10v-2h-3v-2h6a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0 14H4V4h16zm-3.25-3a1.75 1.75 0 0 1-3.5 0L10 11.36a1.71 1.71 0 1 1 0-2.71L13.25 7a1.77 1.77 0 1 1 .68 1.37L10.71 10l3.22 1.61A1.74 1.74 0 0 1 16.75 13z"/></g></svg>';
+			break;
 		case 'gridicons-share-ios':
 			$svg = '<svg class="gridicon gridicons-share-ios" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M17 8h2c1.105 0 2 .895 2 2v9c0 1.105-.895 2-2 2H5c-1.105 0-2-.895-2-2v-9c0-1.105.895-2 2-2h2v2H5v9h14v-9h-2V8zM6.5 5.5l1.414 1.414L11 3.828V14h2V3.828l3.086 3.086L17.5 5.5 12 0 6.5 5.5z"/></g></svg>';
 			break;
