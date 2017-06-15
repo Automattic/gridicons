@@ -82,9 +82,8 @@ export default class Gridicon extends PureComponent {
 
 		if ( iconNeedsOffset.indexOf( icon ) >= 0 ) {
 			return ( size % 18 === 0 );
-		} else {
-			return false;
 		}
+		return false;
 	}
 
 	needsOffsetX( icon, size ) {
@@ -101,9 +100,8 @@ export default class Gridicon extends PureComponent {
 
 		if ( iconNeedsOffsetX.indexOf( icon ) >= 0 ) {
 			return ( size % 18 === 0 );
-		} else {
-			return false;
 		}
+		return false;
 	}
 
 	needsOffsetY( icon, size ) {
@@ -128,19 +126,17 @@ export default class Gridicon extends PureComponent {
 
 		if ( iconNeedsOffsetY.indexOf( icon ) >= 0 ) {
 			return ( size % 18 === 0 );
-		} else {
-			return false;
 		}
+		return false;
 	}
 
 	render() {
-
 		const { size, onClick, icon: iconProp } = this.props;
 		const icon = 'gridicons-' + iconProp;
 		const needsOffset = this.needsOffset( icon, size );
 		const needsOffsetX = this.needsOffsetX( icon, size );
 		const needsOffsetY = this.needsOffsetY( icon, size );
-		
+
 		let svg;
 
 		const iconClass = [
@@ -148,8 +144,8 @@ export default class Gridicon extends PureComponent {
 			icon,
 			this.props.className,
 			needsOffset ? 'needs-offset' : false,
-			needsOffsetX ? 'needs-offset-x': false,
-			needsOffsetY ? 'needs-offset-y': false,
+			needsOffsetX ? 'needs-offset-x' : false,
+			needsOffsetY ? 'needs-offset-y' : false,
 		].filter( Boolean ).join( ' ' );
 
 		switch ( icon ) {
