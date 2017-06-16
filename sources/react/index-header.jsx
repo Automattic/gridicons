@@ -131,7 +131,7 @@ export default class Gridicon extends PureComponent {
 	}
 
 	render() {
-		const { size, onClick, icon: iconProp } = this.props;
+		const { size, onClick, icon: iconProp, ...otherProps } = this.props;
 		const icon = 'gridicons-' + iconProp;
 		const needsOffset = this.needsOffset( icon, size );
 		const needsOffsetX = this.needsOffsetX( icon, size );
@@ -150,5 +150,5 @@ export default class Gridicon extends PureComponent {
 
 		switch ( icon ) {
 			default:
-				svg = <svg height={ size } width={ size } />;
+				svg = <svg height={ size } width={ size } { ...otherProps } />;
 				break;
