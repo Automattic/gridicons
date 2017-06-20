@@ -250,7 +250,7 @@ module.exports = function( grunt ) {
 			// Grab the relevant bits from the file contents
 			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
 
-			// Add transparent rectangle to each file
+			// Add <g> to each file
 			fileContent = fileContent.slice( 0, fileContent.indexOf('viewBox="0 0 24 24">') + 20 ) +	// opening SVG tag
 						'<g>' +
 						fileContent.slice( fileContent.indexOf('viewBox="0 0 24 24">') + 20, -6 ) + 	// child elements of SVG
