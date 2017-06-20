@@ -380,7 +380,7 @@ module.exports = function( grunt ) {
 			content;
 
 		// Start the plugin
-		content = grunt.file.read( 'php/inc/index-header.php' );
+		content = grunt.file.read( 'sources/php/index-header.php' );
 
 		// Create a switch() case for each svg file
 		svgFiles.forEach( function( svgFile ) {
@@ -406,7 +406,7 @@ module.exports = function( grunt ) {
 		} );
 
 		// Finish up and write the plugin
-		content += grunt.file.read( 'php/inc/index-footer.php' );
+		content += grunt.file.read( 'sources/php/index-footer.php' );
 		grunt.file.write( 'php/gridicons.php', content );
 
 	});
