@@ -8,7 +8,7 @@ Note that this component requires [react](https://www.npmjs.com/package/react) t
 
 Gridicon renders a single svg icon based on an `icon` prop. It takes a size property but defaults to 24px. For greater sharpness, the icons should only be shown at either 18px, 24px, 36px or 48px.
 
-There's a gallery with all the available icons in https://wpcalypso.wordpress.com/devdocs/design/gridicons.
+There's a gallery with all the available icons in http://automattic.github.io/gridicons/.
 
 ```
 npm install gridicons --save
