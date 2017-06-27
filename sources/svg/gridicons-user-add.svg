@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>gridicons-user-add</title><g id="Artwork"><g id="Artwork-2"><g id="Artwork-3"><circle cx="15" cy="8" r="4"/><path d="M15,20s8,0,8-2c0-2.4-3.9-5-8-5s-8,2.6-8,5C7,20,15,20,15,20Z"/></g><path d="M6,10V7H4v3H1v2H4v3H6V12H9V10Z"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <title>gridicons-user-add</title>
+  <circle cx="15" cy="8" r="4"/>
+  <path d="M15,20s8,0,8-2c0-2.4-3.9-5-8-5s-8,2.6-8,5C7,20,15,20,15,20Z"/>
+  <path d="M6,10V7H4v3H1v2H4v3H6V12H9V10Z"/>
+</svg>
