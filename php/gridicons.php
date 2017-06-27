@@ -542,7 +542,7 @@ function get_gridicon( $gridicon ) {
 			$svg = '<svg class="gridicon gridicons-undo" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M18.142 5.93C16.97 4.756 15.435 4.17 13.9 4.17s-3.072.586-4.244 1.757L6 9.585V6H4v7h7v-2H7.414l3.657-3.657c.756-.755 1.76-1.172 2.83-1.172 1.067 0 2.072.417 2.827 1.173 1.56 1.56 1.56 4.097 0 5.657l-5.364 5.364 1.414 1.414 5.364-5.364c2.345-2.343 2.345-6.142.002-8.485z"/></g></svg>';
 			break;
 		case 'gridicons-user-add':
-			$svg = '<svg class="gridicon gridicons-user-add" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><g data-name="Artwork"><g data-name="Artwork"><circle cx="15" cy="8" r="4"/><path d="M15 20s8 0 8-2c0-2.4-3.9-5-8-5s-8 2.6-8 5c0 2 8 2 8 2z"/></g><path d="M6 10V7H4v3H1v2h3v3h2v-3h3v-2z"/></g></g></svg>';
+			$svg = '<svg class="gridicon gridicons-user-add" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><circle cx="15" cy="8" r="4"/><path d="M15 20s8 0 8-2c0-2.4-3.9-5-8-5s-8 2.6-8 5c0 2 8 2 8 2zM6 10V7H4v3H1v2h3v3h2v-3h3v-2z"/></g></svg>';
 			break;
 		case 'gridicons-user-circle':
 			$svg = '<svg class="gridicon gridicons-user-circle" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18.5c-4.694 0-8.5-3.806-8.5-8.5S7.306 3.5 12 3.5s8.5 3.806 8.5 8.5-3.806 8.5-8.5 8.5zm0-8c-3.038 0-5.5 1.728-5.5 3.5s2.462 3.5 5.5 3.5 5.5-1.728 5.5-3.5-2.462-3.5-5.5-3.5zm0-.5c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z"/></g></svg>';
