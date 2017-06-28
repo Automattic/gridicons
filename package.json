@@ -1,6 +1,6 @@
 {
   "name": "gridicons",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "main": "build/index.js",
   "scripts": {
     "build": "grunt --verbose",
@@ -19,7 +19,7 @@
     "build/example.js"
   ],
   "dependencies": {
-      "prop-types": "^15.5.10"
+      "prop-types": "^15.5.7"
   },
   "devDependencies": {
     "babel-plugin-add-module-exports": "^0.2.1",
