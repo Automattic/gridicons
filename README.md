@@ -8,7 +8,7 @@ Note that this component requires [react](https://www.npmjs.com/package/react) t
 
 Gridicon renders a single svg icon based on an `icon` prop. It takes a size property but defaults to 24px. For greater sharpness, the icons should only be shown at either 18px, 24px, 36px or 48px.
 
-There's a gallery with all the available icons in http://automattic.github.io/gridicons/.
+There's a gallery with all the available icons in https://wpcalypso.wordpress.com/devdocs/design/gridicons.
 
 ```
 npm install gridicons --save
@@ -70,12 +70,11 @@ Note that the icons in this set are tied to be used in [Calypso](https://github.
 ## Add a Proposed Icon to Gridicons (Admins Only)
 
 1. Switch to the branch (i.e. Pull Request) with the new icon.
-2. Review the SVG source of the new icons to make sure they are clean.
+2. Review the SVG source of the new icons to make sure they are clean and readable.
 3. Check pixel sharpness: open in Illustrator (with "Pixel Preview") or Sketch (with "Show Pixels"), adjust if needed.
-4. Run `grunt` command from terminal. It will generate `svg-min`, React (`build`), `svg-sprite`, `php`, and `docs`.
-   _Optional: if you need to update pdf files, [generate these too](https://github.com/Automattic/gridicons/wiki/Installation)._
-10. Commit
-11. Merge & delete branch
+4. Run `grunt` command from terminal. It will generate `svg-min`, React (`build`), `svg-sprite`, `pdf`, `php`, and `docs`.
+5. Commit
+6. Merge & delete branch
 
 
 ## Installing Automation Scripts
