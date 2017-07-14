@@ -618,6 +618,7 @@ module.exports = function( grunt ) {
     'svgreact',
     'babel',
     'addsquare',
+    'svg2pdf',
     'clean'
   ]);
 };
