@@ -4,8 +4,11 @@
 
 'use strict';
 
-var multiline = require( 'multiline' ),
-	xml2js = require( 'xml2js' );
+var multiline = require( 'multiline' );
+var xml2js = require( 'xml2js' );
+var svg2pdfkit = require('svg-to-pdfkit');
+var PDFDocument = require('pdfkit');
+var fs = require('fs');
 
 var KEBAB_REGEX = /\-(\w)/g;
 
@@ -579,6 +582,28 @@ module.exports = function( grunt ) {
 		} );
 
 	});
+
+  // ****************************************************************************************************
+  // Create PDF version (`svg-min/` --> `pdf/`)
+  grunt.registerTask( 'svg2pdf', 'Convert SVG to PDF', function() {
+    var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] );
+    var self = this;
+
+    // Add stuff
+    svgFiles.forEach( function( svgFile ) {
+      // Grab the relevant bits from the file contents
+      var fileContent = grunt.file.read( 'svg-min/' + svgFile );
+
+      // PDFkit writes to a stream, so it has to be async
+      var done = self.async();
+      var pdf = new PDFDocument( { size: [ 24, 24 ] } );
+      pdf.pipe( fs.createWriteStream( 'pdf/' + svgFile.slice(0, -4) + '.pdf' ) );
+      pdf.on('close', function() { done(); });
+
+      svg2pdfkit(pdf, fileContent, 0, 0 );
+      pdf.end();
+    } );
+  } );
 
   // ****************************************************************************************************
 	// Default task

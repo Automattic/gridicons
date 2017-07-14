@@ -1,68 +1,74 @@
-%PDF-1.5
-%µí®û
-3 0 obj
-<< /Length 4 0 R
-   /Filter /FlateDecode
->>
-stream
-xœeÑÂ0Dÿ=ÅMâ7ÍŒ€*Q>Ò`‰³IŠäwÉ]l?$ÃÏsÃéš±½DgTì İ1¥¥Ô’fÃ=³¬pÙ‡7ùÊè1ÔÄ]”üùfQDY½Ù¦Ôœ3²TÚ<CVf„áÎFÚû<xä.º$ú•ewä…]æ@µ@}qÍ_ê[Å?AM}y÷sò9…;”¿A7¹È~.@_
-endstream
-endobj
-4 0 obj
-   165
-endobj
-2 0 obj
+%PDF-1.3
+%ÿÿÿÿ
+6 0 obj
 <<
-   /ExtGState <<
-      /a0 << /CA 1 /ca 1 >>
-   >>
+/Type /ExtGState
+/ca 1
 >>
 endobj
 5 0 obj
-<< /Type /Page
-   /Parent 1 0 R
-   /MediaBox [ 0 0 24 24 ]
-   /Contents 3 0 R
-   /Group <<
-      /Type /Group
-      /S /Transparency
-      /I true
-      /CS /DeviceRGB
-   >>
-   /Resources 2 0 R
+<<
+/Type /Page
+/Parent 1 0 R
+/MediaBox [0 0 24 24]
+/Contents 3 0 R
+/Resources 4 0 R
 >>
 endobj
-1 0 obj
-<< /Type /Pages
-   /Kids [ 5 0 R ]
-   /Count 1
+4 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/ExtGState <<
+/Gs1 6 0 R
 >>
-endobj
-6 0 obj
-<< /Creator (cairo 1.14.6 (http://cairographics.org))
-   /Producer (cairo 1.14.6 (http://cairographics.org))
 >>
 endobj
 7 0 obj
-<< /Type /Catalog
-   /Pages 1 0 R
+<<
+/Producer (PDFKit)
+/Creator (PDFKit)
+/CreationDate (D:20170714142644Z)
 >>
+endobj
+2 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Pages
+/Count 1
+/Kids [5 0 R]
+>>
+endobj
+3 0 obj
+<<
+/Length 234
+/Filter /FlateDecode
+>>
+stream
+xœmQËÂ0¼û+æ6ÄI“´×ÕJ=Ã…ˆº€T–Jûık;- ±yxœ±=qZ†—ùÁbB‡z¥b£šÂ»’Ì8–¥Nºîq#vÑF«~=ü§º§Şˆİ×ô{©ÓaüD]ìB¥Şh7.ŒÓBœÁWÃ³bğ}'ƒÀàNm%;Ì]?˜·Ô¨µ•"’†ÑVİ•D#ª|Ú
+òš NÒxFÑx·J¥Õ¶Îº'–Ö©á™¸w	Y¶<£8ß‹”$m&í¯°¶Íş‰ñ%fmµ2ÎsSR¯—_Êaã²Qgú–ßæ$b«
+endstream
 endobj
 xref
 0 8
 0000000000 65535 f 
-0000000563 00000 n 
-0000000279 00000 n 
+0000000397 00000 n 
+0000000348 00000 n 
+0000000454 00000 n 
+0000000161 00000 n 
+0000000059 00000 n 
 0000000015 00000 n 
-0000000257 00000 n 
-0000000351 00000 n 
-0000000628 00000 n 
-0000000755 00000 n 
+0000000256 00000 n 
 trailer
-<< /Size 8
-   /Root 7 0 R
-   /Info 6 0 R
+<<
+/Size 8
+/Root 2 0 R
+/Info 7 0 R
 >>
 startxref
-807
+760
 %%EOF
