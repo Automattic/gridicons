@@ -597,6 +597,7 @@ module.exports = function( grunt ) {
       // PDFkit writes to a stream, so it has to be async
       var done = self.async();
       var pdf = new PDFDocument( { size: [ 24, 24 ] } );
+      pdf.info.CreationDate = "";
       pdf.pipe( fs.createWriteStream( 'pdf/' + svgFile.slice(0, -4) + '.pdf' ) );
       pdf.on('close', function() { done(); });
 
