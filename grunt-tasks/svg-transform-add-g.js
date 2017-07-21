@@ -1,5 +1,7 @@
 // ****************************************************************************************************
 // Rewrite to add <g> group tag in `svg-min/`
+// This is used to target directly the content of the SVG.
+// It's also used by the offset fix for 18px size.
 
 module.exports = function( grunt ) {
   grunt.registerMultiTask( 'svg-transform-add-g', 'Add <g> tag to SVGs', function() {
