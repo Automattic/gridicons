@@ -2,11 +2,10 @@
 // Rewrite to add <g> group tag in `svg-min/`
 
 module.exports = function( grunt ) {
-  grunt.registerTask( 'svg-transform-add-g', 'Add <g> tag to SVGs', function() {
-		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] );
+  grunt.registerMultiTask( 'svg-transform-add-g', 'Add <g> tag to SVGs', function() {
 
 		// Add stuff
-		svgFiles.forEach( function( svgFile ) {
+		this.filesSrc.forEach( function( svgFile ) {
 
 			// Grab the relevant bits from the file contents
 			var fileContent = grunt.file.read( 'svg-min/' + svgFile );

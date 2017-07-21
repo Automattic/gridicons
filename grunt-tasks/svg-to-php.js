@@ -2,15 +2,13 @@
 // Create PHP WordPress plugin (`svg-min/` --> `php/`)
 
 module.exports = function( grunt ) {
-  grunt.registerTask( 'svg-to-php', 'Output a PHP WordPress plugin for SVGs', function() {
-		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] ),
-			content;
+  grunt.registerMultiTask( 'svg-to-php', 'Output a PHP WordPress plugin for SVGs', function() {
 
 		// Start the plugin
-		content = grunt.file.read( 'sources/php/index-header.php' );
+		var content = grunt.file.read( 'sources/php/index-header.php' );
 
 		// Create a switch() case for each svg file
-		svgFiles.forEach( function( svgFile ) {
+		this.filesSrc.forEach( function( svgFile ) {
 			// Clean up the filename to use for the react components
 			var name = svgFile.split( '.' );
 			name = name[0];

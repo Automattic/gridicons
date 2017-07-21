@@ -103,8 +103,71 @@ module.exports = function( grunt ) {
 					"build/example.js": "build/example.jsx"
 				}
 			}
-		}
+		},
 
+    'svg-transform-add-g': {
+      dist: {
+        files: [{
+          cwd: 'svg-min/',
+          src: [ '**/*.svg' ],
+          filter: 'isFile'
+        }]
+      }
+    },
+
+    'svg-to-php': {
+      dist: {
+        files: [{
+          cwd: 'svg-min/',
+          src: [ '**/*.svg' ],
+          filter: 'isFile',
+          dest: 'php/'
+        }]
+      }
+    },
+
+    'svg-transform-to-camelcase': {
+      dist: {
+        files: [{
+          cwd: 'svg-min/',
+          src: [ '**/*.svg' ],
+          filter: 'isFile',
+          dest: 'svg-min-react/'
+        }]
+      }
+    },
+
+    'svg-to-react': {
+      dist: {
+        files: [{
+          cwd: 'svg-min-react/',
+          src: [ '**/*.svg' ],
+          filter: 'isFile',
+          dest: 'build/'
+        }]
+      }
+    },
+
+    'svg-transform-add-square': {
+      dist: {
+        files: [{
+          cwd: 'svg-min/',
+          src: [ '**/*.svg' ],
+          filter: 'isFile'
+        }]
+      }
+    },
+
+    'svg-to-pdf': {
+      dist: {
+        files: [{
+          cwd: 'svg-min/',
+          src: [ '**/*.svg' ],
+          filter: 'isFile',
+          dest: 'pdf/'
+        }]
+      }
+    }
 	});
 
   // ****************************************************************************************************
@@ -116,7 +179,9 @@ module.exports = function( grunt ) {
     'rename',
     'copy',
     'svg-to-php',
+    'svg-transform-to-camelcase',
     'svg-to-react',
+    'babel',
     'svg-transform-add-square',
     'svg-to-pdf',
     'clean'

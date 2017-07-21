@@ -6,24 +6,25 @@ var PDFDocument = require( 'pdfkit' );
 var fs = require( 'fs' );
 
 module.exports = function( grunt ) {
-  grunt.registerTask('svg-to-pdf', 'Convert SVG to PDF', function() {
-    var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] );
+  grunt.registerMultiTask('svg-to-pdf', 'Convert SVG to PDF', function() {
     var self = this;
 
     // Add stuff
-    svgFiles.forEach( function( svgFile ) {
-      // Grab the relevant bits from the file contents
-      var fileContent = grunt.file.read( 'svg-min/' + svgFile );
+    this.files.forEach( function( files ) {
+      files.src.forEach( function( svgFile ) {
+        // Grab the relevant bits from the file contents
+        var fileContent = grunt.file.read( files.cwd + svgFile );
 
-      // PDFkit writes to a stream, so it has to be async
-      var done = self.async();
-      var pdf = new PDFDocument( { size: [ 24, 24 ] } );
-      pdf.info.CreationDate = "";
-      pdf.pipe( fs.createWriteStream( 'pdf/' + svgFile.slice(0, -4) + '.pdf' ) );
-      pdf.on('close', function() { done(); });
+        // PDFkit writes to a stream, so it has to be async
+        var done = self.async();
+        var pdf = new PDFDocument( { size: [ 24, 24 ] } );
+        pdf.info.CreationDate = "";
+        pdf.pipe( fs.createWriteStream( files.dest + svgFile.slice(0, -4) + '.pdf' ) );
+        pdf.on('close', function() { done(); });
 
-      svg2pdfkit(pdf, fileContent, 0, 0 );
-      pdf.end();
+        svg2pdfkit(pdf, fileContent, 0, 0 );
+        pdf.end();
+      } )
     } );
   } );
 }

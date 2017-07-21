@@ -3,11 +3,10 @@
 // This ensures precise 24x24 pixel copy/pasting and placement to design apps (i.e. Sketch)
 
 module.exports = function( grunt ) {
-  grunt.registerTask( 'svg-transform-add-square', 'Add transparent square to SVGs', function() {
-		var svgFiles = grunt.file.expand( { filter: 'isFile', cwd: 'svg-min/' }, [ '**/*.svg' ] );
+  grunt.registerMultiTask( 'svg-transform-add-square', 'Add transparent square to SVGs', function() {
 
-		// Add stuff
-		svgFiles.forEach( function( svgFile ) {
+    // Add stuff
+		this.filesSrc.forEach( function( svgFile ) {
 
 			// Grab the relevant bits from the file contents
 			var fileContent = grunt.file.read( 'svg-min/' + svgFile );
