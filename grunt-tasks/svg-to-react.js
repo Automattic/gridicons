@@ -5,6 +5,7 @@ module.exports = function( grunt ) {
   grunt.registerMultiTask( 'svg-to-react', 'Output a react component for SVGs', function() {
     var component = '';
     var componentExample = '';
+    var filesDest;
 
     // Create a switch() case for each svg file
     this.files.forEach( function( files ) {
@@ -30,7 +31,11 @@ module.exports = function( grunt ) {
         // Example Document
         name = name.replace( 'gridicons-', '' );
         componentExample += '				<Gridicon icon="' + name + '" size={ 48 } onClick={ this.handleClick.bind( this, \'' + name + '\' ) } />\n';
-      } )
+
+
+      } );
+
+      filesDest = files.dest;
     } );
 
     // React Component Wrapping
@@ -43,7 +48,7 @@ module.exports = function( grunt ) {
 
 
     // Write the React component to gridicon/index.jsx
-    grunt.file.write( 'build/index.jsx', component );
-    grunt.file.write( 'build/example.jsx', componentExample );
+    grunt.file.write( filesDest + 'index.jsx', component );
+    grunt.file.write( filesDest + 'example.jsx', componentExample );
   });
 }
