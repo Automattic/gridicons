@@ -4,8 +4,6 @@
 
 'use strict';
 
-var multiline = require( 'multiline' );
-
 module.exports = function( grunt ) {
 
   // Loads all tasks from `grunt-tasks/`
