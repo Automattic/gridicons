@@ -132,7 +132,7 @@ export default class Gridicon extends PureComponent {
 	}
 
 	render() {
-		const { size, onClick, icon: iconProp, ...otherProps } = this.props;
+		const { size, onClick, icon: iconProp, className, ...otherProps } = this.props;
 		const icon = 'gridicons-' + iconProp;
 		const needsOffset = this.needsOffset( icon, size );
 		const needsOffsetX = this.needsOffsetX( icon, size );
@@ -143,7 +143,7 @@ export default class Gridicon extends PureComponent {
 		const iconClass = [
 			'gridicon',
 			icon,
-			this.props.className,
+			className,
 			needsOffset ? 'needs-offset' : false,
 			needsOffsetX ? 'needs-offset-x' : false,
 			needsOffsetY ? 'needs-offset-y' : false,
