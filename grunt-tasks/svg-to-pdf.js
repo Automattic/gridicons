@@ -24,7 +24,7 @@ module.exports = function( grunt ) {
 
         svg2pdfkit(pdf, fileContent, 0, 0 );
         pdf.end();
-      } )
+      } );
     } );
   } );
-}
+};

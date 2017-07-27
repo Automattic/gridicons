@@ -23,6 +23,5 @@ module.exports = function( grunt ) {
 			grunt.file.write( 'svg-min/' + svgFile, fileContent );
 
 		} );
-
-	});
-}
+	} );
+};

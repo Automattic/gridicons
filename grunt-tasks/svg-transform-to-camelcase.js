@@ -42,7 +42,7 @@ module.exports = function( grunt ) {
   				} );
 
   			grunt.file.write( files.dest + svgFile, fileContent );
-  		} )
+  		} );
     } );
-	});
-}
+	} );
+};

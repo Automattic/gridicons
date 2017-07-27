@@ -34,5 +34,5 @@ module.exports = function( grunt ) {
 		content += grunt.file.read( 'sources/php/index-footer.php' );
 		grunt.file.write( 'php/gridicons.php', content );
 
-	});
-}
+	} );
+};

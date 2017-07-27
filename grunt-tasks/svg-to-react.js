@@ -50,5 +50,5 @@ module.exports = function( grunt ) {
     // Write the React component to gridicon/index.jsx
     grunt.file.write( filesDest + 'index.jsx', component );
     grunt.file.write( filesDest + 'example.jsx', componentExample );
-  });
-}
+  } );
+};
