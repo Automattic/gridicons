@@ -1,5 +1,11 @@
 _The versioning refers to the React component build._
 
+#### v2.0.3 (2017-08-29)
+* Icon added: "Reader Follow Conversation"
+* Icon added: "Reader Following Conversation"
+* Icon updated: "Chat", made sure this matches all bubble icons style
+* Icon updated: "Comment", made sure this matches all bubble icons style
+
 #### v2.0.2 (2017-08-15)
 
 * Icon updated: "Chat", flipped direction for more modularity.
@@ -21,4 +27,4 @@ _The versioning refers to the React component build._
 * React: dependency raised to 15.3.0.
 * React: dependency added to `prop-type` 15.5.10.
 * Build: refactoring, now SVG are master sources.
-* Build: polished example site. 
+* Build: polished example site.
