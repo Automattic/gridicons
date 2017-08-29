@@ -1,1 +1,19 @@
-<svg id="Artwork" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 18"><title>gridicons-reader-follow-conversation</title><path d="M16.15,13.78l0.69,0.72L20,11.33V5a2,2,0,0,0-2-2H4A2,2,0,0,0,2,5v9a2,2,0,0,0,2,2H6.21v5L12,15l2.71-2.71Z" transform="translate(-2 -3)"/><polygon points="20.61 8.06 14.52 14.16 12.41 11.97 11 13.36 14.51 16.96 22 9.44 20.61 8.06"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g id="Adv._Guides">
+</g>
+<g id="Guides">
+</g>
+<g id="Artwork">
+	<g id="Layer_1_1_">
+	</g>
+	<g id="Layer_1_2_">
+	</g>
+	<g>
+		<polygon points="20,14 20,11 18,11 18,14 15,14 15,16 18,16 18,19 20,19 20,16 23,16 23,14 		"/>
+		<path d="M13,16h-2l-5,5v-5H4c-1.1,0-2-0.9-2-2V5c0-1.1,0.9-2,2-2h14c1.1,0,2,0.9,2,2v4h-4v3h-3V16z"/>
+	</g>
+</g>
+</svg>
