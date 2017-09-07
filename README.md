@@ -87,7 +87,7 @@ This icon set uses a few automation scripts to ease the generation of new icons 
 Note: to proceed with this you need to have write authorization to npm.
 
 1. Create a new PR with updated `CHANGELOG.md` and updated version in `package.json` (i.e. `1.2.3-alpha.1`), see an example [here](https://github.com/Automattic/gridicons/pull/247).
-2. Pre-publish that PR branch on npm with `npm publish --tag next`.
+2. Pre-publish that PR branch on npm with `npm publish --tag next` [more info](https://docs.npmjs.com/getting-started/using-tags).
 3. Create a new PR in a repository using Gridicons (i.e. [Calypso](https://github.com/Automattic/wp-calypso)), see an example [here](https://github.com/Automattic/wp-calypso/pull/17601).
 4. Test if the new icons show up, and there are no regressions in the previous icons.
 5. If changes look good, remove postfix in the version (i.e. `1.2.3`).
