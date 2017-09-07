@@ -86,14 +86,16 @@ This icon set uses a few automation scripts to ease the generation of new icons 
 
 Note: to proceed with this you need to have write authorization to npm.
 
-1. Create a new PR with updated `CHANGELOG.md` and updated version in `package.json` (i.e. `1.1.0-alpha.1`), see an example [here](https://github.com/Automattic/gridicons/pull/247).
-2. Pre-publish that PR branch on npm with `npm publish --tag next`.
+1. Create a new PR with updated `CHANGELOG.md` and updated version in `package.json` (i.e. `1.2.3-alpha.1`), see an example [here](https://github.com/Automattic/gridicons/pull/247).
+2. Pre-publish that PR branch on npm with `npm publish --tag next` (more info).
 3. Create a new PR in a repository using Gridicons (i.e. [Calypso](https://github.com/Automattic/wp-calypso)), see an example [here](https://github.com/Automattic/wp-calypso/pull/17601).
 4. Test if the new icons show up, and there are no regressions in the previous icons.
-5. If changes look good remove postfix in the version (i.e. `1.1.0`).
+5. If changes look good remove postfix in the version (i.e. `1.2.3`).
 6. Merge the Gridicons PR.
-7. Publish MASTER using the latest tag `npm publish --tag latest`.
-8. Merge the test repository PR.
+7. Tag the release on GitHub: `git tag -a v1.2.3 -m "Release v1.2.3"` (and push `git push origin v1.2.3`).
+8. Check it shows up in the [Releases list](https://github.com/Automattic/gridicons/releases).
+8. Publish MASTER using the latest tag `npm publish --tag latest`.
+9. Merge the test repository PR.
 
 ## License
 
