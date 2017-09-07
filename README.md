@@ -60,7 +60,7 @@ These are not rules, they are guidelines that can be broken with the proper reas
 Note that the icons in this set are tied to be used in [Calypso](https://github.com/Automattic/wp-calypso/), but there might be exceptions for more general icons that make sense to be added.
 
 1. Make sure you have a updated local clone of the repository.
-2. Draw the icon in Illustrator on a 24px grid using the guidelines above (use [icon-template.ai](https://github.com/Automattic/gridicons/wiki/Icon-Template) as starting point).  
+2. Draw the icon in Illustrator on a 24px grid using the guidelines above (use [icon-template.ai](https://github.com/Automattic/gridicons/wiki/Icon-Template) as starting point).
    _Tip: tap CMD + Option + Y in Illustrator to see the pixel grid version._
 3. Submit a Pull Request with the icon as a SVG file (inside the `sources/svg` folder), make sure to include a screenshot, ideally containing side by side comparison with some other Gridicons as a visual reference.
 4. Discuss, iterate, review, refine until ready.
@@ -87,14 +87,14 @@ This icon set uses a few automation scripts to ease the generation of new icons 
 Note: to proceed with this you need to have write authorization to npm.
 
 1. Create a new PR with updated `CHANGELOG.md` and updated version in `package.json` (i.e. `1.2.3-alpha.1`), see an example [here](https://github.com/Automattic/gridicons/pull/247).
-2. Pre-publish that PR branch on npm with `npm publish --tag next` (more info).
+2. Pre-publish that PR branch on npm with `npm publish --tag next`.
 3. Create a new PR in a repository using Gridicons (i.e. [Calypso](https://github.com/Automattic/wp-calypso)), see an example [here](https://github.com/Automattic/wp-calypso/pull/17601).
 4. Test if the new icons show up, and there are no regressions in the previous icons.
-5. If changes look good remove postfix in the version (i.e. `1.2.3`).
+5. If changes look good, remove postfix in the version (i.e. `1.2.3`).
 6. Merge the Gridicons PR.
 7. Tag the release on GitHub: `git tag -a v1.2.3 -m "Release v1.2.3"` (and push `git push origin v1.2.3`).
-8. Check it shows up in the [Releases list](https://github.com/Automattic/gridicons/releases).
-8. Publish MASTER using the latest tag `npm publish --tag latest`.
+8. Check if it shows up in the [Releases list](https://github.com/Automattic/gridicons/releases).
+8. Publish to MASTER using the latest tag `npm publish --tag latest`.
 9. Merge the test repository PR.
 
 ## License
