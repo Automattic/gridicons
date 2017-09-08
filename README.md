@@ -94,7 +94,7 @@ Note: to proceed with this you need to have write authorization to npm.
 6. Merge the Gridicons PR.
 7. Tag the release on GitHub: `git tag -a v1.2.3 -m "Release v1.2.3"` (and push `git push origin v1.2.3`).
 8. Check if it shows up in the [Releases list](https://github.com/Automattic/gridicons/releases).
-8. Publish to MASTER using the latest tag `npm publish --tag latest`.
+8. Publish to MASTER using the latest tag `npm publish`.
 9. Merge the test repository PR.
 
 ## License
