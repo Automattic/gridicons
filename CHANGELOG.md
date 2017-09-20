@@ -1,5 +1,8 @@
 _The versioning refers to the React component build._
 
+#### v2.0.4 (2017-09-20)
+* Icon added: "Gift"
+
 #### v2.0.3 (2017-08-29)
 * Icon added: "Reader Follow Conversation"
 * Icon added: "Reader Following Conversation"
