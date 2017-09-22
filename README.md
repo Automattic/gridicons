@@ -88,7 +88,7 @@ Note: to proceed with this you need to have write authorization to npm.
 
 1. Create a new PR with updated `CHANGELOG.md` and updated version in `package.json` (i.e. `1.2.3-alpha.1`), see an example [here](https://github.com/Automattic/gridicons/pull/247).
 2. Pre-publish that PR branch on npm with `npm publish --tag next` ([more info](https://docs.npmjs.com/cli/dist-tag)).
-3. Create a new update PR in a repository that makes use of Gridicons (i.e. [Calypso](https://github.com/Automattic/wp-calypso)) pointing `package.json` to the alpha version, see an example [here](https://github.com/Automattic/wp-calypso/pull/17601).
+3. Create a new update PR in a repository that makes use of Gridicons and run `npm install gridicons@next --save` (which will update `packages.json`). If you're creating the PR in [Calypso](https://github.com/Automattic/wp-calypso) and you get warnings, it might need to regenerate the shrinkwrap, in which case run `npm run update-deps`. See an example [here](https://github.com/Automattic/wp-calypso/pull/17601).
 4. Test if the new icons show up, and there are no regressions in the previous icons.
 5. If changes look good, remove the alpha postfix in the version (i.e. `1.2.3-alpha.1` to `1.2.3`) on both repositories PRs.
 6. Merge the Gridicons PR.
