@@ -4,11 +4,11 @@ The [Calypso](https://github.com/Automattic/wp-calypso/) / [WordPress.com](https
 
 ## Using the Gridicon Component in your project:
 
-Note that this component requires [react](https://www.npmjs.com/package/react) to be installed in your project.
+Note that this component requires [react](https://www.npmjs.com/package/react) to be installed in your project. If you don't want to use React, you can simply include the raw `.svg` files from the [`svg-min`](https://github.com/Automattic/gridicons/tree/master/svg-min) folder.
 
 Gridicon renders a single svg icon based on an `icon` prop. It takes a size property but defaults to 24px. For greater sharpness, the icons should only be shown at either 18px, 24px, 36px or 48px.
 
-There's a gallery with all the available icons in http://automattic.github.io/gridicons/..
+There's a gallery with all the available icons in http://automattic.github.io/gridicons/.
 
 ```
 npm install gridicons --save
