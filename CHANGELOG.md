@@ -1,5 +1,8 @@
 _The versioning refers to the React component build._
 
+#### v2.0.5 (2017-10-16)
+* Icon updated: "Reply", flipped direction so it is pointing down and to the right.
+
 #### v2.0.4 (2017-09-20)
 * Icon added: "Gift"
 
