@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.cls-1{fill:#fff;}</style></defs><title>gridicons-image-remove</title><g id="Artwork"><g id="new_remove" data-name="new remove"><path d="M13,9.5A1.5,1.5,0,1,1,14.5,11,1.5,1.5,0,0,1,13,9.5ZM20,6V18a2,2,0,0,1-2,2H6a2,2,0,0,1-2-2V6A2,2,0,0,1,6,4H18A2,2,0,0,1,20,6ZM18,6H6v6.38l2.19-2.19,5.23,5.23,1-1a1.59,1.59,0,0,1,2.11.11L18,16Z" transform="translate(-2 -2)"/><rect x="11.71" y="0.57" width="2" height="24.28" transform="translate(10.71 -7.26) rotate(45)"/><rect class="cls-1" x="10.29" y="-0.85" width="2" height="24.28" transform="translate(9.29 -6.68) rotate(45)"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <g id="gridicons-image-remove" fill="#000000">
+    <path d="M20.5871695,3.42327127 L22.0013831,4.83748484 L20,6.83886794 L20,18 C20,19.1045695 19.1045695,20 18,20 L6.83886794,20 L4.83283046,22.0060375 L3.41861689,20.5918239 L20.5871695,3.42327127 Z M12.419434,14.419434 L13.42,15.42 L14.42,14.42 C15.0495258,13.9164877 15.9562434,13.9637573 16.53,14.53 L18,16 L18,8.83886794 L12.419434,14.419434 Z M15.1622576,6 L6,6 L6,12.38 L8.19,10.19 L9.58112878,11.5811288 L4,17.1622576 L4,6 C4,4.8954305 4.8954305,4 6,4 L17.1622576,4 L15.1622576,6 Z"></path>
+  </g>
+</svg>
