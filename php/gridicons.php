@@ -283,8 +283,11 @@ function get_gridicon( $gridicon ) {
 		case 'gridicons-image-multiple':
 			$svg = '<svg class="gridicon gridicons-image-multiple" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M15 7.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5S17.328 9 16.5 9 15 8.328 15 7.5zM4 20h14c0 1.105-.895 2-2 2H4c-1.1 0-2-.9-2-2V8c0-1.105.895-2 2-2v14zM22 4v12c0 1.105-.895 2-2 2H8c-1.105 0-2-.895-2-2V4c0-1.105.895-2 2-2h12c1.105 0 2 .895 2 2zM8 4v6.333L11 7l4.855 5.395.656-.73c.796-.886 2.183-.886 2.977 0l.513.57V4H8z"/></g></svg>';
 			break;
+		case 'gridicons-image-remove':
+			$svg = '<svg class="gridicon gridicons-image-remove" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M20.587 3.423L22 4.837 20 6.84V18c0 1.105-.895 2-2 2H6.84l-2.007 2.006-1.414-1.414 17.167-17.17zM12.42 14.42l1 1 1-1c.63-.504 1.536-.456 2.11.11L18 16V8.84l-5.58 5.58zM15.16 6H6v6.38l2.19-2.19 1.39 1.39L4 17.163V6c0-1.105.895-2 2-2h11.162l-2 2z"/></g></svg>';
+			break;
 		case 'gridicons-image':
-			$svg = '<svg class="gridicon gridicons-image" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M13 9.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5zM22 6v12c0 1.105-.895 2-2 2H4c-1.105 0-2-.895-2-2V6c0-1.105.895-2 2-2h16c1.105 0 2 .895 2 2zm-2 0H4v7.444L8 9l5.895 6.55 1.587-1.85c.798-.932 2.24-.932 3.037 0L20 15.426V6z"/></g></svg>';
+			$svg = '<svg class="gridicon gridicons-image" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M20 6v12c0 1.105-.895 2-2 2H6c-1.105 0-2-.895-2-2V6c0-1.105.895-2 2-2h12c1.105 0 2 .895 2 2zm-2 0H6v6.38l2.19-2.19 5.23 5.23 1-1c.63-.504 1.536-.456 2.11.11L18 16V6zm-5 3.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5z"/></g></svg>';
 			break;
 		case 'gridicons-indent-left':
 			$svg = '<svg class="gridicon gridicons-indent-left" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M18 20h2V4h-2v16zM2 11h10.172l-2.086-2.086L11.5 7.5 16 12l-4.5 4.5-1.414-1.414L12.172 13H2v-2z"/></g></svg>';
@@ -565,8 +568,11 @@ function get_gridicon( $gridicon ) {
 		case 'gridicons-video-camera':
 			$svg = '<svg class="gridicon gridicons-video-camera" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M17 9V7c0-1.105-.895-2-2-2H4c-1.105 0-2 .895-2 2v10c0 1.105.895 2 2 2h11c1.105 0 2-.895 2-2v-2l5 4V5l-5 4z"/></g></svg>';
 			break;
+		case 'gridicons-video-remove':
+			$svg = '<svg class="gridicon gridicons-video-remove" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M19.42 4.59l1.167-1.167L22 4.837 20 6.84V18c0 1.105-.895 2-2 2v-2h-2v2H6.84l-2.007 2.006-1.414-1.414 1.17-1.172-.01-.01L8 16 18 6l1.41-1.42.01.01zM15.84 11H18V8.84L15.84 11zM16 8.01l.01-.01H16v.01zM6 15.17l-2 2V6c0-1.105.895-2 2-2v2h2V4h9.17l-9 9H6v2.17zM6 8v3h2V8H6zm12 8v-3h-2v3h2z"/></g></svg>';
+			break;
 		case 'gridicons-video':
-			$svg = '<svg class="gridicon gridicons-video" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M20 4v2h-2V4H6v2H4V4c-1.105 0-2 .895-2 2v12c0 1.105.895 2 2 2v-2h2v2h12v-2h2v2c1.105 0 2-.895 2-2V6c0-1.105-.895-2-2-2zM6 16H4v-3h2v3zm0-5H4V8h2v3zm4 4V9l4.5 3-4.5 3zm10 1h-2v-3h2v3zm0-5h-2V8h2v3z"/></g></svg>';
+			$svg = '<svg class="gridicon gridicons-video" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M8 4h8v1.997h2V4c1.105 0 2 .896 2 2v12c0 1.104-.895 2-2 2v-2.003h-2V20H8v-2.003H6V20c-1.105 0-2-.895-2-2V6c0-1.105.895-2 2-2v1.997h2V4zm2 11l4.5-3L10 9v6zm8 .997v-3h-2v3h2zm0-5v-3h-2v3h2zm-10 5v-3H6v3h2zm0-5v-3H6v3h2z"/></g></svg>';
 			break;
 		case 'gridicons-visible':
 			$svg = '<svg class="gridicon gridicons-visible" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M12 6C5.188 6 1 12 1 12s4.188 6 11 6 11-6 11-6-4.188-6-11-6zm0 10c-3.943 0-6.926-2.484-8.38-4 1.04-1.085 2.863-2.657 5.255-3.47C8.335 9.214 8 10.064 8 11c0 2.21 1.79 4 4 4s4-1.79 4-4c0-.937-.335-1.787-.875-2.47 2.393.813 4.216 2.386 5.254 3.47-1.456 1.518-4.438 4-8.38 4z"/></g></svg>';
