@@ -43,6 +43,6 @@
     "jit-grunt": "^0.10.0",
     "load-grunt-tasks": "^3.5.2",
     "xml2js": "^0.4.17",
-    "svg-to-pdfkit": "^0.1.2"
+    "svg-to-pdfkit": "0.1.3"
   }
 }
