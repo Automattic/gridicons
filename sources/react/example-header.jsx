@@ -9,7 +9,9 @@ import React, { PureComponent } from 'react';
  */
 import Gridicon from './index.js';
 
-class Gridicons extends PureComponent {
+export default class Gridicons extends PureComponent {
+	static displayName = 'Gridicons'; // Don't remove, needed for Calypso devdocs!
+
 	handleClick = ( icon ) => {
 		const toCopy = '<Gridicon icon="' + icon + '" />';
 		window.prompt( 'Copy component code:', toCopy );

@@ -2,5 +2,3 @@
 		);
 	}
 }
-
-export default Gridicons;
