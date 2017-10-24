@@ -1,6 +1,6 @@
 			</div>
 		);
 	}
-};
+}
 
 export default Gridicons;
