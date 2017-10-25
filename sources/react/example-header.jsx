@@ -2,19 +2,21 @@
 /**
  * External dependencies
  */
-var React = require( 'react' );
+import React, { PureComponent } from 'react';
 
 /**
  * Internal dependencies
  */
 import Gridicon from './index.js';
-module.exports = React.createClass( {
-	displayName: 'Gridicons',
-	handleClick: function( icon ) {
-		var toCopy = '<Gridicon icon="' + icon + '" />';
-		window.prompt( 'Copy component code:', toCopy );
-	},
 
-	render: function() {
+export default class Gridicons extends PureComponent {
+	static displayName = 'Gridicons'; // Don't remove, needed for Calypso devdocs!
+
+	handleClick = ( icon ) => {
+		const toCopy = '<Gridicon icon="' + icon + '" />';
+		window.prompt( 'Copy component code:', toCopy );
+	};
+
+	render() {
 		return (
 			<div>

@@ -1,5 +1,9 @@
 _The versioning refers to the React component build._
 
+#### v2.1.0 (2017-10-25)
+* React: Update example headers and footers to use `PureComponent` instead of `createClass`.
+* React: Allow version ^16.0.0.
+
 #### v2.0.5 (2017-10-16)
 * Icon updated: "Reply", flipped direction so it is pointing down and to the right.
 
