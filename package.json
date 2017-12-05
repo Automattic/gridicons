@@ -39,7 +39,6 @@
     "grunt-rename": "^0.1.4",
     "grunt-svgmin": "^2.0.1",
     "grunt-svgstore": "^1.0.0",
-    "handlebars": "^2.0.0",
     "jit-grunt": "^0.10.0",
     "load-grunt-tasks": "^3.5.2",
     "xml2js": "^0.4.17",
