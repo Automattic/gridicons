@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g>
-	<path fill="#010101" d="M15.8,13.8c0.7-1.1,1.2-2.4,1.2-3.8c0-3.9-3.1-7-7-7s-7,3.1-7,7s3.1,7,7,7c1.4,0,2.7-0.4,3.8-1.2L19,21l2-2
-		L15.8,13.8z M10,15c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5S12.8,15,10,15z"/>
-	<polygon fill="#010101" points="11,7 9,7 9,9 7,9 7,11 9,11 9,13 11,13 11,11 13,11 13,9 11,9 	"/>
-</g>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" >
+	<g id="gridicons-zoom-in">
+		<path d="M15.8,13.8c0.7-1.1,1.2-2.4,1.2-3.8c0-3.9-3.1-7-7-7s-7,3.1-7,7s3.1,7,7,7c1.4,0,2.7-0.4,3.8-1.2L19,21l2-2 L15.8,13.8z M10,15c-2.8,0-5-2.2-5-5s2.2-5,5-5s5,2.2,5,5S12.8,15,10,15z"/>
+		<polygon points="11,7 9,7 9,9 7,9 7,11 9,11 9,13 11,13 11,11 13,11 13,9 11,9"/>
+	</g>
 </svg>
