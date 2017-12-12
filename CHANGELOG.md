@@ -1,5 +1,9 @@
 _The versioning refers to the React component build._
 
+#### v2.1.1 (2017-12-12)
+* Icon added: "Zoom in"
+* Icon added: "Zoom out"
+
 #### v2.1.0 (2017-10-25)
 * React: Update example headers and footers to use `PureComponent` instead of `createClass`.
 * React: Allow version ^16.0.0.
