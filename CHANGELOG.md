@@ -1,6 +1,7 @@
 _The versioning refers to the React component build._
 
 #### v2.1.1 (2017-12-12)
+* Icon updated: "Create"
 * Icon added: "Zoom In"
 * Icon added: "Zoom Out"
 
