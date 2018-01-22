@@ -103,3 +103,14 @@ Note: to proceed with this you need to have write authorization to npm.
 ## License
 
 Gridicons is licensed under [GNU General Public License v2 (or later)](./LICENSE.md).
+
+## More notes on publishing to npm
+You need to have a npm user account. [Create one here](https://www.npmjs.com/signup).
+Once you have created it, set up the account on you machine via 
+$ `npm adduser`
+
+Setup the 2fa with npm 
+$ `npm profile enable-2fa` 
+
+Now everytime before you can publish 
+You will be asked for a your [2FA code (OPT)](https://en.wikipedia.org/wiki/One-time_password)
