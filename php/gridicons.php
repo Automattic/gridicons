@@ -340,9 +340,6 @@ function get_gridicon( $gridicon ) {
 		case 'gridicons-mail':
 			$svg = '<svg class="gridicon gridicons-mail" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M20 4H4c-1.105 0-2 .895-2 2v12c0 1.105.895 2 2 2h16c1.105 0 2-.895 2-2V6c0-1.105-.895-2-2-2zm0 4.236l-8 4.882-8-4.882V6h16v2.236z"/></g></svg>';
 			break;
-		case 'gridicons-media-google':
-			$svg = '<svg class="gridicon gridicons-media-google" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M17.4 8.7c.3-.5 1-2.8 1.3-4.1C16.9 3 14.6 2 12 2c-1.4 0-2.8.3-4 .8l8.2 6s.7.7 1.2-.1zM10.5 6c-.4-.5-2.5-1.9-3.6-2.6C4 5.1 2 8.3 2 12c0 .4 0 .7.1 1.1l8.2-5.9s.8-.5.2-1.2zm-4.7 5.7c-.5.2-2.5 1.7-3.6 2.5C3 18 6 20.9 9.7 21.8l-2.9-9.5c0-.1-.2-1-1-.6zm4 6.2c.1.6.8 2.7 1.3 4.1h.9c3.6 0 6.8-2 8.6-4.9h-9.9s-1-.1-.9.8zm9.7-12.5l-3.1 9.5s-.4.9.5 1.1c.6.1 2.8.1 4.2 0 .5-1.2.8-2.6.8-4 .1-2.5-.8-4.8-2.4-6.6z"/></g></svg>';
-			break;
 		case 'gridicons-mention':
 			$svg = '<svg class="gridicon gridicons-mention" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M12 2a10 10 0 0 0 0 20v-2a8 8 0 1 1 8-8v.5a1.5 1.5 0 0 1-3 0V7h-2v1a5 5 0 1 0 1 7 3.5 3.5 0 0 0 6-2.46V12A10 10 0 0 0 12 2zm0 13a3 3 0 1 1 3-3 3 3 0 0 1-3 3z"/></g></svg>';
 			break;
