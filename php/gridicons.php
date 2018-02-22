@@ -493,6 +493,9 @@ function get_gridicon( $gridicon ) {
 		case 'gridicons-shipping':
 			$svg = '<svg class="gridicon gridicons-shipping" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M18 8h-2V7c0-1.105-.895-2-2-2H4c-1.105 0-2 .895-2 2v10h2c0 1.657 1.343 3 3 3s3-1.343 3-3h4c0 1.657 1.343 3 3 3s3-1.343 3-3h2v-5l-4-4zM7 18.5c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zM4 14V7h10v7H4zm13 4.5c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/></g></svg>';
 			break;
+		case 'gridicons-shutter':
+			$svg = '<svg class="gridicon gridicons-shutter" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M18.9 4.8s-.7 5.6-3.5 10.2c1.7-.3 3.9-.9 6.6-2 0 0 .7-4.6-3.1-8.2zm-6 2.8c-1.1-1.3-2.7-3-5-4.7C5.1 4.2 3 6.6 2.3 9.6 7 7.7 11 7.5 12.9 7.6zm3.4 2.9c.6-1.6 1.2-3.9 1.6-6.7-4.1-3-8.6-1.5-8.6-1.5s4.4 3.4 7 8.2zm-5.2 6c1.1 1.3 2.7 3 5 4.7 0 0 4.3-1.6 5.6-6.7 0-.1-5.3 2.1-10.6 2zm-3.4-3.1c-.6 1.6-1.2 3.8-1.5 6.7 0 0 3.6 2.9 8.6 1.5 0 0-4.6-3.4-7.1-8.2zM2 11.1s-.7 4.5 3.1 8.2c0 0 .7-5.7 3.5-10.3-1.7.3-4 .9-6.6 2.1z"/></g></svg>';
+			break;
 		case 'gridicons-sign-out':
 			$svg = '<svg class="gridicon gridicons-sign-out" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M16 17v2c0 1.105-.895 2-2 2H5c-1.105 0-2-.895-2-2V5c0-1.105.895-2 2-2h9c1.105 0 2 .895 2 2v2h-2V5H5v14h9v-2h2zm2.5-10.5l-1.414 1.414L20.172 11H10v2h10.172l-3.086 3.086L18.5 17.5 24 12l-5.5-5.5z"/></g></svg>';
 			break;
