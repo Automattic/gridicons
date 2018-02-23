@@ -1,5 +1,8 @@
 _The versioning refers to the React component build._
 
+#### v2.1.3 (2018-02-22)
+* Icon added: "Shutter"
+
 #### v2.1.2 (2018-01-23)
 * Icon added: "Plans"
 
