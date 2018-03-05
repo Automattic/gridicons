@@ -32,6 +32,18 @@ module.exports = function( grunt ) {
         name = name.replace( 'gridicons-', '' );
         componentExample += '				<Gridicon icon="' + name + '" size={ 48 } onClick={ this.handleClick.bind( this, \'' + name + '\' ) } />\n';
 
+				// Prepare and write to disk every individual component separately
+				var individualComponent =
+					grunt.file.read(
+						'sources/react/index-header-individual-component.jsx',
+					) +
+					'		svg = ' +
+					fileContent +
+					';\n' +
+					grunt.file.read(
+						'sources/react/index-footer-individual-component.jsx',
+					);
+				grunt.file.write(files.dest + name + '.jsx', individualComponent);
 
       } );
 
