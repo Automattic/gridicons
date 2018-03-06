@@ -34,15 +34,23 @@ module.exports = function( grunt ) {
 
 				// Prepare and write to disk every individual component separately
 				var individualComponent =
-					grunt.file.read(
-						'sources/react/index-header-individual-component.jsx',
-					) +
-					'	const icon = \'gridicons-' + name + '\';\n' +
-					'	const svg = ' + fileContent + ';\n' +
-					grunt.file.read(
-						'sources/react/index-footer-individual-component.jsx',
-					);
-				grunt.file.write(files.dest + name + '.jsx', individualComponent);
+					grunt.file.read( 'sources/react/index-header-individual-component.jsx' ) +
+					`const icon = 'gridicons-${ name }';
+const needsOffset = calculateNeedsOffset( icon, size );
+const needsOffsetX = calculateNeedsOffsetX( icon, size );
+const needsOffsetY = calculateNeedsOffsetY( icon, size );
+const iconClass = [
+	'gridicon',
+	icon,
+	className,
+	needsOffset ? 'needs-offset' : false,
+	needsOffsetX ? 'needs-offset-x' : false,
+	needsOffsetY ? 'needs-offset-y' : false,
+].filter( Boolean ).join( ' ' );
+
+return (${ fileContent });
+}`;
+				grunt.file.write( files.dest + name + '.jsx', individualComponent );
 
       } );
 
