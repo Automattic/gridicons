@@ -100,9 +100,9 @@ module.exports = function( grunt ) {
 			dist: {
 				files: [{
 					expand: true,
-					cwd: 'build/',
+					cwd: 'react-icons/',
 					src: [ '**/*.jsx' ],
-					dest: 'build/',
+					dest: 'react-icons/',
 					ext: '.js',
 					filter: 'isFile'
 				}]
@@ -147,7 +147,7 @@ module.exports = function( grunt ) {
           cwd: 'svg-min-react/',
           src: [ '**/*.svg' ],
           filter: 'isFile',
-          dest: 'build/'
+          dest: 'react-icons/'
         }]
       }
     },

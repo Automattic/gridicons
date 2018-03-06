@@ -1,11 +1,11 @@
 .github/
 .idea/
-build/
 docs/
 grunt-tasks/
 pdf/
 php/
 sources/
+react-icons/
 svg-min/
 svg-min-react/
 svg-sprite/
