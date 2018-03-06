@@ -10,22 +10,20 @@ OR if you're looking to change now SVGs get output, you'll need to edit strings 
 /**
  * External dependencies
  */
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
-export default class Gridicon extends PureComponent {
+// We don't want the icon prop in to otherProps,
+// as we'll pass those to the svg component.
+// That's why we destructure it from the props but not use it.
+export default function({
+	size = 24,
+	onClick,
+	icon: iconProp,
+	className,
+	...otherProps
+}){
 
-	static defaultProps = {
-		size: 24
-	};
-
-	static propTypes = {
-		size: PropTypes.number,
-		onClick: PropTypes.func,
-		className: PropTypes.string
-	};
-
-	needsOffset( icon, size ) {
+	const calculateNeedsOffset = ( icon, size ) => {
 		const iconNeedsOffset = [
 			'gridicons-add-outline',
 			'gridicons-add',
@@ -86,7 +84,7 @@ export default class Gridicon extends PureComponent {
 		return false;
 	}
 
-	needsOffsetX( icon, size ) {
+	const calculateNeedsOffsetX = ( icon, size ) => {
 		const iconNeedsOffsetX = [
 			'gridicons-arrow-down',
 			'gridicons-arrow-up',
@@ -104,7 +102,7 @@ export default class Gridicon extends PureComponent {
 		return false;
 	}
 
-	needsOffsetY( icon, size ) {
+	const calculateNeedsOffsetY = ( icon, size ) => {
 		const iconNeedsOffsetY = [
 			'gridicons-align-center',
 			'gridicons-align-justify',
@@ -129,8 +127,3 @@ export default class Gridicon extends PureComponent {
 		}
 		return false;
 	}
-
-	render() {
-		// We don't want the icon prop in to otherProps, as we'll pass those to the svg component.
-		// That's why we destructure it from the props but not use it.
-		const { size, onClick, icon: iconProp, className,  ...otherProps } = this.props;
