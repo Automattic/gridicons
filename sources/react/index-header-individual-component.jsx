@@ -20,7 +20,6 @@ export default class Gridicon extends PureComponent {
 	};
 
 	static propTypes = {
-		icon: PropTypes.string.isRequired,
 		size: PropTypes.number,
 		onClick: PropTypes.func,
 		className: PropTypes.string
@@ -132,19 +131,6 @@ export default class Gridicon extends PureComponent {
 	}
 
 	render() {
-		const { size, onClick, icon: iconProp, className, ...otherProps } = this.props;
-		const icon = 'gridicons-' + iconProp;
-		const needsOffset = this.needsOffset( icon, size );
-		const needsOffsetX = this.needsOffsetX( icon, size );
-		const needsOffsetY = this.needsOffsetY( icon, size );
-
-		let svg;
-
-		const iconClass = [
-			'gridicon',
-			icon,
-			className,
-			needsOffset ? 'needs-offset' : false,
-			needsOffsetX ? 'needs-offset-x' : false,
-			needsOffsetY ? 'needs-offset-y' : false,
-		].filter( Boolean ).join( ' ' );
+		// We don't want the icon prop in to otherProps, as we'll pass those to the svg component.
+		// That's why we destructure it from the props but not use it.
+		const { size, onClick, icon: iconProp, className,  ...otherProps } = this.props;

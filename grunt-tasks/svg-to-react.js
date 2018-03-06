@@ -37,9 +37,8 @@ module.exports = function( grunt ) {
 					grunt.file.read(
 						'sources/react/index-header-individual-component.jsx',
 					) +
-					'		svg = ' +
-					fileContent +
-					';\n' +
+					'		const icon = \'gridicons-' + name + '\';\n' +
+					'		const svg = ' + fileContent + ';\n' +
 					grunt.file.read(
 						'sources/react/index-footer-individual-component.jsx',
 					);
