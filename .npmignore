@@ -1,0 +1,12 @@
+.github/
+.idea/
+build/
+docs/
+grunt-tasks/
+pdf/
+php/
+sources/
+svg-min/
+svg-min-react/
+svg-sprite/
+Gruntfile.js
