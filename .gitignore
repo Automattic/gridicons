@@ -2,5 +2,6 @@ node_modules/
 /npm-debug.log
 .idea/
 svg-min-react/
-build/
+esnext/
+cjs/
 .DS_Store

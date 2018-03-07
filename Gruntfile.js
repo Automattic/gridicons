@@ -98,10 +98,14 @@ module.exports = function( grunt ) {
 				]
 			},
 			dist: {
-				files: {
-					"build/index.js": "build/index.jsx",
-					"build/example.js": "build/example.jsx"
-				}
+				files: [{
+					expand: true,
+					cwd: 'esnext/',
+					src: [ '*.jsx' ],
+					dest: 'cjs/',
+					ext: '.js',
+					filter: 'isFile'
+				}]
 			}
 		},
 
@@ -143,7 +147,7 @@ module.exports = function( grunt ) {
           cwd: 'svg-min-react/',
           src: [ '**/*.svg' ],
           filter: 'isFile',
-          dest: 'build/'
+          dest: 'esnext/'
         }]
       }
     },
