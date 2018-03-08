@@ -3,7 +3,8 @@
   "version": "2.1.3",
   "main": "cjs/index.js",
 	"files": [
-		"cjs"
+		"cjs/",
+		"esm/"
 	],
   "scripts": {
     "build": "grunt --verbose",
