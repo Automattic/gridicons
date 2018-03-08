@@ -4,28 +4,26 @@ const prepareDevDocsExample = components => `
 /**
  * External dependencies
  */
-import React, { PureComponent } from 'react';
+import React from 'react';
 
 /**
  * Internal dependencies
  */
 import Gridicon from './index.js';
 
-export default class Gridicons extends PureComponent {
-	static displayName = 'Gridicons'; // Don't remove, needed for Calypso devdocs!
+export default function() {
+	const displayName = 'Gridicons'; // Don't remove, needed for Calypso devdocs!
 
-	handleClick = ( icon ) => {
+	const handleClick = icon => {
 		const toCopy = '<Gridicon icon="' + icon + '" />';
 		window.prompt( 'Copy component code:', toCopy );
-	};
-
-	render() {
-		return (
-			<div>
-			${ components }
-			</div>
-		);
 	}
+
+	return (
+		<div>
+		${ components }
+		</div>
+	);
 }
 `;
 
