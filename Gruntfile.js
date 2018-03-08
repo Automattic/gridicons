@@ -101,7 +101,7 @@ module.exports = function( grunt ) {
 				files: [{
 					expand: true,
 					cwd: 'esm/',
-					src: [ '**/*.jsx' ],
+					src: [ '**/*.js' ],
 					dest: 'cjs/',
 					ext: '.js',
 					filter: 'isFile'

@@ -115,7 +115,7 @@ module.exports = function( grunt ) {
         componentsExample += '				<Gridicon icon="' + name + '" size={ 48 } onClick={ this.handleClick.bind( this, \'' + name + '\' ) } />\n';
 
 				// Prepare and write to disk every individual icon separately
-				grunt.file.write( files.dest + name + '.jsx', prepareIndividualIcon( {
+				grunt.file.write( files.dest + name + '.js', prepareIndividualIcon( {
 					name,
 					component: fileContent,
 					iconsThatNeedOffset,
@@ -129,10 +129,10 @@ module.exports = function( grunt ) {
     } );
 
     // Prepare and write to disk the Design Docs Example component
-		grunt.file.write( filesDest + 'example.jsx', prepareDevDocsExample( componentsExample ) );
+		grunt.file.write( filesDest + 'example.js', prepareDevDocsExample( componentsExample ) );
 
     // Prepare and write to disk the Gridicon React component
-    grunt.file.write( filesDest + 'index.jsx', prepareAllIcons( {
+    grunt.file.write( filesDest + 'index.js', prepareAllIcons( {
 			components,
 			iconsThatNeedOffset,
 			iconsThatNeedOffsetX,
