@@ -1,4 +1,6 @@
+const prepareDevDocsExample = components => `
 /* eslint-disable no-alert */
+
 /**
  * External dependencies
  */
@@ -20,3 +22,11 @@ export default class Gridicons extends PureComponent {
 	render() {
 		return (
 			<div>
+			${ components }
+			</div>
+		);
+	}
+}
+`;
+
+module.exports = prepareDevDocsExample;

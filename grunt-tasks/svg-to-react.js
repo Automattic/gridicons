@@ -3,19 +3,101 @@
 
 module.exports = function( grunt ) {
   grunt.registerMultiTask( 'svg-to-react', 'Output a react component for SVGs', function() {
-    var component = '';
-    var componentExample = '';
-    var filesDest;
+		let components = '';
+		let componentsExample = '';
+		let filesDest;
+		const prepareIndividualIcon = require( '../sources/react/template-individual-icon' );
+		const prepareAllIcons = require( '../sources/react/template-all-icons' );
+		const prepareDevDocsExample = require( '../sources/react/template-devdocs-example' );
+		const iconsThatNeedOffset = [
+			'gridicons-add-outline',
+			'gridicons-add',
+			'gridicons-align-image-center',
+			'gridicons-align-image-left',
+			'gridicons-align-image-none',
+			'gridicons-align-image-right',
+			'gridicons-attachment',
+			'gridicons-bold',
+			'gridicons-bookmark-outline',
+			'gridicons-bookmark',
+			'gridicons-calendar',
+			'gridicons-cart',
+			'gridicons-create',
+			'gridicons-custom-post-type',
+			'gridicons-external',
+			'gridicons-folder',
+			'gridicons-heading',
+			'gridicons-help-outline',
+			'gridicons-help',
+			'gridicons-history',
+			'gridicons-info-outline',
+			'gridicons-info',
+			'gridicons-italic',
+			'gridicons-layout-blocks',
+			'gridicons-link-break',
+			'gridicons-link',
+			'gridicons-list-checkmark',
+			'gridicons-list-ordered',
+			'gridicons-list-unordered',
+			'gridicons-menus',
+			'gridicons-minus',
+			'gridicons-my-sites',
+			'gridicons-notice-outline',
+			'gridicons-notice',
+			'gridicons-plus-small',
+			'gridicons-plus',
+			'gridicons-popout',
+			'gridicons-posts',
+			'gridicons-scheduled',
+			'gridicons-share-ios',
+			'gridicons-star-outline',
+			'gridicons-star',
+			'gridicons-stats',
+			'gridicons-status',
+			'gridicons-thumbs-up',
+			'gridicons-textcolor',
+			'gridicons-time',
+			'gridicons-trophy',
+			'gridicons-user-circle',
+			'gridicons-reader-follow',
+			'gridicons-reader-following'
+		];
+		const iconsThatNeedOffsetY = [
+			'gridicons-align-center',
+			'gridicons-align-justify',
+			'gridicons-align-left',
+			'gridicons-align-right',
+			'gridicons-arrow-left',
+			'gridicons-arrow-right',
+			'gridicons-house',
+			'gridicons-indent-left',
+			'gridicons-indent-right',
+			'gridicons-minus-small',
+			'gridicons-print',
+			'gridicons-sign-out',
+			'gridicons-stats-alt',
+			'gridicons-trash',
+			'gridicons-underline',
+			'gridicons-video-camera'
+		];
+		const iconsThatNeedOffsetX = [
+			'gridicons-arrow-down',
+			'gridicons-arrow-up',
+			'gridicons-comment',
+			'gridicons-clear-formatting',
+			'gridicons-flag',
+			'gridicons-menu',
+			'gridicons-reader',
+			'gridicons-strikethrough'
+		];
 
-    // Create a switch() case for each svg file
     this.files.forEach( function( files ) {
       files.src.forEach( function( svgFile ) {
-        // Clean up the filename to use for the react components
-        var name = svgFile.split( '.' );
-        name = name[0];
+        // Name to be used by the react components
+        let name = svgFile.split( '.' )[ 0 ];
 
         // Grab the relevant bits from the file contents
-        var fileContent = grunt.file.read( files.cwd + svgFile );
+        let fileContent = grunt.file.read( files.cwd + svgFile );
 
         // Add className, height, and width to the svg element
         fileContent = fileContent.slice( 0, 4 ) +
@@ -23,51 +105,38 @@ module.exports = function( grunt ) {
               fileContent.slice( 4, -6 ) +
               fileContent.slice( -6 );
 
-        // Output the case for each icon
-        component += "			case '" + name + "':\n" +
+        // Holds the switch's cases for every icon
+        components += "			case '" + name + "':\n" +
                   "				svg = " + fileContent + ";\n" +
                   "				break;\n";;
 
-        // Example Document
+        // Holds the Example Document
         name = name.replace( 'gridicons-', '' );
-        componentExample += '				<Gridicon icon="' + name + '" size={ 48 } onClick={ this.handleClick.bind( this, \'' + name + '\' ) } />\n';
+        componentsExample += '				<Gridicon icon="' + name + '" size={ 48 } onClick={ this.handleClick.bind( this, \'' + name + '\' ) } />\n';
 
-				// Prepare and write to disk every individual component separately
-				var individualComponent =
-					grunt.file.read( 'sources/react/index-header-individual-component.jsx' ) +
-					`const icon = 'gridicons-${ name }';
-const needsOffset = calculateNeedsOffset( icon, size );
-const needsOffsetX = calculateNeedsOffsetX( icon, size );
-const needsOffsetY = calculateNeedsOffsetY( icon, size );
-const iconClass = [
-	'gridicon',
-	icon,
-	className,
-	needsOffset ? 'needs-offset' : false,
-	needsOffsetX ? 'needs-offset-x' : false,
-	needsOffsetY ? 'needs-offset-y' : false,
-].filter( Boolean ).join( ' ' );
-
-return (${ fileContent });
-}`;
-				grunt.file.write( files.dest + name + '.jsx', individualComponent );
+				// Prepare and write to disk every individual icon separately
+				grunt.file.write( files.dest + name + '.jsx', prepareIndividualIcon( {
+					name,
+					component: fileContent,
+					iconsThatNeedOffset,
+					iconsThatNeedOffsetX,
+					iconsThatNeedOffsetY,
+				} ) );
 
       } );
 
       filesDest = files.dest;
     } );
 
-    // React Component Wrapping
-    component = grunt.file.read( 'sources/react/index-header.jsx' ) + component;
-    component += grunt.file.read( 'sources/react/index-footer.jsx' );
+    // Prepare and write to disk the Design Docs Example component
+		grunt.file.write( filesDest + 'example.jsx', prepareDevDocsExample( componentsExample ) );
 
-    // Design Docs Wrapping
-    componentExample = grunt.file.read( 'sources/react/example-header.jsx' ) + componentExample;
-    componentExample +=	grunt.file.read( 'sources/react/example-footer.jsx' );
-
-
-    // Write the React component to gridicon/index.jsx
-    grunt.file.write( filesDest + 'index.jsx', component );
-    grunt.file.write( filesDest + 'example.jsx', componentExample );
+    // Prepare and write to disk the Gridicon React component
+    grunt.file.write( filesDest + 'index.jsx', prepareAllIcons( {
+			components,
+			iconsThatNeedOffset,
+			iconsThatNeedOffsetX,
+			iconsThatNeedOffsetY,
+		} ) );
   } );
 };
