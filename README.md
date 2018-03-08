@@ -86,7 +86,7 @@ Note that the icons in this set are tied to be used in [Calypso](https://github.
 1. Switch to the branch (i.e. Pull Request) with the new icon.
 2. Review the SVG source of the new icons to make sure they are clean and readable.
 3. Check pixel sharpness: open in Illustrator (with "Pixel Preview") or Sketch (with "Show Pixels"), adjust if needed.
-4. Run `grunt` command from terminal. It will generate `svg-min`, React (`build`), `svg-sprite`, `pdf`, `php`, and `docs`.
+4. Run `grunt` command from terminal. It will generate `svg-min`, React (`esm` and `cjs`), `svg-sprite`, `pdf`, `php`, and `docs`.
 5. Commit
 6. Merge & delete branch
 
