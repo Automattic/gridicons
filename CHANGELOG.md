@@ -1,5 +1,12 @@
 _The versioning refers to the React component build._
 
+#### v3.0.0 (2018-03-09)
+* React: allow importing individual icons, both in CommonJS and ECMAScript module formats.
+* React: substitute React.PureComponent for a JavaScript function, to minimize the bundle size of transpiled CommonJS files as much as possible.
+* Package: added a `esnext` key in the package.json so API consumers can use it for importing the main ESM file.
+* Build: use template literals to create the React components and centralize the _icon needs offset_ logic in the svg-to-react Grunt task.
+* Build: deleted the `build/` directory in favor of separate `cjs/` and `esm/` folders that contain CommonJS and ECMAScript modules respectively.
+
 #### v2.1.3 (2018-02-22)
 * Icon added: "Shutter"
 
