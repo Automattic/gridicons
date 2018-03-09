@@ -6,8 +6,6 @@ const prepareAllIcons = ( {
 	iconsThatNeedOffsetX,
 	iconsThatNeedOffsetY,
 } ) => `
-/** @ssr-ready **/
-
 /**
  * External dependencies
  */

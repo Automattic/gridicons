@@ -9,8 +9,6 @@ const prepareIndividualIcon = ( {
 	iconsThatNeedOffsetX,
 	iconsThatNeedOffsetY,
 } ) => `
-/* @ssr-ready */
-
 /**
  * External dependencies
  */
