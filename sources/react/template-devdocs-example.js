@@ -9,7 +9,7 @@ import React, { PureComponent } from 'react';
 /**
  * Internal dependencies
  */
-import Gridicon from './index.js';
+import Gridicon from './index';
 
 export default class Gridicons extends PureComponent {
 	static displayName = 'Gridicons'; // Don't remove, needed for Calypso devdocs!
