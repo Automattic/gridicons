@@ -108,7 +108,7 @@ module.exports = function( grunt ) {
         // Holds the switch's cases for every icon
         components += "			case '" + name + "':\n" +
                   "				svg = " + fileContent + ";\n" +
-                  "				break;\n";;
+                  "				break;\n";
 
         // Holds the Example Document
         name = name.replace( 'gridicons-', '' );
