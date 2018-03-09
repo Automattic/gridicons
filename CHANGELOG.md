@@ -1,6 +1,6 @@
 _The versioning refers to the React component build._
 
-#### v3.0.0 (2018-03-09)
+#### v3.0.2 (2018-03-09)
 * React: remove obsolete @ssr-ready pragma from components.
 * React: allow importing individual icons, both in CommonJS and ECMAScript module formats.
 * React: substitute React.PureComponent for a JavaScript function, to minimize the bundle size of transpiled CommonJS files as much as possible.
