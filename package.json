@@ -2,7 +2,6 @@
   "name": "gridicons",
   "version": "3.0.0-alpha.1",
   "main": "cjs/index.js",
-  "esnext": "esm/index.js",
   "files": [
     "cjs/",
     "esm/"
