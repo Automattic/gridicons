@@ -1,10 +1,9 @@
 {
   "name": "gridicons",
   "version": "3.0.0-alpha.1",
-  "main": "cjs/index.js",
+  "main": "dist/index.js",
   "files": [
-    "cjs/",
-    "esm/"
+    "dist/"
   ],
   "scripts": {
     "build": "grunt --verbose",
