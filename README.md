@@ -29,14 +29,14 @@ render() {
 Or import icons individually:
 
 ```
-import GridiconAddImage from 'gridicons/cjs/add-image';
+import GridiconAddImage from 'gridicons/dist/add-image';
 //...
 render() {
     return <GridiconAddImage />;
 }
 ```
 
-We also support importing the untranspiled ECMASCript modules by using `gridicons/esm` instead of `gridicons/cjs`.
+If you use only a few icons, the recommended way of using the Gridicon library is to import them individually. At the moment of writing this, individual icons are between 1K and 2K, and the file containing the whole iconset sits at 92K.
 
 #### Props
 
@@ -48,7 +48,6 @@ We also support importing the untranspiled ECMASCript modules by using `gridicon
 
 * The icon set is made to be used exactly at these pixel sizes: 12, 18, 24, 36, 48, 54, 72.
 * `gridicon-my-sites` as it's a small-size version of the WordPress logo, shouldn't be used larger than 36px. If you need to use the WordPress logo in larger sizes, see the [Social Logos project](https://github.com/Automattic/social-logos).
-* Individual icons are between 1K and 2K. If you use only a few, the recommended way of using the Gridicon library is to import them individually. At the moment, the main file containing the whole iconset sits at 92K.
 
 ## Icon Set Style Guidelines
 
@@ -86,7 +85,7 @@ Note that the icons in this set are tied to be used in [Calypso](https://github.
 1. Switch to the branch (i.e. Pull Request) with the new icon.
 2. Review the SVG source of the new icons to make sure they are clean and readable.
 3. Check pixel sharpness: open in Illustrator (with "Pixel Preview") or Sketch (with "Show Pixels"), adjust if needed.
-4. Run `grunt` command from terminal. It will generate `svg-min`, React (`esm` and `cjs`), `svg-sprite`, `pdf`, `php`, and `docs`.
+4. Run `grunt` command from terminal. It will generate `svg-min`, `dist`, `svg-sprite`, `pdf`, `php`, and `docs`.
 5. Commit
 6. Merge & delete branch
 
