@@ -1,52 +1,67 @@
-const toString = array => array.reduce( ( acc, item ) => ( acc = acc + "'" + item + "', " ), '' );
+const toString = array =>
+        array.reduce((acc, item) => (acc = acc + "'" + item + "', "), '');
 
-const prepareAllIcons = ( {
-	components,
-	iconsThatNeedOffset,
-	iconsThatNeedOffsetX,
-	iconsThatNeedOffsetY,
-} ) => `
+const prepareAllIcons = ({
+        components,
+        iconsThatNeedOffset,
+        iconsThatNeedOffsetX,
+        iconsThatNeedOffsetY,
+}) => `
 /**
  * External dependencies
  */
-import React from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
-export default function( { icon: iconProp, className, onClick, size = 24, ...otherProps } ) {
+export default class Gridicon extends PureComponent {
 
-	const iconsThatNeedOffset = [ ${ toString( iconsThatNeedOffset ) } ];
+	static defaultProps = {
+		size: 24
+	};
 
-	const iconsThatNeedOffsetX = [ ${ toString( iconsThatNeedOffsetX ) } ];
+	static propTypes = {
+		icon: PropTypes.string.isRequired,
+		size: PropTypes.number,
+		onClick: PropTypes.func,
+		className: PropTypes.string
+	};
 
-	const iconsThatNeedOffsetY = [ ${ toString( iconsThatNeedOffsetY ) } ];
+	render() {
 
-	const doesItNeedOffset = ( name, icons ) => icons.indexOf( name ) >= 0;
-	const isModulo18 = size => size % 18 === 0;
+		const iconsThatNeedOffset = [ ${toString(iconsThatNeedOffset)} ];
 
-	const icon = 'gridicons-' + iconProp;
-	const needsOffset = doesItNeedOffset( icon, iconsThatNeedOffset ) && isModulo18( size );
-	const needsOffsetX = doesItNeedOffset( icon, iconsThatNeedOffsetX ) && isModulo18( size );
-	const needsOffsetY = doesItNeedOffset( icon, iconsThatNeedOffsetY ) && isModulo18( size );
+		const iconsThatNeedOffsetX = [ ${toString(iconsThatNeedOffsetX)} ];
 
-	let svg;
-	const iconClass = [
-		'gridicon',
-		icon,
-		className,
-		needsOffset ? 'needs-offset' : false,
-		needsOffsetX ? 'needs-offset-x' : false,
-		needsOffsetY ? 'needs-offset-y' : false,
-	].filter( Boolean ).join( ' ' );
+		const iconsThatNeedOffsetY = [ ${toString(iconsThatNeedOffsetY)} ];
 
-	switch ( icon ) {
-		default:
-			svg = <svg height={ size } width={ size } { ...otherProps } />;
-			break;
+		const doesItNeedOffset = ( name, icons ) => icons.indexOf( name ) >= 0;
+		const isModulo18 = size => size % 18 === 0;
 
-		${ components }
+		const icon = 'gridicons-' + iconProp;
+		const needsOffset = doesItNeedOffset( icon, iconsThatNeedOffset ) && isModulo18( size );
+		const needsOffsetX = doesItNeedOffset( icon, iconsThatNeedOffsetX ) && isModulo18( size );
+		const needsOffsetY = doesItNeedOffset( icon, iconsThatNeedOffsetY ) && isModulo18( size );
 
+		let svg;
+		const iconClass = [
+			'gridicon',
+			icon,
+			className,
+			needsOffset ? 'needs-offset' : false,
+			needsOffsetX ? 'needs-offset-x' : false,
+			needsOffsetY ? 'needs-offset-y' : false,
+		].filter( Boolean ).join( ' ' );
+
+		switch ( icon ) {
+			default:
+				svg = <svg height={ size } width={ size } { ...otherProps } />;
+				break;
+
+			${components}
+		}
+
+		return ( svg );
 	}
-
-	return ( svg );
 }
 `;
 
