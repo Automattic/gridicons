@@ -28,6 +28,8 @@ export default class Gridicon extends PureComponent {
 
 	render() {
 
+		const { size, onClick, icon: iconProp, className, ...otherProps } = this.props;
+
 		const iconsThatNeedOffset = [ ${toString(iconsThatNeedOffset)} ];
 
 		const iconsThatNeedOffsetX = [ ${toString(iconsThatNeedOffsetX)} ];
