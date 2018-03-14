@@ -1,5 +1,8 @@
 _The versioning refers to the React component build._
 
+#### v3.0.1 (2018-03-14)
+* React: Revert to use React.PureComponent in main Gridicon, as to not break backward compatibility.
+
 #### v3.0.0 (2018-03-14)
 * React: remove obsolete @ssr-ready pragma from components.
 * React: allow importing individual icons in CommonJS module formats.
