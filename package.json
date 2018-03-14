@@ -1,6 +1,6 @@
 {
   "name": "gridicons",
-  "version": "3.0.0-alpha.2",
+  "version": "3.0.0",
   "main": "dist/index.js",
   "files": [
     "dist/"
