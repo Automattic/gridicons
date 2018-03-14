@@ -1,4 +1,6 @@
+const prepareDevDocsExample = components => `
 /* eslint-disable no-alert */
+
 /**
  * External dependencies
  */
@@ -7,7 +9,7 @@ import React, { PureComponent } from 'react';
 /**
  * Internal dependencies
  */
-import Gridicon from './index.js';
+import Gridicon from './index';
 
 export default class Gridicons extends PureComponent {
 	static displayName = 'Gridicons'; // Don't remove, needed for Calypso devdocs!
@@ -20,3 +22,11 @@ export default class Gridicons extends PureComponent {
 	render() {
 		return (
 			<div>
+				${components}
+			</div>
+		);
+	}
+}
+`;
+
+module.exports = prepareDevDocsExample;

@@ -1,7 +1,10 @@
 {
   "name": "gridicons",
-  "version": "2.1.3",
-  "main": "build/index.js",
+  "version": "3.0.0",
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "build": "grunt --verbose",
     "prepublish": "npm run build"
@@ -14,10 +17,6 @@
     "url": "https://github.com/Automattic/gridicons"
   },
   "license": "GPL-2.0+",
-  "files": [
-    "build/index.js",
-    "build/example.js"
-  ],
   "dependencies": {
     "prop-types": "^15.5.7"
   },

@@ -98,10 +98,14 @@ module.exports = function( grunt ) {
 				]
 			},
 			dist: {
-				files: {
-					"build/index.js": "build/index.jsx",
-					"build/example.js": "build/example.jsx"
-				}
+				files: [{
+					expand: true,
+					cwd: 'build/',
+					src: [ '**/*.jsx' ],
+					dest: 'dist/',
+					ext: '.js',
+					filter: 'isFile'
+				}]
 			}
 		},
 

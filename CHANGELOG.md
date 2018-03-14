@@ -1,5 +1,12 @@
 _The versioning refers to the React component build._
 
+#### v3.0.0 (2018-03-14)
+* React: remove obsolete @ssr-ready pragma from components.
+* React: allow importing individual icons in CommonJS module formats.
+* React: substitute React.PureComponent for a JavaScript function, to minimize the bundle size of transpiled CommonJS files as much as possible.
+* Build: use template literals to create the React components and centralize the _icon needs offset_ logic in the svg-to-react Grunt task.
+* Build: renamed `build/` to `dist/`, which is now part of the gridicons npm package.
+
 #### v2.1.3 (2018-02-22)
 * Icon added: "Shutter"
 

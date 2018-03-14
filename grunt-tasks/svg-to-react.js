@@ -3,19 +3,25 @@
 
 module.exports = function( grunt ) {
   grunt.registerMultiTask( 'svg-to-react', 'Output a react component for SVGs', function() {
-    var component = '';
-    var componentExample = '';
-    var filesDest;
+		let components = '';
+		let componentsExample = '';
+		let filesDest;
+		const prepareIndividualIcon = require( '../sources/react/template-individual-icon' );
+		const prepareAllIcons = require( '../sources/react/template-all-icons' );
+		const prepareDevDocsExample = require( '../sources/react/template-devdocs-example' );
+		const {
+			iconsThatNeedOffset,
+			iconsThatNeedOffsetX,
+			iconsThatNeedOffsetY
+		} = require( '../sources/react/icons-offset' );
 
-    // Create a switch() case for each svg file
     this.files.forEach( function( files ) {
       files.src.forEach( function( svgFile ) {
-        // Clean up the filename to use for the react components
-        var name = svgFile.split( '.' );
-        name = name[0];
+        // Name to be used by the react components
+        let name = svgFile.split( '.' )[ 0 ];
 
         // Grab the relevant bits from the file contents
-        var fileContent = grunt.file.read( files.cwd + svgFile );
+        let fileContent = grunt.file.read( files.cwd + svgFile );
 
         // Add className, height, and width to the svg element
         fileContent = fileContent.slice( 0, 4 ) +
@@ -23,32 +29,38 @@ module.exports = function( grunt ) {
               fileContent.slice( 4, -6 ) +
               fileContent.slice( -6 );
 
-        // Output the case for each icon
-        component += "			case '" + name + "':\n" +
+        // Holds the switch's cases for every icon
+        components += "			case '" + name + "':\n" +
                   "				svg = " + fileContent + ";\n" +
-                  "				break;\n";;
+                  "				break;\n";
 
-        // Example Document
+        // Holds the Example Document
         name = name.replace( 'gridicons-', '' );
-        componentExample += '				<Gridicon icon="' + name + '" size={ 48 } onClick={ this.handleClick.bind( this, \'' + name + '\' ) } />\n';
+        componentsExample += '				<Gridicon icon="' + name + '" size={ 48 } onClick={ this.handleClick.bind( this, \'' + name + '\' ) } />\n';
 
+				// Prepare and write to disk every individual icon separately
+				grunt.file.write( files.dest + name + '.jsx', prepareIndividualIcon( {
+					name,
+					component: fileContent,
+					iconsThatNeedOffset,
+					iconsThatNeedOffsetX,
+					iconsThatNeedOffsetY,
+				} ) );
 
       } );
 
       filesDest = files.dest;
     } );
 
-    // React Component Wrapping
-    component = grunt.file.read( 'sources/react/index-header.jsx' ) + component;
-    component += grunt.file.read( 'sources/react/index-footer.jsx' );
+    // Prepare and write to disk the Design Docs Example component
+		grunt.file.write( filesDest + 'example.jsx', prepareDevDocsExample( componentsExample ) );
 
-    // Design Docs Wrapping
-    componentExample = grunt.file.read( 'sources/react/example-header.jsx' ) + componentExample;
-    componentExample +=	grunt.file.read( 'sources/react/example-footer.jsx' );
-
-
-    // Write the React component to gridicon/index.jsx
-    grunt.file.write( filesDest + 'index.jsx', component );
-    grunt.file.write( filesDest + 'example.jsx', componentExample );
+    // Prepare and write to disk the Gridicon React component
+    grunt.file.write( filesDest + 'index.jsx', prepareAllIcons( {
+			components,
+			iconsThatNeedOffset,
+			iconsThatNeedOffsetX,
+			iconsThatNeedOffsetY,
+		} ) );
   } );
 };
