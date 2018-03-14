@@ -1,5 +1,8 @@
 _The versioning refers to the React component build._
 
+#### v2.2.0 (2018-03-07)
+* Include untranspiled files in npm.
+
 #### v2.1.3 (2018-02-22)
 * Icon added: "Shutter"
 

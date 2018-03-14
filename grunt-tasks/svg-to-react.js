@@ -1,5 +1,5 @@
 // ****************************************************************************************************
-// Create React component (`svg-min-react/` --> `build/`)
+// Create React component (`svg-min-react/` --> `esm/`)
 
 module.exports = function( grunt ) {
   grunt.registerMultiTask( 'svg-to-react', 'Output a react component for SVGs', function() {

@@ -2,6 +2,7 @@ node_modules/
 /npm-debug.log
 .idea/
 svg-min-react/
-build/
+cjs/
+esm/
 .DS_Store
 package-lock.json

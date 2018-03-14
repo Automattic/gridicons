@@ -72,7 +72,7 @@ Note that the icons in this set are tied to be used in [Calypso](https://github.
 1. Switch to the branch (i.e. Pull Request) with the new icon.
 2. Review the SVG source of the new icons to make sure they are clean and readable.
 3. Check pixel sharpness: open in Illustrator (with "Pixel Preview") or Sketch (with "Show Pixels"), adjust if needed.
-4. Run `grunt` command from terminal. It will generate `svg-min`, React (`build`), `svg-sprite`, `pdf`, `php`, and `docs`.
+4. Run `grunt` command from terminal. It will generate `svg-min`, React (`esm` and `cjs`), `svg-sprite`, `pdf`, `php`, and `docs`.
 5. Commit
 6. Merge & delete branch
 
@@ -81,19 +81,19 @@ Note that the icons in this set are tied to be used in [Calypso](https://github.
 
 This icon set uses a few automation scripts to ease the generation of new icons in a reliable way. In short, we require `node` and `grunt`. For detailed instructions check [the installation page](https://github.com/Automattic/gridicons/wiki/Installation).
 
-Once you checkout the repo run `npm install` in the `gridicons` folder. 
-To generate all the fonts, svgs and so on you run `npm run build` 
+Once you checkout the repo run `npm install` in the `gridicons` folder.
+To generate all the fonts, svgs and so on you run `npm run build`
 
 ## Publishing to npm
 
 Note: to proceed with this you need to have write authorization to npm.
 
-1. Create a new PR with updated `CHANGELOG.md` and updated version in `package.json` (i.e. `1.2.3-alpha.1`), see an example [here](https://github.com/Automattic/gridicons/pull/275). 
-2. In the "CHANGELOG.md" make sure to check all the previous commits since the previous versioned release. 
+1. Create a new PR with updated `CHANGELOG.md` and updated version in `package.json` (i.e. `1.2.3-alpha.1`), see an example [here](https://github.com/Automattic/gridicons/pull/275).
+2. In the "CHANGELOG.md" make sure to check all the previous commits since the previous versioned release.
 3. Pre-publish that PR branch on npm with `npm publish --tag next` ([more info](https://docs.npmjs.com/cli/dist-tag)). Running the `npm publish --tag next` command will send the data that you have localy to npm. Having the alpha version in the `package.json` file will create a newly tagged version npm package. Use `npm view gridicons` to look at the list of current tags. You do not need to commit changes to github in order to publish to npm, but it is recommended so folks testing know what's available.
-4. Create a new update PR in a repository that makes use of Gridicons and run `npm install gridicons@next --save` (which will update `packages.json`). If you're creating the PR in [Calypso](https://github.com/Automattic/wp-calypso) and you get warnings, it might need to regenerate the shrinkwrap, in which case run `npm run update-deps`. See an example [here](https://github.com/Automattic/wp-calypso/pull/17601). 
+4. Create a new update PR in a repository that makes use of Gridicons and run `npm install gridicons@next --save` (which will update `packages.json`). If you're creating the PR in [Calypso](https://github.com/Automattic/wp-calypso) and you get warnings, it might need to regenerate the shrinkwrap, in which case run `npm run update-deps`. See an example [here](https://github.com/Automattic/wp-calypso/pull/17601).
 5. Test if the new icons show up, and there are no regressions in the previous icons. Take a look at the `http://calypso.localhost:3000/devdocs/design/gridicons` for example.
-6. If changes look good, remove the alpha postfix in the version (i.e. `1.2.3-alpha.1` to `1.2.3`) on both repositories PRs. 
+6. If changes look good, remove the alpha postfix in the version (i.e. `1.2.3-alpha.1` to `1.2.3`) on both repositories PRs.
 7. Merge the Gridicons PR.
 8. Tag the release on GitHub: `git tag -a v1.2.3 -m "Release v1.2.3"` (and push `git push origin v1.2.3`).
 9. Check if it shows up in the [Releases list](https://github.com/Automattic/gridicons/releases).
@@ -106,11 +106,11 @@ Gridicons is licensed under [GNU General Public License v2 (or later)](./LICENSE
 
 ## More notes on publishing to npm
 You need to have a npm user account. [Create one here](https://www.npmjs.com/signup).
-Once you have created it, set up the account on you machine via 
+Once you have created it, set up the account on you machine via
 $ `npm adduser`
 
-Setup the 2fa with npm 
-$ `npm profile enable-2fa` 
+Setup the 2fa with npm
+$ `npm profile enable-2fa`
 
-Now everytime before you can publish 
+Now everytime before you can publish
 You will be asked for a your [2FA code (OPT)](https://en.wikipedia.org/wiki/One-time_password)
