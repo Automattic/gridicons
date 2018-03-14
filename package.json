@@ -3,7 +3,7 @@
   "version": "3.0.0-alpha.2",
   "main": "dist/index.js",
   "files": [
-    "dist/*js"
+    "dist/"
   ],
   "scripts": {
     "build": "grunt --verbose",
