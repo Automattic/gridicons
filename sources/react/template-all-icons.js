@@ -13,6 +13,15 @@ const prepareAllIcons = ({
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
+const doesItNeedOffset = ( name, icons ) => icons.indexOf( name ) >= 0;
+const isModulo18 = size => size % 18 === 0;
+
+const iconsThatNeedOffset = [ ${toString(iconsThatNeedOffset)} ];
+
+const iconsThatNeedOffsetX = [ ${toString(iconsThatNeedOffsetX)} ];
+
+const iconsThatNeedOffsetY = [ ${toString(iconsThatNeedOffsetY)} ];
+
 export default class Gridicon extends PureComponent {
 
 	static defaultProps = {
@@ -27,17 +36,7 @@ export default class Gridicon extends PureComponent {
 	};
 
 	render() {
-
 		const { size, onClick, icon: iconProp, className, ...otherProps } = this.props;
-
-		const iconsThatNeedOffset = [ ${toString(iconsThatNeedOffset)} ];
-
-		const iconsThatNeedOffsetX = [ ${toString(iconsThatNeedOffsetX)} ];
-
-		const iconsThatNeedOffsetY = [ ${toString(iconsThatNeedOffsetY)} ];
-
-		const doesItNeedOffset = ( name, icons ) => icons.indexOf( name ) >= 0;
-		const isModulo18 = size => size % 18 === 0;
 
 		const icon = 'gridicons-' + iconProp;
 		const needsOffset = doesItNeedOffset( icon, iconsThatNeedOffset ) && isModulo18( size );
