@@ -523,6 +523,18 @@ function get_gridicon( $gridicon ) {
 		case 'gridicons-stats-alt':
 			$svg = '<svg class="gridicon gridicons-stats-alt" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M21 21H3v-2h18v2zM8 10H4v7h4v-7zm6-7h-4v14h4V3zm6 3h-4v11h4V6z"/></g></svg>';
 			break;
+		case 'gridicons-stats-down-alt':
+			$svg = '<svg class="gridicon gridicons-stats-down-alt" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M21 21H3v-2h18v2zM8 3H4v14h4V3zm6 3h-4v11h4V6zm6 4h-4v7h4v-7z"/></g></svg>';
+			break;
+		case 'gridicons-stats-down':
+			$svg = '<svg class="gridicon gridicons-stats-down" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 16H5V5h14v14zM9 17H7V7h2v10zm4 0h-2v-7h2v7zm4 0h-2v-5h2v5z"/></g></svg>';
+			break;
+		case 'gridicons-stats-up-alt':
+			$svg = '<svg class="gridicon gridicons-stats-up-alt" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M21 21H3v-2h18v2zM8 10H4v7h4v-7zm6-4h-4v11h4V6zm6-3h-4v14h4V3z"/></g></svg>';
+			break;
+		case 'gridicons-stats-up':
+			$svg = '<svg class="gridicon gridicons-stats-up" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 16H5V5h14v14zM9 17H7v-5h2v5zm4 0h-2v-7h2v7zm4 0h-2V7h2v10z"/></g></svg>';
+			break;
 		case 'gridicons-stats':
 			$svg = '<svg class="gridicon gridicons-stats" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M19 3H5c-1.105 0-2 .895-2 2v14c0 1.105.895 2 2 2h14c1.105 0 2-.895 2-2V5c0-1.105-.895-2-2-2zm0 16H5V5h14v14zM9 17H7v-5h2v5zm4 0h-2V7h2v10zm4 0h-2v-7h2v7z"/></g></svg>';
 			break;
