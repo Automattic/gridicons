@@ -316,6 +316,9 @@ function get_gridicon( $gridicon ) {
 		case 'gridicons-layout':
 			$svg = '<svg class="gridicon gridicons-layout" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M8 20H5c-1.105 0-2-.895-2-2V6c0-1.105.895-2 2-2h3c1.105 0 2 .895 2 2v12c0 1.105-.895 2-2 2zm8-10h4c1.105 0 2-.895 2-2V5c0-1.105-.895-2-2-2h-4c-1.105 0-2 .895-2 2v3c0 1.105.895 2 2 2zm5 10v-6c0-1.105-.895-2-2-2h-5c-1.105 0-2 .895-2 2v6c0 1.105.895 2 2 2h5c1.105 0 2-.895 2-2z"/></g></svg>';
 			break;
+		case 'gridicons-line-graph':
+			$svg = '<svg class="gridicon gridicons-line-graph" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M3 19h18v2H3zm3-3c1.1 0 2-.9 2-2 0-.5-.2-1-.5-1.3L8.8 10H9c.5 0 1-.2 1.3-.5l2.7 1.4v.1c0 1.1.9 2 2 2s2-.9 2-2c0-.5-.2-.9-.5-1.3L17.8 7h.2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2c0 .5.2 1 .5 1.3L15.2 9H15c-.5 0-1 .2-1.3.5L11 8.2V8c0-1.1-.9-2-2-2s-2 .9-2 2c0 .5.2 1 .5 1.3L6.2 12H6c-1.1 0-2 .9-2 2s.9 2 2 2z"/></g></svg>';
+			break;
 		case 'gridicons-link-break':
 			$svg = '<svg class="gridicon gridicons-link-break" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M10 11l-2 2H7v-2h3zm9.64-3.64L22 5l-1.5-1.5-17 17L5 22l9-9h3v-2h-1l2-2c1.103 0 2 .897 2 2v2c0 1.103-.897 2-2 2h-4.977c.913 1.208 2.347 2 3.977 2h1c2.21 0 4-1.79 4-4v-2c0-1.623-.97-3.013-2.36-3.64zM4.36 16.64L6 15c-1.103 0-2-.897-2-2v-2c0-1.103.897-2 2-2h4.977C10.065 7.792 8.63 7 7 7H6c-2.21 0-4 1.79-4 4v2c0 1.623.97 3.013 2.36 3.64z"/></g></svg>';
 			break;
