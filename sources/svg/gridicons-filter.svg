@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-<g id="filter">
-	<g id="filter_1_">
-		<path d="M18.595,4H5.415C4.863,3.997,4.412,4.442,4.409,4.994C4.408,5.263,4.514,5.521,4.705,5.71l5.3,5.29v6l4,4V11l5.29-5.29
-			c0.392-0.389,0.395-1.022,0.006-1.414C19.114,4.108,18.86,4.001,18.595,4z"/>
-	</g>
-</g>
-<g id="Layer_1">
-</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>gridicon-filter</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="gridicon-filter" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M10,19 L14,19 L14,17 L10,17 L10,19 Z M6,13 L18,13 L18,11 L6,11 L6,13 Z M3,5 L3,7 L21,7 L21,5 L3,5 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+    </g>
 </svg>
