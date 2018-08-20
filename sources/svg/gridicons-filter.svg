@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>gridicon-filter</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="gridicon-filter" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M10,19 L14,19 L14,17 L10,17 L10,19 Z M6,13 L18,13 L18,11 L6,11 L6,13 Z M3,5 L3,7 L21,7 L21,5 L3,5 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
-    </g>
+  <path id="gridicon-filter" d="M10,19 L14,19 L14,17 L10,17 L10,19 Z M6,13 L18,13 L18,11 L6,11 L6,13 Z M3,5 L3,7 L21,7 L21,5 L3,5 Z"></path>
 </svg>
