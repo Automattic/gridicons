@@ -10,15 +10,15 @@ Gridicon renders a single svg icon based on an `icon` prop. It takes a size prop
 
 There's a gallery with all the available icons in http://automattic.github.io/gridicons/.
 
-```
-npm install gridicons --save
+```sh
+$ npm install gridicons --save
 ```
 
 #### Usage
 
 You can either import the whole iconset and decide at run-time which icon to use:
 
-```
+```js
 import Gridicon from 'gridicons';
 //...
 render() {
@@ -28,7 +28,7 @@ render() {
 
 Or import icons individually:
 
-```
+```js
 import GridiconAddImage from 'gridicons/dist/add-image';
 //...
 render() {
