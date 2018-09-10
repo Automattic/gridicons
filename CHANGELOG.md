@@ -1,5 +1,15 @@
 _The versioning refers to the React component build._
 
+### v3.1.1 (2018-09-10)
+* Icon added: "list-ordered-rtl"
+* Icon added: "stats-up"
+* Icon added: "stats-up-alt"
+* Icon added: "stats-down"
+* Icon added: "stats-down-alt"
+* Icon added: "line-graph"
+* Icon updated: "filter"
+* Icon updated: "pin"
+
 #### v3.0.1 (2018-03-14)
 * React: Revert to use React.PureComponent in main Gridicon, as to not break backward compatibility.
 
