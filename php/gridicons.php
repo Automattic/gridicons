@@ -407,7 +407,7 @@ function get_gridicon( $gridicon ) {
 			$svg = '<svg class="gridicon gridicons-phone" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M16 2H8c-1.104 0-2 .896-2 2v16c0 1.104.896 2 2 2h8c1.104 0 2-.896 2-2V4c0-1.104-.896-2-2-2zm-3 19h-2v-1h2v1zm3-2H8V5h8v14z"/></g></svg>';
 			break;
 		case 'gridicons-pin':
-			$svg = '<svg class="gridicon gridicons-pin" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M9.6 10.2l4.3-4.3c-.8-.8-.8-2 0-2.8l.7-.7 7.1 7.1-.7.6c-.8.8-2 .8-2.8 0l-4.3 4.3c.9 1.5.7 3.5-.6 4.9l-3.5-3.5L7 18.6c-1 .8-2 1.2-2.8 1.4.2-.9.7-1.8 1.4-2.8l2.8-2.8-3.5-3.5C6 9.5 8 9.3 9.6 10.2z"/></g></svg>';
+			$svg = '<svg class="gridicon gridicons-pin" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M19 17c0-2.038-1.188-3.836-3-4.92V5h.5c.828 0 1.5-.672 1.5-1.5S17.328 2 16.5 2h-9C6.672 2 6 2.672 6 3.5S6.672 5 7.5 5H8v7.08C6.188 13.164 5 14.962 5 17h6v4c0 .55.45 1 1 1s1-.45 1-1v-4h6z"/></g></svg>';
 			break;
 		case 'gridicons-plans':
 			$svg = '<svg class="gridicon gridicons-plans" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 12H6l5-10v10zm2 6V10h5l-5 10z"/></g></svg>';
