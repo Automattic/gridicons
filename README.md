@@ -18,7 +18,7 @@ $ npm install gridicons --save
 
 You can either import the whole iconset and decide at run-time which icon to use:
 
-```js
+```jsx
 import Gridicon from 'gridicons';
 //...
 render() {
@@ -28,7 +28,7 @@ render() {
 
 Or import icons individually:
 
-```js
+```jsx
 import GridiconAddImage from 'gridicons/dist/add-image';
 //...
 render() {
