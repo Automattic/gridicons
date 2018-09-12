@@ -10,8 +10,12 @@ Gridicon renders a single svg icon based on an `icon` prop. It takes a size prop
 
 There's a gallery with all the available icons in http://automattic.github.io/gridicons/.
 
+### Install
+
+Use the following command and execute in your terminal:
+
 ```sh
-$ npm install gridicons --save
+npm install gridicons --save
 ```
 
 #### Usage
