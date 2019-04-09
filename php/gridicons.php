@@ -511,6 +511,9 @@ function get_gridicon( $gridicon ) {
 		case 'gridicons-sign-out':
 			$svg = '<svg class="gridicon gridicons-sign-out" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M16 17v2c0 1.105-.895 2-2 2H5c-1.105 0-2-.895-2-2V5c0-1.105.895-2 2-2h9c1.105 0 2 .895 2 2v2h-2V5H5v14h9v-2h2zm2.5-10.5l-1.414 1.414L20.172 11H10v2h10.172l-3.086 3.086L18.5 17.5 24 12l-5.5-5.5z"/></g></svg>';
 			break;
+		case 'gridicons-site':
+			$svg = '<svg class="gridicon gridicons-site" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M18 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm-5 14H6v-7h7zm5 0h-3v-7h3zm0-9H6V6h12z"/></g></svg>';
+			break;
 		case 'gridicons-spam':
 			$svg = '<svg class="gridicon gridicons-spam" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M17 2H7L2 7v10l5 5h10l5-5V7l-5-5zm-4 15h-2v-2h2v2zm0-4h-2l-.5-6h3l-.5 6z"/></g></svg>';
 			break;
