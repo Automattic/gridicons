@@ -1,4 +1,6 @@
 _The versioning refers to the React component build._
+### v3.2.0 (2019-04-11)
+* Icon added: "site"
 
 ### v3.1.1 (2018-09-10)
 * Icon added: "list-ordered-rtl"
