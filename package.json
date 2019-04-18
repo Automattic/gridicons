@@ -1,9 +1,11 @@
 {
   "name": "gridicons",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "main": "dist/index.js",
   "files": [
-    "dist/"
+    "dist/",
+    "sources/react/icons-offset.js",
+    "svg-sprite/gridicons.svg"
   ],
   "scripts": {
     "build": "grunt --verbose",
