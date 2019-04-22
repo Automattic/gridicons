@@ -76,6 +76,10 @@ module.exports = function( grunt ) {
 			sprite: {
 				src: 'svg-sprite/gridicons.svg',
 				dest: 'docs/gridicons.svg'
+			},
+			offset: {
+				src: 'sources/react/icons-offset.js',
+				dest: 'dist/cjs/icons-offset.js'
 			}
 		},
 

@@ -4,7 +4,6 @@
   "main": "dist/index.js",
   "files": [
     "dist/",
-    "sources/react/icons-offset.js",
     "svg-sprite/gridicons.svg"
   ],
   "scripts": {
