@@ -1,4 +1,8 @@
 _The versioning refers to the React component build._
+### v3.3.0 (2019-04-18)
+* Include SVG spritemap (svg-sprite/gridicons.svg) in gridicons npm package.
+* Include offset configuration (sources/react/icons-offset) in gridicons npm package.
+
 ### v3.2.0 (2019-04-11)
 * Icon added: "site"
 
