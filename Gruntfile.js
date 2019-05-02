@@ -79,7 +79,7 @@ module.exports = function( grunt ) {
 			},
 			offset: {
 				src: 'sources/react/icons-offset.js',
-				dest: 'dist/cjs/icons-offset.js'
+				dest: 'dist/util/icons-offset.js'
 			}
 		},
 
