@@ -1,5 +1,8 @@
 _The versioning refers to the React component build._
-### v3.3.0 (2019-04-18)
+### v3.3.1 (2019-05-02)
+* Remove duplicate file from NPM package.
+
+### v3.3.0 (2019-05-02)
 * Include SVG spritemap (svg-sprite/gridicons.svg) in gridicons npm package.
 * Include offset configuration (sources/react/icons-offset) in gridicons npm package.
 
