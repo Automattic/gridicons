@@ -529,6 +529,15 @@ function get_gridicon( $gridicon ) {
 		case 'gridicons-star':
 			$svg = '<svg class="gridicon gridicons-star" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M12 2l2.582 6.953L22 9.257l-5.822 4.602L18.18 21 12 16.89 5.82 21l2.002-7.14L2 9.256l7.418-.304"/></g></svg>';
 			break;
+		case 'gridicons-stats-alt-2':
+			$svg = '<svg class="gridicon gridicons-stats-alt-2" height="24" width="24" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g>
+<path d="M8.14272 15.8573H5.57129V9.42871H8.14272V15.8573Z" fill="black"/>
+<path d="M13.2858 15.8571H10.7144V3H13.2858V15.8571Z" fill="black"/>
+<path d="M18.4284 15.8569H15.8569V6.85693H18.4284V15.8569Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M21 20.7144H3V18.7144H21V20.7144Z" fill="black"/>
+</g></svg>
+';
+			break;
 		case 'gridicons-stats-alt':
 			$svg = '<svg class="gridicon gridicons-stats-alt" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M21 21H3v-2h18v2zM8 10H4v7h4v-7zm6-7h-4v14h4V3zm6 3h-4v11h4V6z"/></g></svg>';
 			break;
