@@ -529,6 +529,9 @@ function get_gridicon( $gridicon ) {
 		case 'gridicons-star':
 			$svg = '<svg class="gridicon gridicons-star" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M12 2l2.582 6.953L22 9.257l-5.822 4.602L18.18 21 12 16.89 5.82 21l2.002-7.14L2 9.256l7.418-.304"/></g></svg>';
 			break;
+		case 'gridicons-stats-alt-2':
+			$svg = '<svg class="gridicon gridicons-stats-alt-2" height="24" width="24" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><path d="M8.143 15.857H5.57V9.43h2.573v6.427zM13.286 15.857h-2.572V3h2.572v12.857zM18.428 15.857h-2.57v-9h2.57v9z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M21 20.714H3v-2h18v2z"/></g></svg>';
+			break;
 		case 'gridicons-stats-alt':
 			$svg = '<svg class="gridicon gridicons-stats-alt" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M21 21H3v-2h18v2zM8 10H4v7h4v-7zm6-7h-4v14h4V3zm6 3h-4v11h4V6z"/></g></svg>';
 			break;
