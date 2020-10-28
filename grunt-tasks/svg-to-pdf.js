@@ -17,8 +17,13 @@ module.exports = function( grunt ) {
 
         // PDFkit writes to a stream, so it has to be async
         var done = self.async();
-        var pdf = new PDFDocument( { size: [ 24, 24 ] } );
-        pdf.info.CreationDate = "";
+        var pdfSettings = {
+          size: [ 24, 24 ],
+          info: {
+            CreationDate: new Date('2014-08-27T05:45:00')
+          }
+        }
+        var pdf = new PDFDocument( pdfSettings );
         pdf.pipe( fs.createWriteStream( files.dest + svgFile.slice(0, -4) + '.pdf' ) );
         pdf.on('finish', function() { done(); });
 
