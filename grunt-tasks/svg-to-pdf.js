@@ -20,7 +20,7 @@ module.exports = function( grunt ) {
         var pdfSettings = {
           size: [ 24, 24 ],
           info: {
-            CreationDate: new Date('2014-08-27T05:45:00')
+            CreationDate: new Date(Date.UTC(2014, 7, 27, 4, 45, 00))
           }
         }
         var pdf = new PDFDocument( pdfSettings );
