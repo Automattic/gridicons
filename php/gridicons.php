@@ -469,6 +469,9 @@ function get_gridicon( $gridicon ) {
 		case 'gridicons-reblog':
 			$svg = '<svg class="gridicon gridicons-reblog" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M22.086 9.914L20 7.828V18c0 1.105-.895 2-2 2h-7v-2h7V7.828l-2.086 2.086L14.5 8.5 19 4l4.5 4.5-1.414 1.414zM6 16.172V6h7V4H6c-1.105 0-2 .895-2 2v10.172l-2.086-2.086L.5 15.5 5 20l4.5-4.5-1.414-1.414L6 16.172z"/></g></svg>';
 			break;
+		case 'gridicons-recent':
+			$svg = '<svg class="gridicon gridicons-recent" height="24" width="24" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><path d="M23 12l-2.44 2.78.34 3.68-3.61.82-1.89 3.18L12 21l-3.4 1.47-1.89-3.18-3.61-.82.34-3.69L1 12l2.44-2.79-.34-3.68 3.61-.81L8.6 1.54 12 3l3.4-1.46 1.89 3.18 3.61.82-.34 3.68L23 12zm-2.67 0L18.5 9.89l.24-2.79L16 6.5l-1.42-2.43L12 5.18 9.42 4.07 8 6.5l-2.74.59.24 2.79L3.67 12l1.83 2.1-.24 2.8 2.74.6 1.42 2.43L12 18.81l2.58 1.11L16 17.5l2.74-.61-.24-2.79 1.83-2.1zM11 15h2v2h-2v-2zm0-8h2v6h-2V7z"/></g></svg>';
+			break;
 		case 'gridicons-redo':
 			$svg = '<svg class="gridicon gridicons-redo" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M18 6v3.586L14.343 5.93C13.17 4.756 11.636 4.17 10.1 4.17s-3.07.585-4.242 1.757c-2.343 2.342-2.343 6.14 0 8.484l5.364 5.364 1.414-1.414L7.272 13c-1.56-1.56-1.56-4.097 0-5.657.755-.755 1.76-1.172 2.828-1.172 1.068 0 2.073.417 2.828 1.173L16.586 11H13v2h7V6h-2z"/></g></svg>';
 			break;
