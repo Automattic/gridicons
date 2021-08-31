@@ -87,19 +87,11 @@ module.exports = function( grunt ) {
 			options: {
 				sourceMap: false,
 				presets: [
-					'es2015',
-					'stage-2',
-					'babili'
+					'@babel/preset-env',
+					'@babel/preset-react',
+					'minify'
 				],
 				comments: false,
-				plugins: [
-					'transform-class-properties',
-					'transform-export-extensions',
-					'add-module-exports',
-					'syntax-jsx',
-					'transform-react-jsx',
-					'transform-react-display-name'
-				]
 			},
 			dist: {
 				files: [{
