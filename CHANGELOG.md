@@ -1,4 +1,12 @@
 _The versioning refers to the React component build._
+
+### v3.4.0 (2021-09-01)
+* Icon added: "story"
+* Icon added: "trending"
+* Icon added: "recent"
+* React 17 support
+* Update grunt and babel dependencies to latest versions
+
 ### v3.3.1 (2019-05-02)
 * Remove duplicate file from NPM package.
 
