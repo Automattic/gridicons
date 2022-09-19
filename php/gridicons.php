@@ -473,10 +473,10 @@ function get_gridicon( $gridicon ) {
 			$svg = '<svg class="gridicon gridicons-reader-share" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><clipPath id="a"><path d="M0 0h20v20H0z"/></clipPath><g clip-path="url(#a)"><path d="M11.867 6.8V3l6.8 6.65-6.8 6.65v-3.8s-10.2-.884-10.2 4.5c0-10.77 10.2-10.2 10.2-10.2z" stroke="#000" stroke-linecap="round" stroke-width="1.5"/></g></g></svg>';
 			break;
 		case 'gridicons-reader-star-outline':
-			$svg = '<svg class="gridicon gridicons-reader-star-outline" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M12 3l2.936 6.402H21.5L16 14.49 17.871 21l-5.87-3.375L6.128 21 8 14.489 2.5 9.402H9.065L12 3z" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></g></svg>';
+			$svg = '<svg class="gridicon gridicons-reader-star-outline" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><rect x="0" fill="none" width="24" height="24"/><g><path d="M12 3l2.936 6.402H21.5L16 14.49 17.871 21l-5.87-3.375L6.128 21 8 14.489 2.5 9.402H9.065L12 3z" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></g></g></svg>';
 			break;
 		case 'gridicons-reader-star':
-			$svg = '<svg class="gridicon gridicons-reader-star" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M10 2.5l2.446 5.335h5.47l-4.583 4.24 1.56 5.425L10 14.687 5.108 17.5l1.559-5.426-4.584-4.239h5.471z" stroke="#000" stroke-linecap="round" stroke-width="1.5"/></g></svg>';
+			$svg = '<svg class="gridicon gridicons-reader-star" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M10 2.5l2.446 5.335h5.47l-4.582 4.24 1.559 5.425L10 14.687 5.108 17.5l1.559-5.426-4.584-4.239h5.471z" stroke="#000" stroke-linecap="round" stroke-width="1.5"/></g></svg>';
 			break;
 		case 'gridicons-reader':
 			$svg = '<svg class="gridicon gridicons-reader" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M3 4v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4H3zm7 11H5v-1h5v1zm2-2H5v-1h7v1zm0-2H5v-1h7v1zm7 4h-5v-5h5v5zm0-7H5V6h14v2z"/></g></svg>';
