@@ -451,17 +451,29 @@ function get_gridicon( $gridicon ) {
 		case 'gridicons-read-more':
 			$svg = '<svg class="gridicon gridicons-read-more" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M9 12h6v-2H9zm-7 0h5v-2H2zm15 0h5v-2h-5zm3 2v2l-6 6H6a2 2 0 01-2-2v-6h2v6h6v-4a2 2 0 012-2h6zM4 8V4a2 2 0 012-2h12a2 2 0 012 2v4h-2V4H6v4z"/></g></svg>';
 			break;
+		case 'gridicons-reader-comment':
+			$svg = '<svg class="gridicon gridicons-reader-comment" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M12.528 14.556v-.75h-8.75c-.568 0-1.028-.46-1.028-1.028v-8c0-.568.46-1.028 1.028-1.028h12.444c.568 0 1.028.46 1.028 1.028v7.948c0 .905-.438 1.756-1.175 2.282l-3.547 2.534z" stroke="#000" stroke-width="1.5"/></g></svg>';
+			break;
+		case 'gridicons-reader-external':
+			$svg = '<svg class="gridicon gridicons-reader-external" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path clip-rule="evenodd" d="M11.376 2.016h6.608v6.608h-1.5V4.577l-5.87 5.87-.53.53-1.061-1.06.53-.53 5.87-5.87H11.376zM5 5.5h4V4H5a2 2 0 00-2 2v9a2 2 0 002 2h9a2 2 0 002-2v-4h-1.5v4a.5.5 0 01-.5.5H5a.5.5 0 01-.5-.5V6a.5.5 0 01.5-.5z" fill-rule="evenodd"/></g></svg>';
+			break;
 		case 'gridicons-reader-follow-conversation':
 			$svg = '<svg class="gridicon gridicons-reader-follow-conversation" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M20 14v-3h-2v3h-3v2h3v3h2v-3h3v-2z"/><path d="M13 16h-2l-5 5v-5H4c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v4h-4v3h-3v4z"/></g></svg>';
 			break;
 		case 'gridicons-reader-follow':
-			$svg = '<svg class="gridicon gridicons-reader-follow" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"/></g></svg>';
+			$svg = '<svg class="gridicon gridicons-reader-follow" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path clip-rule="evenodd" d="M4 4.5h12V11h1.5V3h-15v12a2 2 0 002 2h7v-1.5h-7A.5.5 0 014 15zm10.5 2h-9V8h9zm-5 3h-4V11h4zM13 11h-1v1h1zm-1-1.5h-1.5v4h4v-4H13zM9.5 12h-4v1.5h4zm6.5 1.25h1.5v2.25h2.25V17H17.5v2.25H16V17h-2.25v-1.5H16z" fill-rule="evenodd"/></g></svg>';
 			break;
 		case 'gridicons-reader-following-conversation':
 			$svg = '<svg class="gridicon gridicons-reader-following-conversation" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M16.8 14.5l3.2-3.2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v9c0 1.1.9 2 2 2h2v5l8.7-8.7 2.1 2.2z"/><path d="M22.6 11.1l-6.1 6.1-2.1-2.2-1.4 1.4 3.5 3.6 7.5-7.6z"/></g></svg>';
 			break;
 		case 'gridicons-reader-following':
-			$svg = '<svg class="gridicon gridicons-reader-following" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 13.482L15.508 21 12 17.4l1.412-1.388 2.106 2.188 6.094-6.094L23 13.482zm-7.455 1.862L20 10.889V2H2v14c0 1.1.9 2 2 2h4.538l4.913-4.832 2.094 2.176zM8 13H4v-1h4v1zm3-2H4v-1h7v1zm0-2H4V8h7v1zm7-3H4V4h14v2z"/></g></svg>';
+			$svg = '<svg class="gridicon gridicons-reader-following" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="21" height="19"><path fill-rule="evenodd" clip-rule="evenodd" d="M21 11.889l-4.455 4.455-2.094-2.176L9.538 19H5c-1.1 0-2-.9-2-2V3h18v8.889zM16.508 22L24 14.482l-1.388-1.376-6.094 6.094-2.106-2.188L13 18.4l3.508 3.6zM9 14H5v-1h4v1zm-4-2h7v-1H5v1zm7-2H5V9h7v1zM5 7h14V5H5v2z"/></mask><g mask="url(#a)"><path d="M1-1h24v24H1z"/></g></g></svg>';
+			break;
+		case 'gridicons-reader-share':
+			$svg = '<svg class="gridicon gridicons-reader-share" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><clipPath id="a"><path d="M0 0h20v20H0z"/></clipPath><g clip-path="url(#a)"><path d="M11.867 6.8V3l6.8 6.65-6.8 6.65v-3.8s-10.2-.884-10.2 4.5c0-10.77 10.2-10.2 10.2-10.2z" stroke="#000" stroke-linecap="round" stroke-width="1.5"/></g></g></svg>';
+			break;
+		case 'gridicons-reader-star':
+			$svg = '<svg class="gridicon gridicons-reader-star" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M10 2.5l2.446 5.335h5.47l-4.582 4.24 1.559 5.425L10 14.687 5.108 17.5l1.559-5.426-4.584-4.239h5.471z" stroke="#000" stroke-linecap="round" stroke-width="1.5"/></g></svg>';
 			break;
 		case 'gridicons-reader':
 			$svg = '<svg class="gridicon gridicons-reader" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M3 4v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4H3zm7 11H5v-1h5v1zm2-2H5v-1h7v1zm0-2H5v-1h7v1zm7 4h-5v-5h5v5zm0-7H5V6h14v2z"/></g></svg>';
