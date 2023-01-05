@@ -4,7 +4,8 @@
   "main": "dist/index.js",
   "files": [
     "dist/",
-    "svg-sprite/gridicons.svg"
+    "svg-sprite/gridicons.svg",
+    "index.d.ts"
   ],
   "scripts": {
     "build": "grunt --verbose",
@@ -43,5 +44,6 @@
   "volta": {
     "node": "16.8.0",
     "npm": "7.21.1"
-  }
+  },
+  "types": "./index.d.ts"
 }
