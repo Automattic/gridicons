@@ -1,5 +1,14 @@
 _The versioning refers to the React component build._
 
+### v3.4.1 (2023-01-13)
+* Icon added: "reader-comment"
+* Icon added: "reader-external"
+* Icon added: "reader-share"
+* Icon added: "reader-star"
+* Updated icon: "reader-follow"
+* Updated icon: "reader-following"
+* React 18 support
+
 ### v3.4.0 (2021-09-01)
 * Icon added: "story"
 * Icon added: "trending"
