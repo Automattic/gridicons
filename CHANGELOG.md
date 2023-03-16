@@ -1,5 +1,8 @@
 _The versioning refers to the React component build._
 
+### v3.4.2 (2023-03-16)
+* Icon added: "science"
+
 ### v3.4.1 (2023-01-13)
 * Icon added: "reader-comment"
 * Icon added: "reader-external"
