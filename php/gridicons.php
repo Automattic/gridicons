@@ -508,6 +508,9 @@ function get_gridicon( $gridicon ) {
 		case 'gridicons-scheduled':
 			$svg = '<svg class="gridicon gridicons-scheduled" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M10.498 18.001l-3.705-3.705 1.415-1.415 2.294 2.294 5.293-5.293 1.415 1.415-6.712 6.704zM21 6v13a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2h1V2h2v2h8V2h2v2h1a2 2 0 012 2zm-2 2H5v11h14V8z"/></g></svg>';
 			break;
+		case 'gridicons-science':
+			$svg = '<svg class="gridicon gridicons-science" height="24" width="24" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M3.211 19.7c.375.867 1.01 1.3 1.909 1.3h13.76c.898 0 1.535-.433 1.909-1.3.374-.867.251-1.656-.37-2.367L15.465 11V5h1.668a.917.917 0 00.69-.283.992.992 0 00.273-.717.992.992 0 00-.273-.717.917.917 0 00-.69-.283H6.867a.916.916 0 00-.69.283.992.992 0 00-.272.717c0 .289.091.528.273.717a.916.916 0 00.69.283h1.668v6L3.58 17.333c-.62.711-.743 1.5-.369 2.367zm4.457-4.423h8.664l-2.792-3.544V5h-3.08v6.733l-2.792 3.544z"/></g></svg>';
+			break;
 		case 'gridicons-search':
 			$svg = '<svg class="gridicon gridicons-search" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M21 19l-5.154-5.154a7 7 0 10-2 2L19 21l2-2zM5 10c0-2.757 2.243-5 5-5s5 2.243 5 5-2.243 5-5 5-5-2.243-5-5z"/></g></svg>';
 			break;
