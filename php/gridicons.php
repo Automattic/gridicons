@@ -166,6 +166,9 @@ function get_gridicon( $gridicon ) {
 		case 'gridicons-computer':
 			$svg = '<svg class="gridicon gridicons-computer" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M20 2H4a2 2 0 00-2 2v12a2 2 0 002 2h6v2H7v2h10v-2h-3v-2h6a2 2 0 002-2V4a2 2 0 00-2-2zm0 14H4V4h16v12z"/></g></svg>';
 			break;
+		case 'gridicons-copy':
+			$svg = '<svg class="gridicon gridicons-copy" height="24" width="24" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><rect x="11" y="3" width="9" height="12" rx="1" stroke="#000" stroke-width="2" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h7a2 2 0 002-2v-1h-2v1H6V9h2V7z"/></g></svg>';
+			break;
 		case 'gridicons-coupon':
 			$svg = '<svg class="gridicon gridicons-coupon" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M13 16v2h-2v-2h2zm3-3h2v-2h-2v2zm2 8h-2v2h2v-2zm3-5v2h2v-2h-2zm-1-3a1 1 0 011 1h2a3 3 0 00-3-3v2zm1 7a1 1 0 01-1 1v2a3 3 0 003-3h-2zm-7 1a1 1 0 01-1-1h-2a3 3 0 003 3v-2zm3.21-5.21a2 2 0 01-2.828.002l-.002-.002L10 11.41l-1.43 1.44c.279.506.427 1.073.43 1.65A3.5 3.5 0 115.5 11a3.454 3.454 0 011.65.43L8.59 10 7.15 8.57A3.454 3.454 0 015.5 9 3.5 3.5 0 119 5.5a3.454 3.454 0 01-.43 1.65L10 8.59l3.88-3.88a2 2 0 012.828-.002l.002.002-5.3 5.29 5.8 5.79zM5.5 7a1.5 1.5 0 10-.001-3.001A1.5 1.5 0 005.5 7zM7 14.5a1.5 1.5 0 10-3.001.001A1.5 1.5 0 007 14.5z"/></g></svg>';
 			break;
