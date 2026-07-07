@@ -1,6 +1,6 @@
 _The versioning refers to the React component build._
 
-### Unreleased
+### v3.4.3 (2026-07-07)
 * React 19 support
 
 ### v3.4.2 (2023-03-16)
