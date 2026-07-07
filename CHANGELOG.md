@@ -1,5 +1,8 @@
 _The versioning refers to the React component build._
 
+### Unreleased
+* React 19 support
+
 ### v3.4.2 (2023-03-16)
 * Icon added: "science"
 

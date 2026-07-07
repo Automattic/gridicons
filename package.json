@@ -11,7 +11,7 @@
     "prepublish": "npm run build"
   },
   "peerDependencies": {
-    "react": "15 - 18"
+    "react": "15 - 19"
   },
   "repository": {
     "type": "git",
