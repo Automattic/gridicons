@@ -1,6 +1,6 @@
 {
   "name": "gridicons",
-  "version": "3.4.2",
+  "version": "3.4.3",
   "main": "dist/index.js",
   "files": [
     "dist/",
@@ -11,7 +11,7 @@
     "prepublish": "npm run build"
   },
   "peerDependencies": {
-    "react": "15 - 18"
+    "react": "15 - 19"
   },
   "repository": {
     "type": "git",
