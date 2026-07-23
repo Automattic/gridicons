@@ -32,7 +32,7 @@
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-rename-util": "^1.0.0",
-    "grunt-svgmin": "^6.0.1",
+    "grunt-svgmin": "^7.0.0",
     "grunt-svgstore": "^2.0.0",
     "jit-grunt": "^0.10.0",
     "load-grunt-tasks": "^5.1.0",
